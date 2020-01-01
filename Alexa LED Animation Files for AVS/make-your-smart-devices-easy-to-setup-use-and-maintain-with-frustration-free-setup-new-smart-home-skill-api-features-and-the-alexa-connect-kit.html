@@ -1,0 +1,1745 @@
+
+
+
+
+
+   
+   
+      <!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+<html lang="en-US">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+        {'gtm.start': new Date().getTime(),event:'gtm.js'}
+    );var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5LVXJD4');</script>
+    <!-- End Google Tag Manager -->
+
+    <title>Make Your Smart Devices Easy to Setup, Use, and Maintain with Frustration-Free Setup, New Smart Home Skill API Features, and the Alexa Connect Kit</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="wfEDah_6uJe9Y7uIfLrVycd_efr8wQ9YO-fM_5MI5w0"/>
+    <meta name="google-site-verification" content="Eu8BqTWMhRRdfCAdqUh2RYb3SjAiuFp4wmgTtGcteM0"/>
+    <meta name="google-site-verification" content="KHmp6TUPKc1gHlM9TuB842pcV7TxZVV6TgenZtsYoNY"/>
+    <meta name="msvalidate.01" content="9761B379C1B64F587D71BA40337FDD07"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <!-- Dynamic meta tags -->
+    <meta name="template" content="blog-content-template" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0" />
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://m.media-amazon.com/images/G/01/AlexaDevPortal/favicon-32x32._CB1544644721_.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://m.media-amazon.com/images/G/01/AlexaDevPortal/favicon-96x96._CB1544644752_.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://m.media-amazon.com/images/G/01/AlexaDevPortal/favicon-16x16._CB1544644669_.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" itemprop="url"
+          href="https://m.media-amazon.com/images/G/01/ASK/rosie-v2/css/bootstrap.min._CB472035751_.css"/>
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="/alexa/console/ask/dante/static/css/all.css">
+    <!-- Combined Dante CSS -->
+    <link rel="stylesheet" href="/alexa/console/ask/dante/static/css/app.css"/>
+    <!-- UX Style Dictionary CSS -->
+    
+
+    <!-- Dynamic link tags -->
+    <link rel="alternate" href="/en-US/blogs/alexa/device-makers/2019/09/make-your-smart-devices-easy-to-setup-use-and-maintain-with-frustration-free-setup-new-smart-home-skill-api-features-and-the-alexa-connect-kit" hreflang="en-US" />
+<link rel="canonical" href="/en-US/blogs/alexa/device-makers/2019/09/make-your-smart-devices-easy-to-setup-use-and-maintain-with-frustration-free-setup-new-smart-home-skill-api-features-and-the-alexa-connect-kit" hreflang="en-US" />
+<link rel="stylesheet" href="//d3ogm7ac91k97u.cloudfront.net/etc.clientlibs/developer-portal/clientlibs/dependencies.4c9468760cc14066cb16e03f91a18210.css" type="text/css" hreflang="en-US" />
+<link rel="stylesheet" href="//d3ogm7ac91k97u.cloudfront.net/etc.clientlibs/developer-portal/clientlibs/main.fa7cafec5dcd1815d3569305a21f7b97.css" type="text/css" hreflang="en-US" />
+
+
+    <!-- Dynamic script tags -->
+    <script type="text/javascript">
+		(function() {
+		  var didInit = false;
+		  function initMunchkin() {
+		    if(didInit === false) {
+		      didInit = true;
+		      Munchkin.init('365-EFI-026');
+		    }
+		  }
+		  var s = document.createElement('script');
+		  s.type = 'text/javascript';
+		  s.async = true;
+		  s.src = '//munchkin.marketo.net/munchkin.js';
+		  s.onreadystatechange = function() {
+		    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+		      initMunchkin();
+		    }
+		  };
+		  s.onload = initMunchkin;
+		  document.getElementsByTagName('head')[0].appendChild(s);
+		})();
+	</script>
+
+    <script language="JavaScript" type="text/javascript">
+        var digitalData = {
+            page: {
+                pageInfo: {
+                    pageInstanceID: "en-US/blogs/alexa/device-makers/2019/09/make-your-smart-devices-easy-to-setup-use-and-maintain-with-frustration-free-setup-new-smart-home-skill-api-features-and-the-alexa-connect-kit",
+                    path: "/en-US/blogs/alexa/device-makers/2019/09/make-your-smart-devices-easy-to-setup-use-and-maintain-with-frustration-free-setup-new-smart-home-skill-api-features-and-the-alexa-connect-kit",
+                    pageID: "make-your-smart-devices-easy-to-setup-use-and-maintain-with-frustration-free-setup-new-smart-home-skill-api-features-and-the-alexa-connect-kit",
+                    pageTitle: "MAKE-YOUR-SMART-DEVICES-EASY-TO-SETUP-USE-AND-MAINTAIN-WITH-FRUSTRATION-FREE-SETUP-NEW-SMART-HOME-SKILL-API-FEATURES-AND-THE-ALEXA-CONNECT-KIT",
+                    pageType: "DeX",
+                    primaryCategory: "alexa",
+                    pageName: "alexa:MAKE-YOUR-SMART-DEVICES-EASY-TO-SETUP-USE-AND-MAINTAIN-WITH-FRUSTRATION-FREE-SETUP-NEW-SMART-HOME-SKILL-API-FEATURES-AND-THE-ALEXA-CONNECT-KIT",
+                    language: "en_US"
+                }
+            },
+            user: {
+                userID: "",
+                ipAddress: "94.191.128.47",
+                userAgent: ""
+            }
+        };
+    </script>
+    <script src="//assets.adobedtm.com/2c02c31d2aed638ba6c6ca977df6b73f9ff514c3/satelliteLib-38635b7dc936a1789c429e0c77550bc7a78f33af.js"></script>
+</head>
+
+<body>
+
+<div class="dante-content-wrapper">
+    
+    
+    
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<header class="dante-header">
+    <div class="container-fluid p-0">
+        <nav class="navbar d-flex flex-row align-items-start custom-nav-bar">
+            <div class="flex-column p-0 m-0">
+                <a href="/alexa/alexa-skills-kit" id="dpc-header-logo" class="dpc-logo">
+                    <div class="row">
+                            <div class="col align-self-end">
+                                    <img src="https://m.media-amazon.com/images/G/01/AlexaDevPortal/alexa.CB473388935._CB1539290662_.png" alt="Alexa Developer Console" class="p-0">
+                            </div>
+                            <div class="col align-self-center">
+                                <span class="dpc-console-title row justify-content-start">amazon alexa</span>
+                            </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex-column-reverse ml-auto">
+                <ul class="navbar-nav dpcHeaderButtonRow">
+
+                    
+                    
+                        <li class="nav-item dpcHeaderLink">
+                            <a href="https://developer.amazon.com/alexa/console/signin">Sign In</a>
+                        </li>
+                    
+                    
+
+                    <li class="nav-item nav-item-dpcSearch dpcHeaderButtonWrapper">
+                        <a href="#" id="dpcHeaderSearchButtonAnchor">
+                            <div class ="dpcHeaderButton dpcHeaderSearchButton">
+                                <svg class="dpcSearchIcon" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                     shape-rendering="geometricPrecision">
+                                    <circle stroke="#FFFFFF" stroke-width="2" cx="8" cy="8" r="7" fill="transparent"></circle>
+                                    <path d="M13.5,13.5 L19.5,19.5" id="Path-1" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"></path>
+                                </svg>
+                            </div>
+                        </a>
+                        <form id="dpcSearchForm" class="dpcSearch active d-none" method="get" action="https://developer.amazon.com/search"  target="_blank">
+                            <button type="submit" id="searchButton" class="dpcButton dpcButtonSearch">
+                                <svg class="dpcSearchIcon" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                     shape-rendering="geometricPrecision">
+                                    <circle stroke="#FFFFFF" stroke-width="2" cx="8" cy="8" r="7" fill="transparent"></circle>
+                                    <path d="M13.5,13.5 L19.5,19.5" id="Path-1" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"></path>
+                                </svg>
+                            </button>
+                            <div class="dpcSearchWrap">
+                                <input type="search" id="search" name="query" class="dpcSearchField" onfocus="this.value=''"
+                                   placeholder='Search...'
+                                autocomplete="off" >
+                            </div>
+                        </form>
+                    </li>
+
+                    
+                        
+                    
+
+                    <li class="nav-item pr-2">
+                        <a class="nav-link dpcHeaderButtonWrapper pr-0" href="#" id="navbarSupportDropdownMenuLink">
+                            <div class ="dpcHeaderButton" id="support-popover" data-toggle="popover">
+                                <span> <i class="fas fa-ellipsis-v"></i> </span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+<!-- user account popover content -->
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<!-- support popover content -->
+<div id="support-popover-content" style="display: none">
+    <div class="header-popover-content">
+        <div class="header-popover-inner-content">
+            <div class="hp-menu">
+                <ul>
+                    <a class="container" href="/docs/ask-overviews/build-skills-with-the-alexa-skills-kit.html" target="_blank">
+                        <li>
+                            <span class="ml-3">Documentation</span>
+                        </li>
+                    </a>
+                    <a class="container" href="https://forums.developer.amazon.com/spaces/23/index.html" target="_blank">
+                        <li>
+                            <span class="ml-3">Forums</span>
+                        </li>
+                    </a>
+                    
+                        
+                            <a class="container" href="https://developer.amazon.com/alexa/console/contact-us" target="_blank">
+                        
+                        
+                    
+                        <li>
+                            <span class="ml-3">Contact Us</span>
+                        </li>
+                    </a>
+                    
+                    <li role="separator"><div class="dropdown-divider"></div></li>
+                    <a class="container" href="https://developer.amazon.com/alexa" target="_blank">
+                        <li>
+                            <span class="ml-3">Alexa Developer Home</span>
+                        </li>
+                    </a>
+                    <a class="container" href="https://developer.amazon.com/alexa/console/ask">
+                        <li>
+                            <span class="ml-3">Alexa Developer Console</span>
+                        </li>
+                    </a>
+                    <a class="container" href="https://developer.amazon.com/alexa/console/avs">
+                        <li>
+                            <span class="ml-3">Alexa Voice Service</span>
+                        </li>
+                    </a>
+                    <a class="container" href="https://developer.amazon.com/alexa/console/wwa">
+                        <li>
+                            <span class="ml-3">Works With Alexa</span>
+                        </li>
+                    </a>
+                    <a class="container" href="https://developer.amazon.com/alexa/console/ack">
+                        <li>
+                            <span class="ml-3">Alexa Connect Kit</span>
+                        </li>
+                    </a>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </nav>
+    </div>
+</header>
+
+    <div class="dante-content">
+        <div class="dante-container-fluid flex-grow-1">
+            <div class="dante-row flex-grow-1">
+                <div class="dpc-tenant-content flex-grow-1" style="width:100%">
+                    
+         <body class="blogs-content-page blogs-base-page page basicpage">
+        
+        
+            
+
+
+
+            <div class="base-wrapper">
+    <div class="header iparsys parsys">
+
+
+
+    
+        
+        
+        <div class="newpar new section">
+
+</div>
+
+    
+        
+        
+        <div class="par iparys_inherited">
+
+    
+    
+    
+    
+        
+        
+        <div class="navigation-header">
+
+    
+
+
+
+<header class="dpHeader">
+    <div class="dphTopBar">
+        <div class="dphMenuToggle">
+            <i class="dphMenuIcon"></i>
+            <i class="dphMenuBackIcon"></i>
+        </div>
+    </div>
+    <div class="accordion dphNavigation">
+        <nav class="dpPrimaryNav">
+            <ul class="dppnItems">
+                
+                
+                <li class="dppnItem   accrItem">
+                    <a href="https://developer.amazon.com/en-US/alexa/alexa-skills-kit" class="dppnLink">
+                        Skill Builders
+                    </a>
+                    
+                        <div class="dpIconArrow accrHandle"></div>
+                        <div class="dppnFlyoutWrap">
+                            <div class="dppnSecondaryNavWrap">
+                                <ul class="dppnFlyout dppnSecondaryNav">
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/en-US/alexa/alexa-skills-kit" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Skills Kit</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="/content/alexa-language-masters/en_US/alexa/feature-updates" class="dppnfLink">
+                                                <span class="dppnfTitle">Release Updates</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/en-US/alexa/alexa-skills-kit/resources" class="dppnfLink">
+                                                <span class="dppnfTitle">Resources</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/docs/ask-overviews/build-skills-with-the-alexa-skills-kit.html" class="dppnfLink">
+                                                <span class="dppnfTitle">Documentation</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/en-US/alexa/alexa-skills-kit/learn/build-a-business" class="dppnfLink">
+                                                <span class="dppnfTitle">Build a Business</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexa/console/ask" class="dppnfLink">
+                                                <span class="dppnfTitle">Developer Console</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                </li>
+            
+                
+                
+                <li class="dppnItem   accrItem">
+                    <a href="https://developer.amazon.com/en-US/alexa/devices" class="dppnLink">
+                        Device Makers
+                    </a>
+                    
+                        <div class="dpIconArrow accrHandle"></div>
+                        <div class="dppnFlyoutWrap">
+                            <div class="dppnSecondaryNavWrap">
+                                <ul class="dppnFlyout dppnSecondaryNav">
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexa-voice-service" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Built-in Devices</span>
+                                                <span class="dppnfSubtitle">Develop Alexa built-in devices with Alexa Voice Service </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                            <div class="dpIconArrow accrHandle"></div>
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            <ul class="dppnFlyout dppnLevel3Nav">
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/docs/alexa-voice-service/get-started-with-alexa-voice-service.html" class="dppnfLink">
+                                                        <span class="dppnfTitle">Overview</span>
+                                                        <span class="dppnfSubtitle">Integrate Alexa directly into your products. </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa-voice-service/learn" class="dppnfLink">
+                                                        <span class="dppnfTitle">Learn</span>
+                                                        <span class="dppnfSubtitle">Discover AVS features, solutions, and resources </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa-voice-service/learn" class="dppnfLink">
+                                                        <span class="dppnfTitle">Design</span>
+                                                        <span class="dppnfSubtitle">Read functional, hardware &amp; UX guidelines </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa-voice-service/build" class="dppnfLink">
+                                                        <span class="dppnfTitle">Build</span>
+                                                        <span class="dppnfSubtitle">Evaluate SDKs, dev kits, and solution providers </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa-voice-service/launch" class="dppnfLink">
+                                                        <span class="dppnfTitle">Launch</span>
+                                                        <span class="dppnfSubtitle">Prepare for product testing and marketing </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexa/connected-devices" class="dppnfLink">
+                                                <span class="dppnfTitle">Connected Devices</span>
+                                                <span class="dppnfSubtitle">Connect your smart devices to Alexa </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                            <div class="dpIconArrow accrHandle"></div>
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            <ul class="dppnFlyout dppnLevel3Nav">
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa/connected-devices/learn" class="dppnfLink">
+                                                        <span class="dppnfTitle">Learn</span>
+                                                        <span class="dppnfSubtitle">Features and benefits </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa/connected-devices/design" class="dppnfLink">
+                                                        <span class="dppnfTitle">Design</span>
+                                                        <span class="dppnfSubtitle">Design your customer experience </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa/connected-devices/build" class="dppnfLink">
+                                                        <span class="dppnfTitle">Build</span>
+                                                        <span class="dppnfSubtitle">Build with the Smart Home Skill API </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa/connected-devices/launch" class="dppnfLink">
+                                                        <span class="dppnfTitle">Launch</span>
+                                                        <span class="dppnfSubtitle">Launch your skill or submit your product </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                </li>
+            
+                
+                
+                <li class="dppnItem   accrItem">
+                    <a class="dppnLink">
+                        Products
+                    </a>
+                    
+                        <div class="dpIconArrow accrHandle"></div>
+                        <div class="dppnFlyoutWrap">
+                            <div class="dppnSecondaryNavWrap">
+                                <ul class="dppnFlyout dppnSecondaryNav">
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="/content/alexa-language-masters/en_US/alexa/alexa-skills-kit" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Skills Kit</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexa-voice-service" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Voice Service</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexa/connected-devices" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Smart Home</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                        
+                                            <span class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Gadgets Toolkit</span>
+                                                <span class="dppnfSubtitle"></span>
+                                            </span>
+                                        
+                                        
+                                            <div class="dpIconArrow accrHandle"></div>
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            <ul class="dppnFlyout dppnLevel3Nav">
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa/alexa-gadgets" class="dppnfLink">
+                                                        <span class="dppnfTitle">Alexa Gadgets</span>
+                                                        <span class="dppnfSubtitle"> </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa/alexa-gadgets/smart-toys" class="dppnfLink">
+                                                        <span class="dppnfTitle">Alexa Smart Toys</span>
+                                                        <span class="dppnfSubtitle"> </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa/alexa-gadgets/smart-clocks" class="dppnfLink">
+                                                        <span class="dppnfTitle">Alexa Smart Clocks</span>
+                                                        <span class="dppnfSubtitle"> </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa/alexa-gadgets/resources" class="dppnfLink">
+                                                        <span class="dppnfTitle">Resources</span>
+                                                        <span class="dppnfSubtitle"> </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexa-voice-service/alexa-auto-sdk" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Auto SDK</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="/content/alexa-language-masters/en_US/alexa/alexa-skills-kit/alexa-development-for-businesses" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa for Business</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://alexa.design/hospitality" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa for Hospitality</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                </li>
+            
+                
+                
+                <li class="dppnItem   accrItem">
+                    <a class="dppnLink">
+                        Programs
+                    </a>
+                    
+                        <div class="dpIconArrow accrHandle"></div>
+                        <div class="dppnFlyoutWrap">
+                            <div class="dppnSecondaryNavWrap">
+                                <ul class="dppnFlyout dppnSecondaryNav">
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexa-fund" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Fund</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                            <div class="dpIconArrow accrHandle"></div>
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            <ul class="dppnFlyout dppnLevel3Nav">
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa-fund/fund-signup" class="dppnfLink">
+                                                        <span class="dppnfTitle">Pitch Us</span>
+                                                        <span class="dppnfSubtitle">Tell us about your company </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa-fund" class="dppnfLink">
+                                                        <span class="dppnfTitle">Portfolio</span>
+                                                        <span class="dppnfSubtitle">Alexa Fund Portfolio companies </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa-fund/alexa-accelerator" class="dppnfLink">
+                                                        <span class="dppnfTitle">Alexa Accelerator</span>
+                                                        <span class="dppnfSubtitle">Program for early-stage startups </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa-fund/alexa-fellowship" class="dppnfLink">
+                                                        <span class="dppnfTitle">Alexa Fellowship</span>
+                                                        <span class="dppnfSubtitle">Program for university students </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexaprize" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Prize</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexa/science" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Science</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexa/champions" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Champions</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/en-US/alexa/voice-interoperability" class="dppnfLink">
+                                                <span class="dppnfTitle">Voice Interoperability Initiative</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                </li>
+            
+                
+                
+                <li class="dppnItem   accrItem">
+                    <a class="dppnLink">
+                        Docs
+                    </a>
+                    
+                        <div class="dpIconArrow accrHandle"></div>
+                        <div class="dppnFlyoutWrap">
+                            <div class="dppnSecondaryNavWrap">
+                                <ul class="dppnFlyout dppnSecondaryNav">
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/docs/ask-overviews/build-skills-with-the-alexa-skills-kit.html" class="dppnfLink">
+                                                <span class="dppnfTitle">Build Skills</span>
+                                                <span class="dppnfSubtitle">Alexa Skills Kit </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/docs/alexa-voice-service/get-started-with-alexa-voice-service.html" class="dppnfLink">
+                                                <span class="dppnfTitle">Build Alexa into a Device</span>
+                                                <span class="dppnfSubtitle">Alexa Voice Service </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                        
+                                            <span class="dppnfLink">
+                                                <span class="dppnfTitle">Connect Devices to Alexa</span>
+                                                <span class="dppnfSubtitle">Alexa Smart Home &amp; Alexa Gadgets</span>
+                                            </span>
+                                        
+                                        
+                                            <div class="dpIconArrow accrHandle"></div>
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            <ul class="dppnFlyout dppnLevel3Nav">
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/docs/smarthome/understand-the-smart-home-skill-api.html" class="dppnfLink">
+                                                        <span class="dppnfTitle">Smart Home Skills</span>
+                                                        <span class="dppnfSubtitle"> </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/docs/echo-button-skills/understand-echo-button-skills.html" class="dppnfLink">
+                                                        <span class="dppnfTitle">Echo Button Skills</span>
+                                                        <span class="dppnfSubtitle"> </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/docs/alexa-gadgets-toolkit/understand-alexa-gadgets-toolkit.html" class="dppnfLink">
+                                                        <span class="dppnfTitle">Alexa Gadgets Toolkit</span>
+                                                        <span class="dppnfSubtitle"> </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/docs/smapi/ask-cli-intro.html" class="dppnfLink">
+                                                <span class="dppnfTitle">Manage Skills</span>
+                                                <span class="dppnfSubtitle">ASK CLI and SMAPI </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                </li>
+            
+                
+                
+                <li class="dppnItem   accrItem">
+                    <a href="https://developer.amazon.com/en-US/blogs/alexa" class="dppnLink">
+                        Blog
+                    </a>
+                    
+                        <div class="dpIconArrow accrHandle"></div>
+                        <div class="dppnFlyoutWrap">
+                            <div class="dppnSecondaryNavWrap">
+                                <ul class="dppnFlyout dppnSecondaryNav">
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/en-US/blogs/alexa/alexa-skills-kit" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Skills Kit</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/en-US/blogs/alexa/device-makers" class="dppnfLink">
+                                                <span class="dppnfTitle">Device Makers</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/en-US/blogs/alexa/alexa-auto" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Auto</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/blogs/alexa/tag/Alexa+Science" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Science</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+</div>
+
+    
+        
+        
+        <div class="SubNavComponent">
+<div class="content">
+
+    <div class="blog-sub-header-component">
+        <div class="d-none d-sm-none d-md-block">
+            <ul style="background-color:#e6e6e6" class="sub-nav-items mt-none mb-none">
+                
+
+                
+                    
+                        <li class="sub-nav-item active">
+                            <a class="font-black" href="https://developer.amazon.com/en-US/blogs/alexa/device-makers"><span>Device Makers Blog</span></a>
+                        </li>
+                    
+
+                    
+                    
+                
+                    
+
+                    
+                        <li class="sub-nav-item "><a class="font-black" href="https://developer.amazon.com/en-US/blogs/alexa/device-makers/news"><span>News</span></a></li>
+                    
+                    
+                
+                    
+
+                    
+                        <li class="sub-nav-item "><a class="font-black" href="https://developer.amazon.com/en-US/blogs/alexa/device-makers/tips-and-tools"><span>Tips &amp; Tools</span></a></li>
+                    
+                    
+                
+                    
+
+                    
+                        <li class="sub-nav-item "><a class="font-black" href="https://developer.amazon.com/en-US/blogs/alexa/device-makers/spotlight"><span>Spotlight</span></a></li>
+                    
+                    
+                
+            </ul>
+        </div>
+
+        <div class="d-block d-sm-none d-none d-sm-block d-md-none">
+            <div id="subNabMControls" data-interval="false" style="background-color:#e6e6e6" class="sub-nav-items carousel slide mt-none mb-none" data-ride="carousel">
+                <div class="carousel-inner">
+                    
+
+                    
+                        
+                            <div class="sub-nav-item carousel-item active selectedactive"><a class="font-black" href="https://developer.amazon.com/en-US/blogs/alexa/device-makers"><span>Device Makers Blog</span></a></div>
+                        
+                        
+
+                        
+
+                    
+                        
+                        
+                            <div class="sub-nav-item carousel-item "><a class="font-black" href="https://developer.amazon.com/en-US/blogs/alexa/device-makers/news"><span>News</span></a></div>
+                        
+
+                        
+
+                    
+                        
+                        
+                            <div class="sub-nav-item carousel-item "><a class="font-black" href="https://developer.amazon.com/en-US/blogs/alexa/device-makers/tips-and-tools"><span>Tips &amp; Tools</span></a></div>
+                        
+
+                        
+
+                    
+                        
+                        
+                            <div class="sub-nav-item carousel-item "><a class="font-black" href="https://developer.amazon.com/en-US/blogs/alexa/device-makers/spotlight"><span>Spotlight</span></a></div>
+                        
+
+                        
+
+                    
+                </div>
+
+                <a class="carousel-control-prev" href="#subNabMControls" role="button" data-slide="prev">
+                    <img src="//d3ogm7ac91k97u.cloudfront.net/content/dam/shared/left-arrow.png" class="subnav-carousel" alt="left-arrow" />
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#subNabMControls" role="button" data-slide="next">
+                    <img src="//d3ogm7ac91k97u.cloudfront.net/content/dam/shared/right-arrow.png" class="subnav-carousel" alt="left-arrow" />
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+    
+
+</div>
+
+    
+
+</div>
+<div class="root responsivegrid">
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="rowComponent aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+<div class="row-container">
+	<div class="mt-none mb-none" style="background-color:none">
+<!--The super indent field was added to the dialog after the pages were authored. Hence in order to avoid re-authoring the pages, properties.contentIndent has to be checked before being applied. If this is not done, existing row containers authored in page will not pick up the required CSS class  -->		
+		<div class="inner-wrap-indent px-3 px-md-5">
+			<div class="row-component_wrapper p-large">
+				
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-none mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+			<div class="column-control_wrapper_container65-35 clearfix gutter-blog">
+				<div class="column-control_wrapper_container65-35 content-section gutter-blog p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="blogPostHeader aem-GridColumn aem-GridColumn--default--12">
+<div class="blog-post-component__wrapper card">
+	<div class="blog-post-component__title-text mb-2">Make Your Smart Devices Easy to Setup, Use, and Maintain with Frustration-Free Setup, New Smart Home Skill API Features, and the Alexa Connect Kit</div>
+
+	<div class="d-flex justify-content-between">
+		<div>
+			
+        <span class="blog__desc-item blog__desc-item--author mr-2">
+        <a href="/en-US/blogs/alexa/author.nathan-smith">Nathan Smith</a>
+        </span>
+			
+			<span class="blog-post-component__date">Sep 25, 2019</span>
+		</div>
+		<div class="d-flex">
+			Share:
+			<span class="share__icon share__icon-fb ml-2">
+        <img src="//d3ogm7ac91k97u.cloudfront.net/content/dam/shared/facebook.png" />
+    <span id="fb-root"></span>
+                              <script async="" defer="" crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&amp;version=v4.0"></script>
+        <span class="fb-share-button" data-layout="button" data-size="small"></span>
+
+
+    </span>
+			<span class="share__icon share__icon-in ml-2 mr-2">
+    <img src="//d3ogm7ac91k97u.cloudfront.net/content/dam/shared/linkedin.png" />
+    <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+				<script type="IN/Share"></script>
+     </span>
+			<span class="share__icon share__icon--tw">
+        <img src="//d3ogm7ac91k97u.cloudfront.net/content/dam/shared/twitter.png" />
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">
+        </a><script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </span>
+		</div>
+	</div>
+	<div class="blog-post-component__bottom_text-wrapper mt-2 mb-2">
+		
+			<span class="blog-post-component__video href-btn mr-1 badge badge-pill badge-secondary"><a href="/en-US/blogs/alexa/tag.connected-devices">Connected Devices</a></span>
+		
+			<span class="blog-post-component__video href-btn mr-1 badge badge-pill badge-secondary"><a href="/en-US/blogs/alexa/tag.api">API</a></span>
+		
+			<span class="blog-post-component__video href-btn mr-1 badge badge-pill badge-secondary"><a href="/en-US/blogs/alexa/tag.smart-home">Smart Home</a></span>
+		
+			<span class="blog-post-component__video href-btn mr-1 badge badge-pill badge-secondary"><a href="/en-US/blogs/alexa/tag.news">News</a></span>
+		
+	</div>
+
+	<img class="card-img" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/temp-working-folder/blog/alexa_blog_6307263751.png" alt="Blog_Header_Post_Img" />
+</div>
+</div>
+<div class="text parbase aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    <div class="text-comp mt-none mb-none font-black">
+        <div class="text-comp_wrapper">
+            <div class="description">
+                <p></p><p>Today, we’re excited to announce new features you can use to make your smart devices easier for customers to setup, use, and maintain, and easier for you to build.</p>
+<p>You can join us in our Frustration-Free Setup initiative, and use simple setup, app-to-app account linking, and automated registration to reduce the number of steps it takes customers to connect your Wi-Fi, Zigbee, and Bluetooth devices to their home network and to Alexa. When you make setting up your products easier, customers can take advantage of them more quickly, with fewer customer service contacts and fewer returns.</p>
+<p>You can use the updated Smart Home Skill API and Alexa to enable customers to use more natural voice commands to control any device, to control your home routers and cooking appliances, to stay up-to-date on the state of their&nbsp;smart devices, and even to avoid running out of consumables their devices need to keep running at their&nbsp;best. As a result, you can increase customer engagement and satisfaction with your devices, and create new monetization opportunities for your business.</p>
+<p>You can use the Alexa Connect Kit (ACK), to connect any device to the Internet and Alexa without worrying about managing cloud services, Alexa skills, or complex networking and security firmware. With ACK, you can create products that customers love – easily, quickly, and economically.</p>
+<p>Finally, we are introducing Certified for Humans, a new program designed to help customers find smart home products that are easy to set up and work seamlessly with Alexa.&nbsp;By meeting the minimum eligibility requirements for the program, you can deliver a better customer experience, and, if your product is certified, you could see increased traffic to your products on Amazon.com through high-visibility placements in search and display the new Certified for Humans badge&nbsp;on your product listings.<br />
+&nbsp;</p>
+<h2>Make Your Devices Easy to Connect to Customers’ Home Networks and to Alexa</h2>
+<p>Last year, we announced the <a href="https://blog.aboutamazon.com/devices/making-the-smart-home-even-smarter">Frustration-Free Setup initiative</a>, aimed at making setting up a smart home absolutely simple. We have more work to do together to make it truly effortless. In fact, setup problems are the top source of Amazon customer service contacts and returns for smart home devices.</p>
+<p>The first thing a customer does to setup a smart device is connect it to their home network. By reducing the number of steps required to connect your device to the customer’s home network, you can reduce customer frustration, customer service contacts, and product returns. For your business, this means lower cost and higher profit. With simple setup, now generally available for Wi-Fi and Zigbee, and coming soon for&nbsp;Bluetooth, you can enable customers to connect your device&nbsp;to their home networks by simply powering it on in many cases. For example, when a customer purchases your Wi-Fi connected device on Amazon.com and plugs it in, simple setup can securely send the customer’s saved Wi-Fi password to your device, enabling it to join the customer’s Wi-Fi network automatically. Or, the customer can use the Alexa app to scan your&nbsp;device barcode&nbsp;and then follow the simple&nbsp;instructions to complete the setup with fewer steps than before. <b>TP-Link Kasa, Philips Hue,</b> and<b> eero</b> have already implemented simple setup in their products, and you can implement it beginning today.</p>
+<p>The second thing many customers do to setup a smart device is to connect it to Alexa. Last month we released <a href="https://developer.amazon.com/blogs/alexa/post/f8251953-17ab-44df-b504-5af79af9684a/use-app-to-app-account-linking-and-new-skill-activation-api-to-simplify-skill-setup">app-to-app account linking</a>; you can use it now to enable customers to enable your Alexa skill and link their Alexa account to your account from within your mobile application. We are also working to enable customers to begin controlling a device connected to your Alexa skill before they complete the account linking process. Automated registration, coming soon, can associate a new device with your smart home skill as soon as it is connected,&nbsp;enabling them to use Alexa to control it right away. With the combination of simple setup and automated registration, customers can both connect your device to their network and enable Alexa control simply by plugging it in. <b>TP-Link Kasa</b> is already adding automated registration to their products, and you will be able to add it soon.</p>
+<p>You can learn more about Frustration-Free Setup in this <a href="https://developer.amazon.com/blogs/alexa/post/5d0905b9-6b95-4b94-9c82-e4ab0cc332f9/announcing-simple-setup-for-your-wi-fi-zigbee-and-bluetooth-preview-devices">blog</a> and request access to the Bluetooth simple setup preview <a href="https://developer.amazon.com/frustration-free-setup/console/forms/dev-preview-request">here</a>. Sign up <a href="https://build.amazonalexadev.com/AutomatedRegistration.html">here</a> to be notified when more information on automated registration is available.<br />
+&nbsp;</p>
+<h2>Deliver More Natural and Complete Control with Smart Home Skill API Updates</h2>
+<p>The Smart Home Skill API provides building block APIs that you can use to connect any device feature to Alexa, and APIs you can use for the most common smart device functions, such as turning on lights and locking doors. Device makers have used the Smart Home Skill API to integrate more than 85,000 products with Alexa, enabling customers to control them not only with their voices, but also via touch in the Alexa app, and automatically with Routines. We are enhancing both types of APIs to enable you to do more for customers.</p>
+<h3>Richer Basic Building Block APIs</h3>
+<p>Last year, we introduced the toggle, mode, and range building block APIs in the US. <b>Lutron, Moen, Dyson, Netgear, Ring</b>,<b> Kenmore</b> and other device makers have used these APIs to enable Alexa control of their air conditioners, air purifiers, dog cameras, fans, humidifiers, routers, vacuums, TVs, and more. Coming soon, you can use the building block APIs in nine additional Alexa locales, specifically Australia, Canada, France, Germany, India, Italy, Mexico, Spain, and the UK. <b>Dyson,&nbsp;eWeLink </b>and<b> Liebherr</b> are already building skills to take advantage. Also coming soon, as described below, you can enable customers to use additional voice commands with the building block APIs, and use the APIs to give customers more details about your device state.</p>
+<p>The building block APIs enable you to control any feature of any device using a set of pre-defined phrases. With&nbsp;semantic extensions (coming soon), you can enable additional voice commands - and deliver more natural control - with just a few lines of code. You can tell Alexa to map commands like “open”, “close”, “raise,” and “lower” to specific toggle, range, and mode directives for your device. For example, your customer can say “Alexa, open the garage door,” in addition to “Alexa, set the garage door mode to open.” <b>beam Home </b>and<b> Nexx, </b>are using semantic extensions for their garage door openers, and <b>IKEA, Legrand, Lutron, Schellenberg,</b> and<b> Somfy</b> are using them for their shades. You will be able to use them soon.</p>
+<p>Until now, you could use state reporting from your smart home skill to tell Alexa the state of any toggle, mode, or range&nbsp;that customers can control, and Alexa would use this information to keep customers up-to-date by voice and in the Alexa app. With&nbsp;non-controllable states (coming soon), you can also give customers detail on states they cannot control. For example, you can warn customers that the top of your smart stove is too hot to touch, or tell them when your smart washing machine automatically goes from wash to rinse, or rinse to spin. <b>Hamilton Beach</b> uses a non-controllable state to report on the brew cycle status for their smart coffee maker.</p>
+<p>You can learn more about the building block API updates in this <a href="https://developer.amazon.com/blogs/alexa/post/49eff766-5d95-4faf-9205-2ab52ae8a437/announcing-updated-smart-home-building-block-apis-non-controllable-device-states-semantic-extensions-and-expanded-international-support">blog</a> and sign up <a href="https://build.amazonalexadev.com/2019Semantic_Extensions_Smart-Home-Semantic-Extensions-Interest.html">here</a> to be notified when more information is available.</p>
+<h3>Inventory State Updates and Easy Re-ordering</h3>
+<p>One of the states that customers care most about is when consumable products used in your devices, such as air filters, batteries, and coffee pods, get low and need to be replaced. We are excited to announce that coming soon you can use&nbsp;new inventory sensors in the Smart Home Skill API&nbsp;to report the level or usage of consumables used by your device, and take advantage of built-in integration with Alexa and the Dash Replenishment Service to enable automatic re-ordering of consumables when they’re needed. As a result, you can ensure your customers never have that “ran out of it” moment and create new monetization opportunities for your business. You simply provide inventory or usage updates from your smart home skill and identify the right replacement supplies in the Amazon Dash replenishment service portal, and we’ll do the rest. You can choose to sell your own genuine products that you design and manufacture specifically for your device, or you can receive a fee for other products sold on Amazon.com. <b>August Home, Blink, Coway, Ring, Schlage, </b>and<b> Yale </b>are already building skills using inventory sensors, and you can use them soon.</p>
+<p>Learn more in this <a href="https://developer.amazon.com/blogs/alexa/post/83f38ae7-a3a8-4cb8-a83a-dfe844ad066e/coming-soon-alexa-smart-home-developers-can-make-their-customer-s-lives-easier-by-helping-them-never-run-out-of-supplies-and-earn-revenue-in-the-process">blog</a>&nbsp;and sign up <a href="https://build.amazonalexadev.com/2019DashReplenishment_DashReplenishment.html">here</a> to be notified when more information is available.</p>
+<h3>New APIs for Home Networking and Cooking Functions</h3>
+<p>In addition to the building block APIs, the Smart Home Skill API provides you with APIs designed specifically to enable control of common smart home functions, such as turning on lights, locking doors, and setting target thermostat temperatures. Coming soon, we are introducing a new networking API for controlling home router and Wi-Fi functions, expanding the cooking API to support more cooking modes and functions, and extending 2-way communications with smart home cameras to many more Echo endpoints.</p>
+<p>With the new networking API (coming soon), you can enable your customers to use Alexa to control your networking devices. With Alexa control, your customers can use their voices to quickly manage Wi-Fi access and other&nbsp;valuable features in your devices that previously required them to open a mobile app or web browser. You can enable them to manage Wi-Fi access for individual devices or groups of devices. For example, your customers could say, “Alexa, turn off Daniel’s Wi-Fi” when it’s time for dinner and “Alexa, enable guest Wi-Fi” when relatives visit.&nbsp;<b>Arris, ASUS, eero, Linksys,</b> and<b> TP-Link</b> are already building skills using the networking&nbsp;API, and you can use it soon.</p>
+<p>The Smart Home Skill API currently supports defrost, preset, reheat, and timecook cooking modes, and is best suited for microwaves and other preset-centric cooking appliances. Coming soon, you can use the updated cooking API to enable customers to control more&nbsp;cooking appliances and functions with Alexa, allowing them to use your appliances hands-free and check cooking progress from other rooms in the house. The updated cooking API enables you to support 40 different cooking modes, including air-fry, bake, pressure cook, roast, and slow cook, and adds new APIs that allow you to enable customer control based on oven and food temperature. <b>GE Appliances, Instant Pot, June Oven, LG, Traeger, </b>and<b> Whirlpool</b> are already building skills using the updated cooking API now, and you can use it soon.</p>
+<p>Next year, we will add the ability for you to use Alexa to make announcements on cooking status, and to enable your customers to Scan-to-Cook packaged foods using Alexa. With Scan-to-Cook, your customer can use the Alexa app to scan the barcode on packaged food, and Alexa sends your device the right cooking instructions. Scan-to-Cook will work with hundreds of packaged foods from brands including <b>Whole Foods Market, 365 Everyday Value, Gardein, Marie Callender’s</b>, and more.</p>
+<p>Last year, we released the 2-way communication API to enable smart cameras and doorbells to establish 2-way communications with Echo Show and Echo Spot. With this feature, your customers could use these devices to talk to visitors at their door through your smart home camera. Starting tomorrow, your customers can use all Echo devices with a microphone and speaker, including those without screens, to talk to visitors through your smart home camera. If you already support 2-way communications with Echo Show and Echo Spot in your skill, no changes are required to take advantage of this update. If not, you can add 2-way communications using the <a href="https://developer.amazon.com/docs/device-apis/alexa-rtcsessioncontroller.html">session controller API</a>.</p>
+<p>Sign up <a href="https://build.amazonalexadev.com/NetworkingAPI.html">here</a> to be notified when more information is available on the networking API. Learn more about the&nbsp;updated cooking API&nbsp;in this <a href="https://developer.amazon.com/blogs/alexa/post/26fc2efe-427d-42bb-bcf2-2a13ec718f1e/coming-soon-updated-smart-home-skill-api-enables-alexa-to-control-more-types-of-cooking-appliance">blog</a> and sign up <a href="https://build.amazonalexadev.com/2019Cooking_API_Cooking-API-Interest.html">here</a> to be notified when more information is available.<br />
+&nbsp;</p>
+<h2>Use the Alexa Connect Kit to Easily Make Your Devices Smart</h2>
+<p>We are excited to announce that the Alexa Connect Kit (ACK), is now generally available. ACK enables device makers to connect any device to the Internet and Alexa using an Amazon-managed hardware module, without worrying about managing cloud services, Alexa skills, or complex networking and security firmware. With ACK, you can build smart devices that customers will love - easily, quickly, and economically. <b>Crock-Pot, Eaton, Hamilton Beach, Leedarson, Midea, Mr. Christmas, Procter &amp; Gamble, Tonly, </b>and <b>Amazon</b> are already using it to build products ranging from smart coffee makers to smart Christmas trees; now, you can use it too.</p>
+<p>The ACK hardware module provides Internet connectivity with simple setup, and lets you use Smart Home Skill API features like setting ranges, modes, and toggles, controlling cooking functions, and reporting inventory levels. ACK’s managed cloud service is built on <a href="https://aws.amazon.com/iot/">AWS IoT</a>, and meets the cloud reliability requirements for both Works with Alexa and Certified for Humans certification. With ACK, you pay a fixed one-time cost of less than $7 on average for both the hardware module and your ongoing use of the ACK cloud service. This enables you to eliminate the ongoing unpredictable cost of managing your own cloud service.</p>
+<p>We’re also excited to announce multi-step control (coming soon) on ACK devices. With multi-step control, you can deliver sophisticated functions like recipe presets from the cloud, allowing you to make your devices smarter and smarter over time, with no firmware updates required. You provide the logic which dictates which primitive commands to send to your device and when - based on time, device state, and more. Your device provides real-time state information and responds to primitive commands. The ACK cloud does the rest, including sending the right commands at the right time.</p>
+<p>You can learn how to take advantage of ACK in this <a href="https://developer.amazon.com/blogs/alexa/post/03376e48-f33a-4664-b668-a94d5025dd8e/use-the-alexa-connect-kit-now-available-to-build-alexa-connected-devices-more-easily-quickly-and-economically">blog</a> and order the <a href="https://www.amazon.com/dp/B07WJGSCH2">ACK development kit</a> today. You can also sign up to be notified when more information is available about multi-step control <a href="https://build.amazonalexadev.com/2019AlexaConnect_Alexa-Connect-Kit-Interest.html">here</a>.<br />
+&nbsp;</p>
+<h2>Certified for Humans</h2>
+<p>Today we are excited to introduce Certified for Humans, a new program designed to help customers find smart home products that are easy to set up and work seamlessly with Alexa. Since 2016, Works with Alexa has helped device manufacturers to promote their Alexa compatibility for over 11,000 certified products, and has been successful in driving increased conversion and sales globally. Certified for Humans products go above Works with Alexa to deliver a struggle-free, tinker-free, and stress-free experience. Customers can find the Certified for Humans badge&nbsp;on select smart home devices starting this fall from brands including <b>Amazon, Philips Hue, Hamilton Beach, </b>and <b>TP-Link Kasa</b>.</p>
+<p>To be eligible for the Certified for Humans program, your device must qualify for the Works with Alexa program as well as offering Frustration-Free Setup&nbsp;and a dependable Alexa experience that meets the Certified for Humans bar. If you are certified, you could see increased traffic to your product on Amazon.com through high-visibility placements in search and display the new Certified for Humans badge on your Amazon.com product listings. You can submit your product to Amazon for Certified for Humans consideration once it meets the minimum requirements. We will assess each product against our quality and customer experience standards to determine its eligibility for Certified for Humans certification.</p>
+<p>You can see&nbsp;Certified for Humans products <a href="https://www.amazon.com/b?node=19982322011&amp;ref_=ods_surl_cfh">here</a> and learn more about the Certified for Humans program <a href="https://developer.amazon.com/docs/smarthome/cfh-overview.html">here</a>.<br />
+&nbsp;</p>
+<h2>Learn More and Get Started Today</h2>
+<p>Whether you are starting with a blank sheet of paper, or already offer customers devices that integrate with Alexa, you can take advantage of the new features announced today to make your devices easier for customers to setup, use, and maintain. Take advantage of the following resources linked to learn more and get started today.</p>
+<ul>
+<li><a href="https://developer.amazon.com/blogs/alexa/post/5d0905b9-6b95-4b94-9c82-e4ab0cc332f9/announcing-simple-setup-for-your-wi-fi-zigbee-and-bluetooth-preview-devices">Frustration-Free Setup</a></li>
+<li><a href="https://developer.amazon.com/blogs/alexa/post/49eff766-5d95-4faf-9205-2ab52ae8a437/announcing-updated-smart-home-building-block-apis-non-controllable-device-states-semantic-extensions-and-expanded-international-support">Updated Smart Home Building Block&nbsp;APIs</a></li>
+<li><a href="https://developer.amazon.com/blogs/alexa/post/83f38ae7-a3a8-4cb8-a83a-dfe844ad066e/coming-soon-alexa-smart-home-developers-can-make-their-customer-s-lives-easier-by-helping-them-never-run-out-of-supplies-and-earn-revenue-in-the-process">Inventory Sensors and Automatic Reordering</a></li>
+<li><a href="https://developer.amazon.com/blogs/alexa/post/26fc2efe-427d-42bb-bcf2-2a13ec718f1e/coming-soon-updated-smart-home-skill-api-enables-alexa-to-control-more-types-of-cooking-appliance">Updated Smart Home Cooking API</a></li>
+<li><a href="https://developer.amazon.com/blogs/alexa/post/03376e48-f33a-4664-b668-a94d5025dd8e/use-the-alexa-connect-kit-now-available-to-build-alexa-connected-devices-more-easily-quickly-and-economically">Alexa Connect Kit</a></li>
+</ul>
+<p></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-blog p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="twitter aem-GridColumn aem-GridColumn--default--12">
+<div class="twitter-timeline-widget">
+  <a class="twitter-timeline" data-width="500" data-height="340" href="https://twitter.com/alexadevs">Tweets</a>
+  <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+		
+		
+	</div>
+</div>
+</div>
+
+    
+</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+
+    
+</div></div>
+<div class="footer iparsys parsys">
+
+
+
+    
+        
+        
+        <div class="newpar new section">
+
+</div>
+
+    
+        
+        
+        <div class="par iparys_inherited">
+
+    
+    
+    
+    
+        
+        
+        <div class="navigation-footer">
+
+    
+
+
+<footer>
+    <a class="dpfBackToTopLink" href="#">Back to Top</a>
+    <nav class="dpfNav accordion clearfix">
+        <div class="dpfWidth">
+            <div class="dpfnHideRightMargin">
+                <div>
+                    <div class="dpfnCol">
+                        <div>
+                            <div class="dpfnGroup accrItem">
+                                <div class="dpIconArrow accrHandle"></div>
+                                <h3><a>Alexa Skills Kit</a></h3>
+                                <ul>
+                                    <div>
+                                        <li><a href="https://developer.amazon.com/alexa-skills-kit">Alexa Skills Kit</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-skills-kit/learn">Learn</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-skills-kit/design">Design</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-skills-kit/build">Build</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-skills-kit/launch">Launch</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                        
+                            <div class="dpfnGroup accrItem">
+                                <div class="dpIconArrow accrHandle"></div>
+                                <h3><a>Resources</a></h3>
+                                <ul>
+                                    <div>
+                                        <li><a href="https://developer.amazon.com/alexa-skills-kit/start">Getting Started</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-skills-kit/tutorials">Tutorials</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/docs/ask-overviews/build-skills-with-the-alexa-skills-kit.html">Documentation</a></li>
+                                    
+                                        <li><a href="https://forums.developer.amazon.com/spaces/165/index.html">Developer Forum</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa/agencies-and-tools">Agencies and Tools</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="dpfnCol">
+                        <div>
+                            <div class="dpfnGroup accrItem">
+                                <div class="dpIconArrow accrHandle"></div>
+                                <h3><a>Alexa Voice Service</a></h3>
+                                <ul>
+                                    <div>
+                                        <li><a href="https://developer.amazon.com/alexa-voice-service">Alexa Voice Service</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-voice-service/learn">Learn</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-voice-service/design">Design</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-voice-service/build">Build</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-voice-service/launch">Launch</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                        
+                            <div class="dpfnGroup accrItem">
+                                <div class="dpIconArrow accrHandle"></div>
+                                <h3><a>AVS Resources</a></h3>
+                                <ul>
+                                    <div>
+                                        <li><a href="https://developer.amazon.com/docs/alexa-voice-service/get-started-with-alexa-voice-service.html">Getting Started</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-voice-service/sdk">AVS Device SDK</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/docs/alexa-voice-service/api-overview.html">AVS API</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-voice-service/dev-kits">Dev Kits for AVS</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="dpfnCol">
+                        <div>
+                            <div class="dpfnGroup accrItem">
+                                <div class="dpIconArrow accrHandle"></div>
+                                <h3><a>Connected Devices</a></h3>
+                                <ul>
+                                    <div>
+                                        <li><a href="https://developer.amazon.com/alexa/connected-devices">Alexa Smart Home</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa/alexa-gadgets">Alexa Gadgets</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                        
+                            <div class="dpfnGroup accrItem">
+                                <div class="dpIconArrow accrHandle"></div>
+                                <h3><a>Agreements</a></h3>
+                                <ul>
+                                    <div>
+                                        <li><a href="https://developer.amazon.com/appsandservices/support/legal/da">Amazon Developer Services Agreement</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/appsandservices/support/pml.html">Program Materials License Agreement</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/public/support/mobileads/publisher-agreement.html">Mobile Ad Network Publisher Agreement</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/public/support/mobileads/participation-requirements.html">Mobile Ad Network Program Participation Requirements</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/public/support/advertise-your-app-agreement">Advertise Your App with Amazon Agreement</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/public/support/legal/tuabg">Trademark Guidelines</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/public/support/legal/tou">Terms of Use</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-voice-service/support/terms-and-agreements">AVS Program Requirements</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="dpfnCol">
+                        <div>
+                            <div class="dpfnGroup accrItem">
+                                <div class="dpIconArrow accrHandle"></div>
+                                <h3><a>Blogs</a></h3>
+                                <ul>
+                                    <div>
+                                        <li><a href="/content/alexa-blog/en_US/blogs/alexa/alexa-skills-kit">Alexa Skills Kit Blog</a></li>
+                                    
+                                        <li><a href="/content/alexa-blog/en_US/blogs/alexa/device-makers">Device Makers Blog</a></li>
+                                    
+                                        <li><a href="https://aws.amazon.com/blogs/aws/">AWS Blog</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                        
+                            <div class="dpfnGroup accrItem">
+                                <div class="dpIconArrow accrHandle"></div>
+                                <h3><a>Support</a></h3>
+                                <ul>
+                                    <div>
+                                        <li><a href="https://developer.amazon.com/support/">Amazon Developer Support</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/support/contact-us?subjectCategory=ALEXA">Contact Us</a></li>
+                                    
+                                        <li><a href="https://forums.developer.amazon.com/spaces/165/index.html">Forums</a></li>
+                                    
+                                        <li><a href="https://build.amazonalexadev.com/preference-center.html">Manage Email Preferences</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="dpfSocialLocal clearfix">
+        <div class="dpfWidth">
+            <div class="dpfSocial">
+                <span class="dpfSocialTitle">
+                    Follow Us:
+                </span>
+                
+                    <a href="https://www.facebook.com/AlexaDevs/">
+                        <img src="//d3ogm7ac91k97u.cloudfront.net/content/dam/shared/social/logo-facebook.png" />
+                    </a>
+                
+                    <a href="https://twitter.com/alexadevs">
+                        <img src="//d3ogm7ac91k97u.cloudfront.net/content/dam/shared/social/logo-twitter..png" />
+                    </a>
+                
+                    <a href="https://developer.amazon.com/blogs/alexa/">
+                        <img src="//d3ogm7ac91k97u.cloudfront.net/content/dam/shared/social/logo-blog.png" />
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+</footer></div>
+
+    
+
+</div>
+
+    
+
+</div>
+
+</div>
+            
+    
+    
+	
+    
+<script type="text/javascript" src="//d3ogm7ac91k97u.cloudfront.net/etc.clientlibs/developer-portal/clientlibs/dependencies.bc2e3663a17988bb5631a62d7bf1d94e.js"></script>
+
+
+
+    
+    
+<script type="text/javascript" src="//d3ogm7ac91k97u.cloudfront.net/etc.clientlibs/developer-portal/clientlibs/main.915f2e870b19b8ac03f1a60cd6331652.js"></script>
+
+
+    
+
+
+
+
+    
+
+    
+
+    
+
+            
+
+        
+    
+
+</body>
+      
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="dante-footer">
+    <div class="container-fluid p-0">
+        <div class="d-flex flex-row align-items-start dante-footer-row">
+            <div class="flex-column">
+                <div id="localizationSelector" class="dropup">
+                    <a id="localizationSelectorLink" class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="localizationIcon align-middle"></i>
+                        <span class="align-middle">
+                            English (US)
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu localizerSelectorMenu" aria-labelledby="localizationSelectorLink">
+                        
+                            <a href="#" onclick='updateLocale("en_AU")'>
+                                <li class="w-100">
+                                    <span class="ml-3">English (ANZ)</span>
+                                </li>
+                            </a>
+                        
+                            <a href="#" onclick='updateLocale("en_GB")'>
+                                <li class="w-100">
+                                    <span class="ml-3">English (UK)</span>
+                                </li>
+                            </a>
+                        
+                            <a href="#" onclick='updateLocale("en_IN")'>
+                                <li class="w-100">
+                                    <span class="ml-3">English (India)</span>
+                                </li>
+                            </a>
+                        
+                            <a href="#" onclick='updateLocale("ja_JP")'>
+                                <li class="w-100">
+                                    <span class="ml-3">Japanese (日本語)</span>
+                                </li>
+                            </a>
+                        
+                            <a href="#" onclick='updateLocale("fr_FR")'>
+                                <li class="w-100">
+                                    <span class="ml-3">French (Français)</span>
+                                </li>
+                            </a>
+                        
+                            <a href="#" onclick='updateLocale("it_IT")'>
+                                <li class="w-100">
+                                    <span class="ml-3">Italian (Italiano)</span>
+                                </li>
+                            </a>
+                        
+                            <a href="#" onclick='updateLocale("de_DE")'>
+                                <li class="w-100">
+                                    <span class="ml-3">German (Deutsch)</span>
+                                </li>
+                            </a>
+                        
+                            <a href="#" onclick='updateLocale("es_ES")'>
+                                <li class="w-100">
+                                    <span class="ml-3">Spanish (España)</span>
+                                </li>
+                            </a>
+                        
+                            <a href="#" onclick='updateLocale("es_MX")'>
+                                <li class="w-100">
+                                    <span class="ml-3">Spanish (México)</span>
+                                </li>
+                            </a>
+                        
+                            <a href="#" onclick='updateLocale("pt_BR")'>
+                                <li class="w-100">
+                                    <span class="ml-3">Portuguese (Brasil)</span>
+                                </li>
+                            </a>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="flex-column ml-auto">
+                <div class="d-flex flex-row ml-auto flex-wrap pb-1 align-middle justify-content-end">
+                    <div class="flex-column">
+                        <span class="dante-copyright-tag">© 2010 - 2019, Amazon.com, Inc. or its affiliates. All Rights Reserved.</span>
+                    </div>
+                    <div class="flex-column flex-wrap pl-3 pr-0 pb-1 d-none d-lg-inline">
+                        <div class="footer-links">
+                            
+
+
+
+
+
+
+
+
+
+
+<a href="https://developer.amazon.com/terms-and-agreements" target="_blank">
+    Terms
+</a>
+<a href="/docs/ask-overviews/build-skills-with-the-alexa-skills-kit.html" target="_blank">
+    Docs
+</a>
+<a href="https://forums.developer.amazon.com/spaces/23/index.html" target="_blank">
+    Forums
+</a>
+<a href="https://developer.amazon.com/blogs/alexa" target="_blank">
+    Blog
+</a>
+<a href="https://developer.amazon.com/alexa" target="_blank">
+    Alexa Developer Home
+</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row dante-footer-row d-inline d-lg-none pb-2">
+            <div class="footer-links d-flex justify-content-end">
+                
+
+
+
+
+
+
+
+
+
+
+<a href="https://developer.amazon.com/terms-and-agreements" target="_blank">
+    Terms
+</a>
+<a href="/docs/ask-overviews/build-skills-with-the-alexa-skills-kit.html" target="_blank">
+    Docs
+</a>
+<a href="https://forums.developer.amazon.com/spaces/23/index.html" target="_blank">
+    Forums
+</a>
+<a href="https://developer.amazon.com/blogs/alexa" target="_blank">
+    Blog
+</a>
+<a href="https://developer.amazon.com/alexa" target="_blank">
+    Alexa Developer Home
+</a>
+
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- TODO: switch to own JQuery after setup -->
+<script src="https://m.media-amazon.com/images/G/01/alexa-blueprints/jquery-3.3.1.min._CB1518646291_.js"></script>
+<script src="https://m.media-amazon.com/images/G/01/ASK/rosie-v2/js/bootstrap.bundle._CB476904092_.js"></script>
+<script src="/alexa/console/ask/dante/static/js/app.js"></script>
+
+<script type="text/javascript">_satellite.pageBottom()</script>
+</body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LVXJD4"
+              height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+</html>
+   
+
+
