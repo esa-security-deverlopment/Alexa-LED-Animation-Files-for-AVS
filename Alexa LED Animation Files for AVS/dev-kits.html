@@ -1,0 +1,5927 @@
+
+
+
+
+
+   
+   
+      <!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+<html lang="en-US">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+        {'gtm.start': new Date().getTime(),event:'gtm.js'}
+    );var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5LVXJD4');</script>
+    <!-- End Google Tag Manager -->
+
+    <title>Development Kits for Alexa Voice Service</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="wfEDah_6uJe9Y7uIfLrVycd_efr8wQ9YO-fM_5MI5w0"/>
+    <meta name="google-site-verification" content="Eu8BqTWMhRRdfCAdqUh2RYb3SjAiuFp4wmgTtGcteM0"/>
+    <meta name="google-site-verification" content="KHmp6TUPKc1gHlM9TuB842pcV7TxZVV6TgenZtsYoNY"/>
+    <meta name="msvalidate.01" content="9761B379C1B64F587D71BA40337FDD07"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <!-- Dynamic meta tags -->
+    <meta name="description" content="Reference solutions and resources for building products with Amazon Alexa" /><meta name="template" content="content-page-with-header-and-footer-template" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0" />
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://m.media-amazon.com/images/G/01/AlexaDevPortal/favicon-32x32._CB1544644721_.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://m.media-amazon.com/images/G/01/AlexaDevPortal/favicon-96x96._CB1544644752_.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://m.media-amazon.com/images/G/01/AlexaDevPortal/favicon-16x16._CB1544644669_.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" itemprop="url"
+          href="https://m.media-amazon.com/images/G/01/ASK/rosie-v2/css/bootstrap.min._CB472035751_.css"/>
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="/alexa/console/ask/dante/static/css/all.css">
+    <!-- Combined Dante CSS -->
+    <link rel="stylesheet" href="/alexa/console/ask/dante/static/css/app.css"/>
+    <!-- UX Style Dictionary CSS -->
+    
+
+    <!-- Dynamic link tags -->
+    <link rel="alternate" href="/alexa/alexa-voice-service/dev-kits" hreflang="en-US" />
+<link rel="canonical" href="/alexa/alexa-voice-service/dev-kits" hreflang="en-US" />
+<link rel="stylesheet" href="//d3ogm7ac91k97u.cloudfront.net/etc.clientlibs/developer-portal/clientlibs/dependencies.4c9468760cc14066cb16e03f91a18210.css" type="text/css" hreflang="en-US" />
+<link rel="stylesheet" href="//d3ogm7ac91k97u.cloudfront.net/etc.clientlibs/developer-portal/clientlibs/main.fa7cafec5dcd1815d3569305a21f7b97.css" type="text/css" hreflang="en-US" />
+
+
+    <!-- Dynamic script tags -->
+    <script type="text/javascript">
+		(function() {
+		  var didInit = false;
+		  function initMunchkin() {
+		    if(didInit === false) {
+		      didInit = true;
+		      Munchkin.init('365-EFI-026');
+		    }
+		  }
+		  var s = document.createElement('script');
+		  s.type = 'text/javascript';
+		  s.async = true;
+		  s.src = '//munchkin.marketo.net/munchkin.js';
+		  s.onreadystatechange = function() {
+		    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+		      initMunchkin();
+		    }
+		  };
+		  s.onload = initMunchkin;
+		  document.getElementsByTagName('head')[0].appendChild(s);
+		})();
+	</script>
+
+    <script language="JavaScript" type="text/javascript">
+        var digitalData = {
+            page: {
+                pageInfo: {
+                    pageInstanceID: "en-US/alexa/alexa-voice-service/dev-kits",
+                    path: "/en-US/alexa/alexa-voice-service/dev-kits",
+                    pageID: "dev-kits",
+                    pageTitle: "DEV-KITS",
+                    pageType: "DeX",
+                    primaryCategory: "alexa",
+                    pageName: "alexa:DEV-KITS",
+                    language: "en_US"
+                }
+            },
+            user: {
+                userID: "",
+                ipAddress: "94.191.128.47",
+                userAgent: ""
+            }
+        };
+    </script>
+    <script src="//assets.adobedtm.com/2c02c31d2aed638ba6c6ca977df6b73f9ff514c3/satelliteLib-38635b7dc936a1789c429e0c77550bc7a78f33af.js"></script>
+</head>
+
+<body>
+
+<div class="dante-content-wrapper">
+    
+    
+    
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<header class="dante-header">
+    <div class="container-fluid p-0">
+        <nav class="navbar d-flex flex-row align-items-start custom-nav-bar">
+            <div class="flex-column p-0 m-0">
+                <a href="/alexa/alexa-skills-kit" id="dpc-header-logo" class="dpc-logo">
+                    <div class="row">
+                            <div class="col align-self-end">
+                                    <img src="https://m.media-amazon.com/images/G/01/AlexaDevPortal/alexa.CB473388935._CB1539290662_.png" alt="Alexa Developer Console" class="p-0">
+                            </div>
+                            <div class="col align-self-center">
+                                <span class="dpc-console-title row justify-content-start">amazon alexa</span>
+                            </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex-column-reverse ml-auto">
+                <ul class="navbar-nav dpcHeaderButtonRow">
+
+                    
+                    
+                        <li class="nav-item dpcHeaderLink">
+                            <a href="https://developer.amazon.com/alexa/console/signin">Sign In</a>
+                        </li>
+                    
+                    
+
+                    <li class="nav-item nav-item-dpcSearch dpcHeaderButtonWrapper">
+                        <a href="#" id="dpcHeaderSearchButtonAnchor">
+                            <div class ="dpcHeaderButton dpcHeaderSearchButton">
+                                <svg class="dpcSearchIcon" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                     shape-rendering="geometricPrecision">
+                                    <circle stroke="#FFFFFF" stroke-width="2" cx="8" cy="8" r="7" fill="transparent"></circle>
+                                    <path d="M13.5,13.5 L19.5,19.5" id="Path-1" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"></path>
+                                </svg>
+                            </div>
+                        </a>
+                        <form id="dpcSearchForm" class="dpcSearch active d-none" method="get" action="https://developer.amazon.com/search"  target="_blank">
+                            <button type="submit" id="searchButton" class="dpcButton dpcButtonSearch">
+                                <svg class="dpcSearchIcon" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                     shape-rendering="geometricPrecision">
+                                    <circle stroke="#FFFFFF" stroke-width="2" cx="8" cy="8" r="7" fill="transparent"></circle>
+                                    <path d="M13.5,13.5 L19.5,19.5" id="Path-1" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"></path>
+                                </svg>
+                            </button>
+                            <div class="dpcSearchWrap">
+                                <input type="search" id="search" name="query" class="dpcSearchField" onfocus="this.value=''"
+                                   placeholder='Search...'
+                                autocomplete="off" >
+                            </div>
+                        </form>
+                    </li>
+
+                    
+                        
+                    
+
+                    <li class="nav-item pr-2">
+                        <a class="nav-link dpcHeaderButtonWrapper pr-0" href="#" id="navbarSupportDropdownMenuLink">
+                            <div class ="dpcHeaderButton" id="support-popover" data-toggle="popover">
+                                <span> <i class="fas fa-ellipsis-v"></i> </span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+<!-- user account popover content -->
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<!-- support popover content -->
+<div id="support-popover-content" style="display: none">
+    <div class="header-popover-content">
+        <div class="header-popover-inner-content">
+            <div class="hp-menu">
+                <ul>
+                    <a class="container" href="/docs/ask-overviews/build-skills-with-the-alexa-skills-kit.html" target="_blank">
+                        <li>
+                            <span class="ml-3">Documentation</span>
+                        </li>
+                    </a>
+                    <a class="container" href="https://forums.developer.amazon.com/spaces/23/index.html" target="_blank">
+                        <li>
+                            <span class="ml-3">Forums</span>
+                        </li>
+                    </a>
+                    
+                        
+                            <a class="container" href="https://developer.amazon.com/alexa/console/contact-us" target="_blank">
+                        
+                        
+                    
+                        <li>
+                            <span class="ml-3">Contact Us</span>
+                        </li>
+                    </a>
+                    
+                    <li role="separator"><div class="dropdown-divider"></div></li>
+                    <a class="container" href="https://developer.amazon.com/alexa" target="_blank">
+                        <li>
+                            <span class="ml-3">Alexa Developer Home</span>
+                        </li>
+                    </a>
+                    <a class="container" href="https://developer.amazon.com/alexa/console/ask">
+                        <li>
+                            <span class="ml-3">Alexa Developer Console</span>
+                        </li>
+                    </a>
+                    <a class="container" href="https://developer.amazon.com/alexa/console/avs">
+                        <li>
+                            <span class="ml-3">Alexa Voice Service</span>
+                        </li>
+                    </a>
+                    <a class="container" href="https://developer.amazon.com/alexa/console/wwa">
+                        <li>
+                            <span class="ml-3">Works With Alexa</span>
+                        </li>
+                    </a>
+                    <a class="container" href="https://developer.amazon.com/alexa/console/ack">
+                        <li>
+                            <span class="ml-3">Alexa Connect Kit</span>
+                        </li>
+                    </a>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </nav>
+    </div>
+</header>
+
+    <div class="dante-content">
+        <div class="dante-container-fluid flex-grow-1">
+            <div class="dante-row flex-grow-1">
+                <div class="dpc-tenant-content flex-grow-1" style="width:100%">
+                    
+         <body class="alexa-content-page alexa-base-page page basicpage">
+        
+        
+            
+
+
+
+            <div class="base-wrapper">
+    <div class="header iparsys parsys">
+
+
+
+    
+        
+        
+        <div class="newpar new section">
+
+</div>
+
+    
+        
+        
+        <div class="par iparys_inherited">
+
+    
+    
+    
+    
+        
+        
+        <div class="navigation-header">
+
+    
+
+
+
+<header class="dpHeader">
+    <div class="dphTopBar">
+        <div class="dphMenuToggle">
+            <i class="dphMenuIcon"></i>
+            <i class="dphMenuBackIcon"></i>
+        </div>
+    </div>
+    <div class="accordion dphNavigation">
+        <nav class="dpPrimaryNav">
+            <ul class="dppnItems">
+                
+                
+                <li class="dppnItem   accrItem">
+                    <a href="/alexa/alexa-skills-kit" class="dppnLink">
+                        Skill Builders
+                    </a>
+                    
+                        <div class="dpIconArrow accrHandle"></div>
+                        <div class="dppnFlyoutWrap">
+                            <div class="dppnSecondaryNavWrap">
+                                <ul class="dppnFlyout dppnSecondaryNav">
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="/alexa/alexa-skills-kit" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Skills Kit</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="/alexa/feature-updates" class="dppnfLink">
+                                                <span class="dppnfTitle">Release Updates</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="/alexa/alexa-skills-kit/resources" class="dppnfLink">
+                                                <span class="dppnfTitle">Resources</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/docs/ask-overviews/build-skills-with-the-alexa-skills-kit.html" class="dppnfLink">
+                                                <span class="dppnfTitle">Documentation</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="/alexa/alexa-skills-kit/learn/build-a-business" class="dppnfLink">
+                                                <span class="dppnfTitle">Build a Business</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexa/console/ask" class="dppnfLink">
+                                                <span class="dppnfTitle">Developer Console</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                </li>
+            
+                
+                
+                <li class="dppnItem   accrItem">
+                    <a href="/alexa/devices" class="dppnLink">
+                        Device Makers
+                    </a>
+                    
+                        <div class="dpIconArrow accrHandle"></div>
+                        <div class="dppnFlyoutWrap">
+                            <div class="dppnSecondaryNavWrap">
+                                <ul class="dppnFlyout dppnSecondaryNav">
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexa-voice-service" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Built-in Devices</span>
+                                                <span class="dppnfSubtitle">Develop Alexa built-in devices with Alexa Voice Service </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                            <div class="dpIconArrow accrHandle"></div>
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            <ul class="dppnFlyout dppnLevel3Nav">
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/docs/alexa-voice-service/get-started-with-alexa-voice-service.html" class="dppnfLink">
+                                                        <span class="dppnfTitle">Overview</span>
+                                                        <span class="dppnfSubtitle">Integrate Alexa directly into your products. </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa-voice-service/learn" class="dppnfLink">
+                                                        <span class="dppnfTitle">Learn</span>
+                                                        <span class="dppnfSubtitle">Discover AVS features, solutions, and resources </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa-voice-service/learn" class="dppnfLink">
+                                                        <span class="dppnfTitle">Design</span>
+                                                        <span class="dppnfSubtitle">Read functional, hardware &amp; UX guidelines </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa-voice-service/build" class="dppnfLink">
+                                                        <span class="dppnfTitle">Build</span>
+                                                        <span class="dppnfSubtitle">Evaluate SDKs, dev kits, and solution providers </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa-voice-service/launch" class="dppnfLink">
+                                                        <span class="dppnfTitle">Launch</span>
+                                                        <span class="dppnfSubtitle">Prepare for product testing and marketing </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexa/connected-devices" class="dppnfLink">
+                                                <span class="dppnfTitle">Connected Devices</span>
+                                                <span class="dppnfSubtitle">Connect your smart devices to Alexa </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                            <div class="dpIconArrow accrHandle"></div>
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            <ul class="dppnFlyout dppnLevel3Nav">
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa/connected-devices" class="dppnfLink">
+                                                        <span class="dppnfTitle">Overview</span>
+                                                        <span class="dppnfSubtitle">Create a smarter home with Alexa </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa/connected-devices/learn" class="dppnfLink">
+                                                        <span class="dppnfTitle">Learn</span>
+                                                        <span class="dppnfSubtitle">Features and benefits </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa/connected-devices/design" class="dppnfLink">
+                                                        <span class="dppnfTitle">Design</span>
+                                                        <span class="dppnfSubtitle">Design your customer experience </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa/connected-devices/build" class="dppnfLink">
+                                                        <span class="dppnfTitle">Build</span>
+                                                        <span class="dppnfSubtitle">Build with the Smart Home Skill API </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa/connected-devices/launch" class="dppnfLink">
+                                                        <span class="dppnfTitle">Launch</span>
+                                                        <span class="dppnfSubtitle">Launch your skill or submit your product </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                </li>
+            
+                
+                
+                <li class="dppnItem   accrItem">
+                    <a class="dppnLink">
+                        Products
+                    </a>
+                    
+                        <div class="dpIconArrow accrHandle"></div>
+                        <div class="dppnFlyoutWrap">
+                            <div class="dppnSecondaryNavWrap">
+                                <ul class="dppnFlyout dppnSecondaryNav">
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="/alexa/alexa-skills-kit" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Skills Kit</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexa-voice-service" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Voice Service</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexa/connected-devices" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Smart Home</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                        
+                                            <span class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Gadgets Toolkit</span>
+                                                <span class="dppnfSubtitle"></span>
+                                            </span>
+                                        
+                                        
+                                            <div class="dpIconArrow accrHandle"></div>
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            <ul class="dppnFlyout dppnLevel3Nav">
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa/alexa-gadgets" class="dppnfLink">
+                                                        <span class="dppnfTitle">Alexa Gadgets</span>
+                                                        <span class="dppnfSubtitle"> </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa/alexa-gadgets/smart-toys" class="dppnfLink">
+                                                        <span class="dppnfTitle">Alexa Smart Toys</span>
+                                                        <span class="dppnfSubtitle"> </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa/alexa-gadgets/smart-clocks" class="dppnfLink">
+                                                        <span class="dppnfTitle">Alexa Smart Clocks</span>
+                                                        <span class="dppnfSubtitle"> </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa/alexa-gadgets/resources" class="dppnfLink">
+                                                        <span class="dppnfTitle">Resources</span>
+                                                        <span class="dppnfSubtitle"> </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexa-voice-service/alexa-auto-sdk" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Auto SDK</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="/alexa/alexa-skills-kit/alexa-development-for-businesses" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa for Business</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://alexa.design/hospitality" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa for Hospitality</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                </li>
+            
+                
+                
+                <li class="dppnItem   accrItem">
+                    <a class="dppnLink">
+                        Programs
+                    </a>
+                    
+                        <div class="dpIconArrow accrHandle"></div>
+                        <div class="dppnFlyoutWrap">
+                            <div class="dppnSecondaryNavWrap">
+                                <ul class="dppnFlyout dppnSecondaryNav">
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexa-fund" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Fund</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                            <div class="dpIconArrow accrHandle"></div>
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            <ul class="dppnFlyout dppnLevel3Nav">
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa-fund/fund-signup" class="dppnfLink">
+                                                        <span class="dppnfTitle">Pitch Us</span>
+                                                        <span class="dppnfSubtitle">Tell us about your company </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa-fund" class="dppnfLink">
+                                                        <span class="dppnfTitle">Portfolio</span>
+                                                        <span class="dppnfSubtitle">Alexa Fund Portfolio companies </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa-fund/alexa-accelerator" class="dppnfLink">
+                                                        <span class="dppnfTitle">Alexa Accelerator</span>
+                                                        <span class="dppnfSubtitle">Program for early-stage startups </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/alexa-fund/alexa-fellowship" class="dppnfLink">
+                                                        <span class="dppnfTitle">Alexa Fellowship</span>
+                                                        <span class="dppnfSubtitle">Program for university students </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexaprize" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Prize</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexa/science" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Science</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/alexa/champions" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Champions</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/en-US/alexa/voice-interoperability" class="dppnfLink">
+                                                <span class="dppnfTitle">Voice Interoperability Initiative</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                </li>
+            
+                
+                
+                <li class="dppnItem   accrItem">
+                    <a class="dppnLink">
+                        Docs
+                    </a>
+                    
+                        <div class="dpIconArrow accrHandle"></div>
+                        <div class="dppnFlyoutWrap">
+                            <div class="dppnSecondaryNavWrap">
+                                <ul class="dppnFlyout dppnSecondaryNav">
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/docs/ask-overviews/build-skills-with-the-alexa-skills-kit.html" class="dppnfLink">
+                                                <span class="dppnfTitle">Build Skills</span>
+                                                <span class="dppnfSubtitle">Alexa Skills Kit </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/docs/alexa-voice-service/get-started-with-alexa-voice-service.html" class="dppnfLink">
+                                                <span class="dppnfTitle">Build Alexa into a Device</span>
+                                                <span class="dppnfSubtitle">Alexa Voice Service </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                        
+                                            <span class="dppnfLink">
+                                                <span class="dppnfTitle">Connect Devices to Alexa</span>
+                                                <span class="dppnfSubtitle">Alexa Smart Home &amp; Alexa Gadgets</span>
+                                            </span>
+                                        
+                                        
+                                            <div class="dpIconArrow accrHandle"></div>
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            <ul class="dppnFlyout dppnLevel3Nav">
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/docs/smarthome/understand-the-smart-home-skill-api.html" class="dppnfLink">
+                                                        <span class="dppnfTitle">Smart Home Skills</span>
+                                                        <span class="dppnfSubtitle"> </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/docs/echo-button-skills/understand-echo-button-skills.html" class="dppnfLink">
+                                                        <span class="dppnfTitle">Echo Button Skills</span>
+                                                        <span class="dppnfSubtitle"> </span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dppnfItem ">
+                                                    <a href="https://developer.amazon.com/docs/alexa-gadgets-toolkit/understand-alexa-gadgets-toolkit.html" class="dppnfLink">
+                                                        <span class="dppnfTitle">Alexa Gadgets Toolkit</span>
+                                                        <span class="dppnfSubtitle"> </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/docs/smapi/ask-cli-intro.html" class="dppnfLink">
+                                                <span class="dppnfTitle">Manage Skills</span>
+                                                <span class="dppnfSubtitle">ASK CLI and SMAPI </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                </li>
+            
+                
+                
+                <li class="dppnItem   accrItem">
+                    <a href="https://developer.amazon.com/en-US/blogs/alexa" class="dppnLink">
+                        Blog
+                    </a>
+                    
+                        <div class="dpIconArrow accrHandle"></div>
+                        <div class="dppnFlyoutWrap">
+                            <div class="dppnSecondaryNavWrap">
+                                <ul class="dppnFlyout dppnSecondaryNav">
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/en-US/blogs/alexa/alexa-skills-kit" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Skills Kit</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/en-US/blogs/alexa/device-makers" class="dppnfLink">
+                                                <span class="dppnfTitle">Device Makers</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/en-US/blogs/alexa/alexa-auto" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Auto</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                
+                                    <li class="dppnfItem  accrItem">
+                                        
+                                            <a href="https://developer.amazon.com/blogs/alexa/tag/Alexa+Science" class="dppnfLink">
+                                                <span class="dppnfTitle">Alexa Science</span>
+                                                <span class="dppnfSubtitle"> </span>
+                                            </a>
+                                        
+                                        
+                                        
+                                        <div class="dppnLevel3NavWrap">
+                                            
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+</div>
+
+    
+
+</div>
+
+    
+
+</div>
+<div class="root responsivegrid">
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="herobanner aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        .base-wrapper .hero-banner_wrapper .hero-banner-description a {
+            color: #000000;
+            text-decoration: underline;
+        }
+    </style>
+<div class="hero-banner col-12 px-0 font-white" style="background-color:#f6f6f6">
+	
+	
+		<picture>
+			<source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/avs-hp/hero-bkgd_teal-6-dark_center-fade_1500x450.png"></source>
+			
+		    <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/avs-hp/hero-bkgd_teal-6-dark_center-fade_1500x450.png" />
+		</picture>
+	
+	<div class="inner-wrap px-3 px-md-5">
+	
+   
+    
+    <div class="hero-banner_wrapper wrapper-center">
+        <div class="row">
+            <div class="hero-banner_wrapper_center col-12">
+                <div class="text-pos">
+                    <h1>Development Kits for AVS</h1>
+                    
+	                    <h4>Reference Solutions for Creating Products with Alexa Built-in</h4>
+                    
+                    <div class="hero-banner-description">
+                        <p></p>
+                    </div>
+					
+                </div>
+            </div>
+        </div>
+    </div>
+    
+	</div>
+</div>
+
+
+<div class="modal" id="video-modal">
+        <div class="modal-dialog publish">
+            <div class="modal-content">
+				<div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item video-url" src="" frameborder="0" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+
+</div>
+<div class="SubNavComponent aem-GridColumn aem-GridColumn--default--12">
+<div class="content">
+
+    <div class="blog-sub-header-component">
+        <div class="d-none d-sm-none d-md-block">
+            <ul style="background-color:#e6e6e6" class="sub-nav-items mt-none mb-none">
+                
+
+                
+                    
+                        <li class="sub-nav-item ">
+                            <a class="font-black" href="/alexa/alexa-voice-service"><span>Alexa Voice Service</span></a>
+                        </li>
+                    
+
+                    
+                    
+                
+                    
+
+                    
+                        <li class="sub-nav-item "><a class="font-black" href="/alexa/alexa-voice-service/learn"><span>Learn</span></a></li>
+                    
+                    
+                
+                    
+
+                    
+                        <li class="sub-nav-item "><a class="font-black" href="/alexa/alexa-voice-service/design"><span>Design</span></a></li>
+                    
+                    
+                
+                    
+
+                    
+                        <li class="sub-nav-item "><a class="font-black" href="/alexa/alexa-voice-service/build"><span>Build</span></a></li>
+                    
+                    
+                
+                    
+
+                    
+                        <li class="sub-nav-item "><a class="font-black" href="/alexa/alexa-voice-service/launch"><span>Launch</span></a></li>
+                    
+                    
+                
+                    
+
+                    
+                    
+                        <li class="sub-nav-item">
+                            <div class="btn-section">
+                                <a href="https://developer.amazon.com/alexa/console/avs/welcome" tabindex="0" target="https://developer.amazon.com/alexa/console/avs/welcome" class="cta-button d-inline-flex align-items-center justify-content-center cta-blue">AVS Console</a>
+                            </div>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+
+        <div class="d-block d-sm-none d-none d-sm-block d-md-none">
+            <div id="subNabMControls" data-interval="false" style="background-color:#e6e6e6" class="sub-nav-items carousel slide mt-none mb-none" data-ride="carousel">
+                <div class="carousel-inner">
+                    
+
+                    
+                        
+                            <div class="sub-nav-item carousel-item active"><a class="font-black" href="/alexa/alexa-voice-service"><span>Alexa Voice Service</span></a></div>
+                        
+                        
+
+                        
+
+                    
+                        
+                        
+                            <div class="sub-nav-item carousel-item "><a class="font-black" href="/alexa/alexa-voice-service/learn"><span>Learn</span></a></div>
+                        
+
+                        
+
+                    
+                        
+                        
+                            <div class="sub-nav-item carousel-item "><a class="font-black" href="/alexa/alexa-voice-service/design"><span>Design</span></a></div>
+                        
+
+                        
+
+                    
+                        
+                        
+                            <div class="sub-nav-item carousel-item "><a class="font-black" href="/alexa/alexa-voice-service/build"><span>Build</span></a></div>
+                        
+
+                        
+
+                    
+                        
+                        
+                            <div class="sub-nav-item carousel-item "><a class="font-black" href="/alexa/alexa-voice-service/launch"><span>Launch</span></a></div>
+                        
+
+                        
+
+                    
+                        
+                        
+
+                        
+                            <div class="sub-nav-item carousel-item">
+                                <div class="btn-section">
+                                    <a href="https://developer.amazon.com/alexa/console/avs/welcome" tabindex="0" target="https://developer.amazon.com/alexa/console/avs/welcome" class="cta-button d-inline-flex align-items-center justify-content-center cta-blue">AVS Console</a>
+                                </div>
+                            </div>
+                        
+
+                    
+                </div>
+
+                <a class="carousel-control-prev" href="#subNabMControls" role="button" data-slide="prev">
+                    <img src="//d3ogm7ac91k97u.cloudfront.net/content/dam/shared/left-arrow.png" class="subnav-carousel" alt="left-arrow" />
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#subNabMControls" role="button" data-slide="next">
+                    <img src="//d3ogm7ac91k97u.cloudfront.net/content/dam/shared/right-arrow.png" class="subnav-carousel" alt="left-arrow" />
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<div class="rowComponent aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+<div class="row-container">
+	<div class="mt-none mb-none" style="background-color:none">
+<!--The super indent field was added to the dialog after the pages were authored. Hence in order to avoid re-authoring the pages, properties.contentIndent has to be checked before being applied. If this is not done, existing row containers authored in page will not pick up the required CSS class  -->		
+		<div class="inner-wrap-indent px-3 px-md-5">
+			<div class="row-component_wrapper p-large">
+				
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-none mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+			<div class="column-control_wrapper_container60-40 clearfix gutter-none">
+				<div class="column-control_wrapper_container60-40 content-section gutter-none p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="title aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+<div class="title-comp mt-none mb-none font-black">
+        <div class="title-comp_wrapper">
+			
+				<a class="title-link" id="accelerate-alexa-voice-integration"></a>
+                
+					<div class="title-left text-left">
+						
+						
+							
+							
+								<h3>Accelerate Alexa Voice Integration</h3>
+							
+							
+							
+								 
+						
+				</div>
+				
+            	
+           
+     </div>
+ </div>
+</div>
+<div class="text parbase aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    <div class="text-comp mt-none mb-none font-black">
+        <div class="text-comp_wrapper">
+            <div class="description">
+                <p>Development Kits for the Alexa Voice Service (AVS) are complete reference solutions for creating products with Alexa built-in. They include chipsets, voice processing technologies, and client software that leverages the AVS APIs to help you easily build commercial-grade, voice-forward products while reducing development costs and accelerating the integration process.&nbsp;</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="title aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+<div class="title-comp mt-medium mb-none font-black">
+        <div class="title-comp_wrapper">
+			
+				<a class="title-link" id="avs-dev-kit-comparison-table"></a>
+                
+					<div class="title-left text-left">
+						
+						
+							
+							
+							
+							
+							
+								<h6>AVS Dev Kit Comparison Table </h6>
+								 
+						
+				</div>
+				
+            	
+           
+     </div>
+ </div>
+</div>
+<div class="text parbase aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    <div class="text-comp mt-none mb-extra-small font-black">
+        <div class="text-comp_wrapper">
+            <div class="description">
+                <p>Download the Dev Kit Comparison Table to filter and compare Amazon-qualified dev kits by various metrics.&nbsp;</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="buttonComponent aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+<div class="btn-section" align="left" id="dev-kts_dkct-download-button">
+	<a href="https://alexa.design/DevKitComparisonTable" tabindex="0" target="_self" class="cta-button d-inline-flex align-items-center justify-content-center cta-blue">Download Now</a>
+</div></div>
+<div class="text parbase aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    <div class="text-comp mt-small mb-none font-black">
+        <div class="text-comp_wrapper">
+            <div class="description">
+                <p><i><sub><b>(Last updated: 11/27/2019)</b></sub></i></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-none p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-component aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    
+    
+    
+    
+    <div class="image-rte">
+        <div class="image-rte_wrapper">
+            
+                <div class="image-pos">
+                    <div class="image-wrap d-flex align-items-center justify-content-center">
+                        
+                        
+                            <a target="_self" tabindex="0" class="image-width">
+                            	
+                                
+                                	
+	                                    <picture class="image-picture">
+	                                        <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/feat_dev-kits_1280x560.png"></source>
+	                                        
+	                                        <img class="image-width" alt="Development Kits for AVS" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/feat_dev-kits_1280x560.png" />
+	                                    </picture>
+	                            	
+                                
+                            </a>
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+		
+		
+	</div>
+</div>
+</div>
+<div class="title aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+<div class="title-comp mt-large mb-none font-black">
+        <div class="title-comp_wrapper">
+			
+				<a class="title-link" id="sections"></a>
+                
+					<div class="title-left text-left">
+						
+						
+							
+							
+							
+							
+							
+								<h6>Sections:</h6>
+								 
+						
+				</div>
+				
+            	
+           
+     </div>
+ </div>
+</div>
+<div class="text parbase aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    <div class="text-comp mt-none mb-none font-black">
+        <div class="text-comp_wrapper">
+            <div class="description">
+                <p><a href="#system-dev-kits">System Dev Kits</a>&nbsp;| <a href="#audio-front-end-dev-kits">Audio Front End Dev Kits</a> |&nbsp;<a href="#choosing-the-right-audio-front-end">Choosing the Right Audio Front End</a> |&nbsp;<a href="#additional-solution-providers">Additional Solution Providers</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+<div class="rowComponent aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+<div class="row-container">
+	<div class="mt-none mb-none" style="background-color:#f6f6f6">
+<!--The super indent field was added to the dialog after the pages were authored. Hence in order to avoid re-authoring the pages, properties.contentIndent has to be checked before being applied. If this is not done, existing row containers authored in page will not pick up the required CSS class  -->		
+		<div class="inner-wrap-indent px-3 px-md-5">
+			<div class="row-component_wrapper p-large">
+				
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="title aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+<div class="title-comp mt-none mb-none font-black">
+        <div class="title-comp_wrapper">
+			
+				<a class="title-link" id="system-dev-kits"></a>
+                	
+            
+                <div class="title-center mx-auto text-center">
+                    
+						
+							
+								<h2>System Dev Kits</h2>
+							
+							
+							
+							
+								 
+						
+                </div>
+				
+           
+     </div>
+ </div>
+</div>
+<div class="text parbase aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    <div class="text-comp mt-none mb-extra-small font-black">
+        <div class="text-comp_wrapper">
+            <div class="description">
+                <p></p><p style="text-align: center;">Complete, end-to-end system reference designs for creating products with Alexa built-in.</p>
+<p></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-extra-large mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+		
+			<div class="column-control_wrapper_container33-33-33 clearfix gutter-large">
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                
+	                    <a href="/alexa/alexa-voice-service/dev-kits/amazon-smart-screen" target="_self" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_amazon-alexa-smart-screen_dev-kit_v2_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_amazon-alexa-smart-screen_dev-kit_v2_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> Amazon Alexa Smart Screen Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Features a production-ready system reference to create beautiful screen-based products with Alexa built-in.</p>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+ <b>-&nbsp;&nbsp;</b>3-mic<br />
+ <b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+ <b>-&nbsp;&nbsp;Limited Availability&nbsp;</b></p>
+<p><a href="/alexa/alexa-voice-service/dev-kits/amazon-smart-screen">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="https://www.qualcomm.com/products/smart-audio-400-platform" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Qualcomm-SH100_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Qualcomm-SH100_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium">Qualcomm Smart Audio 400 Platform Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Comprehensive hardware and software development kit with the necessary building blocks to create smart speakers and smart home assistants with Alexa built-in.</p>
+<ul>
+</ul>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+<b>-&nbsp;&nbsp;</b>2-mic and 4-mic configurations<br />
+<b>-&nbsp;</b> Voice-initiated<br />
+<b>-&nbsp; Limited Availability&nbsp;</b></p>
+<p><a href="https://www.qualcomm.com/products/smart-audio-400-platform" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="https://www.mediatek.com/products/voiceAssistantDevices/mediatek-c4x-development-kit-for-amazon-avs" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_MediaTek-C4X_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_MediaTek-C4X_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium">MediaTek C4X Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Supports a range of device types using the Alexa Smart Screen SDK, multi-room music, and horizontal and vertical microphone configurations.</p>
+<ul>
+</ul>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+<b>-&nbsp;&nbsp;</b>4-mic<br />
+<b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+<b>-&nbsp;&nbsp;Limited Availability&nbsp;</b></p>
+<p><a href="https://www.mediatek.com/products/voiceAssistantDevices/mediatek-c4x-development-kit-for-amazon-avs" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+		
+	</div>
+</div>
+</div>
+<div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-extra-large mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+		
+			<div class="column-control_wrapper_container33-33-33 clearfix gutter-large">
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="https://www.broadcom.com/products/broadband/cable/reference-design/bcm972180_voice" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Broadcom_BCM97271-STB_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Broadcom_BCM97271-STB_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium">Broadcom BCM972180 Voice STB Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>A reference solution for set-top-boxes using the Alexa Smart Screen SDK and smart home skills for entertainment devices.</p>
+<ul>
+</ul>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+<b>-&nbsp;&nbsp;</b>2-mic<br />
+<b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+<b>-&nbsp;&nbsp;Limited Availability&nbsp;</b></p>
+<p><a href="https://www.broadcom.com/products/broadband/cable/reference-design/bcm972180_voice" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="/alexa/alexa-voice-service/dev-kits/qualcomm-home-hub-100-dev-kit-amazon-avs" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Qualcomm_MCU-AIS_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Qualcomm_MCU-AIS_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium">Qualcomm Home Hub 100 Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>An MCU-based development kit with multi-core connectivity supporting Alexa Voice Service for AWS IoT Core connected devices.</p>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+<b>-&nbsp;&nbsp;</b>2-mic<br />
+<b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+<b>-&nbsp;&nbsp;Limited Availability&nbsp;</b></p>
+<p><a href="/alexa/alexa-voice-service/dev-kits/qualcomm-home-hub-100-dev-kit-amazon-avs" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="https://www.mediatek.com/products/voiceAssistantDevices/mt8516-ffa" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_MediaTek_MT8516_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_MediaTek_MT8516_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> MediaTek MT8516 Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>A highly efficient audio applications processor designed for smart speakers, soundbars, smart appliances or other in-home smart products with Alexa built-in. Features a 2-mic far-field array, and includes support for Alexa Multi-Room Music (MRM).</p>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+<b>-&nbsp;&nbsp;</b>2-mic<br />
+<b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+<b>-&nbsp;&nbsp;Limited Availability&nbsp;</b></p>
+<p><a href="https://www.mediatek.com/products/voiceAssistantDevices/mt8516-ffa" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+		
+	</div>
+</div>
+</div>
+<div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-2x-large mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+		
+			<div class="column-control_wrapper_container33-33-33 clearfix gutter-large">
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="http://www.knowles.com/products/smart-microphones/amazon-avs" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_knowles_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_knowles_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> Knowles AISonic SmartMic Headset Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Alexa Mobile Accessory enabled solution for voice-initiated low-power Bluetooth headphones, headsets, and earbuds.</p>
+<p><b>-&nbsp;&nbsp;</b>Close-Talk<br />
+<b>-&nbsp;&nbsp;</b>1-mic<br />
+<b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+<b>-&nbsp;&nbsp;Limited Availability&nbsp;</b></p>
+<p><a href="http://www.knowles.com/products/smart-microphones/amazon-avs" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="https://www.mouser.com/ProductDetail/NXP-Semiconductors/SLN-ALEXA-IOT?qs=vLWxofP3U2wdXXcseLwc1Q%3D%3D" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_NXP-iMX-RT_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_NXP-iMX-RT_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> NXP i.MX RT MCU AVS Solution</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>End-to-end Alexa built-in reference solution for low-cost MCU-based AWS IoT Core connected devices running Amazon FreeRTOS.&nbsp;</p>
+<p><b>-&nbsp;</b>&nbsp;Far-field<br />
+<b>-</b>&nbsp; 3-mic<br />
+<b>-</b>&nbsp; Voice-initiated<br />
+<b>-&nbsp; $149.00&nbsp;</b></p>
+<p><a href="https://www.mouser.com/ProductDetail/NXP-Semiconductors/SLN-ALEXA-IOT?qs=vLWxofP3U2wdXXcseLwc1Q%3D%3D" target="_blank">Order now from Mouser &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+<div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte ">
+    <div class="image-rte_wrapper">
+    	 
+         
+		
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="https://www.qualcomm.com/products/qualcomm-mesh-networking-development-kit-amazon-avs" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Qualcomm-mesh-networking_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Qualcomm-mesh-networking_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> Qualcomm Mesh Networking Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>For mesh routers based on Qualcomm’s single-SoC Wi-Fi router platform and Meeami’s ClearVoice audio algorithms.</p>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+<b>-&nbsp;&nbsp;</b>4-mic<br />
+<b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+<b>-&nbsp;&nbsp;$1,395.00</b></p>
+<p><a href="https://www.qualcomm.com/products/qualcomm-mesh-networking-development-kit-amazon-avs" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+		
+	</div>
+</div>
+</div>
+<div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-2x-large mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+		
+			<div class="column-control_wrapper_container33-33-33 clearfix gutter-large">
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="https://www.digikey.com/en/product-highlight/q/qualcomm/smart-headset-dev-kit-amazon-alexa" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Qualcomm-smart-headset_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Qualcomm-smart-headset_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> Qualcomm Smart Headset Reference Design</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>The first solution qualified by Amazon for Bluetooth headsets and with support for the Alexa Mobile Accessory (AMA) protocol.</p>
+<p><b>-&nbsp;&nbsp;</b>Close-talk<br />
+<b>-&nbsp;&nbsp;</b>2-mic<br />
+<b>-&nbsp;&nbsp;</b>Push-to-Talk<br />
+<b>-&nbsp;&nbsp;$299.00</b></p>
+<p><a href="https://www.digikey.com/en/product-highlight/q/qualcomm/smart-headset-dev-kit-amazon-alexa" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="http://www.hisilicon.com/en/HiSilicon_STB_Push-to-Talk_Development_Kit_for_Amazon_AVS" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_HiSilicon-STB-1mic_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_HiSilicon-STB-1mic_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> HiSilicon STB Push-to-Talk Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Enables set-top-box (STB) device makers and TV operators to build Alexa into new designs, and retrofit deployed STBs to support Alexa.&nbsp;</p>
+<p>-&nbsp;&nbsp;Close-talk<br />
+-&nbsp;&nbsp;1-mic<br />
+-&nbsp;&nbsp;Push-to-Talk<br />
+-&nbsp;<b>&nbsp;Limited Availability&nbsp;</b></p>
+<p><a href="http://www.hisilicon.com/en/HiSilicon_STB_Push-to-Talk_Development_Kit_for_Amazon_AVS" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="/alexa/alexa-voice-service/dev-kits/nxp-imx-8m-dk" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_NXP-iMX-8M_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_NXP-iMX-8M_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> NXP i.MX 8M Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Pre-integrated Multi-Room Music capabilities, Far-field voice capture, and with the Amazon Wake Word Engine.</p>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+<b>-&nbsp; 2</b>-mic<br />
+<b>-&nbsp; </b>Voice-initiated<br />
+<b>-&nbsp;&nbsp;$219.00&nbsp;</b></p>
+<p><a href="/alexa/alexa-voice-service/dev-kits/nxp-imx-8m-dk" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+		
+	</div>
+</div>
+</div>
+<div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-2x-large mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+		
+			<div class="column-control_wrapper_container33-33-33 clearfix gutter-large">
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="https://www.amazon.com/dp/B07NP2GYQK?ref=myi_title_dp" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_AmLogic-6mic_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_AmLogic-6mic_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> Amlogic A113X1 Far-Field Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Configurable for multiple mic arrays. An SoC with performance, low power consumption, and support for displays.</p>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+<b>-&nbsp;&nbsp;</b>2-mic, 4-mic, and 6-mic configurations<br />
+<b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+<b>-&nbsp;&nbsp;$250.00&nbsp;</b></p>
+<p><a href="https://www.amazon.com/dp/B07NP2GYQK?ref=myi_title_dp" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+<div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte ">
+    <div class="image-rte_wrapper">
+    	 
+         
+		
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="http://www.banana-pi.org/r18avs.html#!" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Allwinner-6mic_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Allwinner-6mic_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> Allwinner SoC-Only 3-Mic Far-Field Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>A cost-effective solution for integrating Alexa into devices with displays, and delivers application headroom.</p>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+<b>-&nbsp;&nbsp;</b>3-mic<br />
+<b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+<b>-&nbsp;&nbsp;$129.00</b></p>
+<p><a href="http://www.banana-pi.org/r18avs.html#!" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+		
+	</div>
+</div>
+</div>
+<div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-medium mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+			<div class="column-control_wrapper_container50-50 clearfix gutter-none">
+				<div class="column-control_wrapper_container50-50 content-section gutter-none p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-none p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-none mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+		
+		
+		
+		
+			<div class="column-control_wrapper_container16-16-16-16-16-16 clearfix gutter-small">
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text parbase aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    <div class="text-comp mt-none mb-none font-black">
+        <div class="text-comp_wrapper">
+            <div class="description">
+                <p></p><div style="text-align: center;"><a href="#top">Back to top</a></div>
+<p></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</div>
+				</div>
+			</div>
+		
+	</div>
+</div>
+</div>
+
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+		
+		
+	</div>
+</div>
+</div>
+
+    
+</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+<div class="rowComponent aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+<div class="row-container">
+	<div class="mt-none mb-none" style="background-color:none">
+<!--The super indent field was added to the dialog after the pages were authored. Hence in order to avoid re-authoring the pages, properties.contentIndent has to be checked before being applied. If this is not done, existing row containers authored in page will not pick up the required CSS class  -->		
+		<div class="inner-wrap-indent px-3 px-md-5">
+			<div class="row-component_wrapper p-large">
+				
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="title aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+<div class="title-comp mt-none mb-none font-black">
+        <div class="title-comp_wrapper">
+			
+				<a class="title-link" id="audio-front-end-dev-kits"></a>
+                	
+            
+                <div class="title-center mx-auto text-center">
+                    
+						
+							
+								<h2>Audio Front End Dev Kits </h2>
+							
+							
+							
+							
+								 
+						
+                </div>
+				
+           
+     </div>
+ </div>
+</div>
+<div class="text parbase aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    <div class="text-comp mt-none mb-extra-small font-black">
+        <div class="text-comp_wrapper">
+            <div class="description">
+                <p></p><div style="text-align: center;"><p>Reference solutions with flexibility to select a preferred production-ready SoC for the final product.</p>
+</div>
+<p></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-extra-large mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+		
+			<div class="column-control_wrapper_container33-33-33 clearfix gutter-large">
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                
+	                    <a href="/alexa/alexa-voice-service/dev-kits/amazon-premium-voice" target="_self" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_amazon-premium-voice_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_amazon-premium-voice_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> Amazon Alexa Premium Far-Field Voice Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>“Far-field in a chip” architecture offers premium-level voice technology on a single DSP.&nbsp;</p>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+ <b>-&nbsp;&nbsp;</b>7-mic and 8-mic configurations<br />
+ <b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+ <b>-&nbsp;&nbsp;Limited Availability</b></p>
+<p><a href="/alexa/alexa-voice-service/dev-kits/amazon-premium-voice">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="https://www.xmos.com/xvf3510avs" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_XMOS_XVF3510_Dev-Kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_XMOS_XVF3510_Dev-Kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> XMOS VocalFusion 2-Mic (XVF3510) Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Powered by XMOS voice algorithms, the 2-mic XVF3510 is a BOM-efficient solution optimized for smart TVs and set-top boxes with Alexa built-in. It features an adaptive delay estimator to ensure audio-visual sync and stereo acoustic echo cancellation for barge-in support.</p>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+<b>-&nbsp;&nbsp;</b>2-mic<br />
+<b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+<b>-&nbsp;&nbsp;Limited Availability</b></p>
+<p><a href="https://www.xmos.com/xvf3510avs" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="https://www.semiconductorstore.com/cart/pc/viewPrd.asp?idproduct=94829" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_DSP-HDClear-3mic_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_DSP-HDClear-3mic_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> DSP Group HDClear 3-Mic Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Enables low-power wake-on-voice operation and far-field voice recognition performance with only three mics.&nbsp;</p>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+<b>-&nbsp;&nbsp;</b>3-mic<br />
+<b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+<b>-&nbsp;&nbsp;$249.00</b></p>
+<p><a href="https://www.semiconductorstore.com/cart/pc/viewPrd.asp?idproduct=94829" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+		
+	</div>
+</div>
+</div>
+<div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-extra-large mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+		
+			<div class="column-control_wrapper_container33-33-33 clearfix gutter-large">
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="https://www.xmos.com/products/voice/amazon#getting-started" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_XMOS-Stereo-Linear-4Mic_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_XMOS-Stereo-Linear-4Mic_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> XMOS VocalFusion 4-Mic Stereo-AEC Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Linear mic array combined with full-duplex stereo Acoustic Echo Cancellation, for slim profile and wall-mounted devices.&nbsp;</p>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+<b>-&nbsp;&nbsp;</b>4-mic<br />
+<b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+<b>-&nbsp;&nbsp;$499.00&nbsp;</b></p>
+<p><a href="https://www.xmos.com/products/voice/amazon#getting-started" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="https://click.intel.com/intelr-speech-enabling-developer-kit.html" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Intel-Speech-Enabling-8mic_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Intel-Speech-Enabling-8mic_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> Intel Speech Enabling Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Powered by Intel’s audio algorithms and dual DSP with inference engine, optimized for smart home applications.</p>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+<b>-&nbsp;&nbsp;</b>8-mic<br />
+<b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+<b>-&nbsp;&nbsp;$499.00</b></p>
+<p><a href="https://click.intel.com/intelr-speech-enabling-developer-kit.html" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="https://www.xmos.com/products/voice/amazon#getting-started" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_XMOS-VocalFusion-4Mic_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_XMOS-VocalFusion-4Mic_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> XMOS VocalFusion 4-Mic Mono-AEC Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>A linear array that brings far-field voice capture to new device types and form factors.&nbsp;</p>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+<b>-&nbsp;&nbsp;</b>4-mic<br />
+<b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+<b>-&nbsp;&nbsp;$499.00</b></p>
+<p><a href="https://www.xmos.com/products/voice/amazon#getting-started" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+		
+	</div>
+</div>
+</div>
+<div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-2x-large mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+		
+			<div class="column-control_wrapper_container33-33-33 clearfix gutter-large">
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="https://www.arrow.com/en/products/ds20924-evk/synaptics" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Synaptics-AudioSmart-4Mic_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Synaptics-AudioSmart-4Mic_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> Synaptics AudioSmart 4-Mic Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Features four mic far-field voice interaction and is designed for omni-directional products with Alexa built-in.</p>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+<b>-&nbsp;&nbsp;</b>4-mic<br />
+<b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+<b>-&nbsp;&nbsp;$349.00&nbsp;</b></p>
+<p><a href="https://www.arrow.com/en/products/ds20924-evk/synaptics" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="https://www.digikey.com/en/product-highlight/c/cirrus-logic/development-kit-for-avs" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Cirrus-Logic-Voice-Capture-2mic_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Cirrus-Logic-Voice-Capture-2mic_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> Cirrus Logic Voice Capture Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>For portable speakers and compact audio device; uses Cirrus Logic audio algorithms.&nbsp;</p>
+<p><b>-&nbsp;&nbsp;</b>Near-field<br />
+<b>-&nbsp;&nbsp;</b>2-mic<br />
+<b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+<b>-&nbsp;&nbsp;$400.00</b></p>
+<p><a href="https://www.digikey.com/en/product-highlight/c/cirrus-logic/development-kit-for-avs" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="https://github.com/Microsemi/ZLK38AVS/wiki" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_microsemi-4mic_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_microsemi-4mic_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> Microsemi AcuEdge Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Features include both 180-degree and 360-degree audio pickup, and high-quality stereo acoustic echo cancellation.</p>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+<b>-&nbsp;&nbsp;</b>1-mic, 2-mic, and 3-mic configurations<br />
+<b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+<b>-&nbsp;&nbsp;$299.00&nbsp;</b></p>
+<p><a href="https://www.arrow.com/en/products/zlk38avs/microsemi" target="_blank">Order now from&nbsp;Arrow &raquo;&nbsp;</a><br />
+<a href="https://www.futureelectronics.com/p/development-tools--development-tool-hardware/zlk38avs2-microsemi-3108662" target="_blank">Order now from&nbsp;Future &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+		
+	</div>
+</div>
+</div>
+<div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-2x-large mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+		
+			<div class="column-control_wrapper_container33-33-33 clearfix gutter-large">
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                    <a href="https://www.arrow.com/en/products/ds20921-evk/synaptics" target="_blank" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Synaptics-AudioSmart-2mic_dev-kit_740x380.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_Synaptics-AudioSmart-2mic_dev-kit_740x380.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium"> Synaptics AudioSmart 2-Mic Dev Kit</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Low-power, far-field voice recognition with customizable microphone array spacing and orientation options.&nbsp;</p>
+<p><b>-&nbsp;&nbsp;</b>Far-field<br />
+<b>-&nbsp;&nbsp;</b>2-mic<br />
+<b>-&nbsp;&nbsp;</b>Voice-initiated<br />
+<b>-&nbsp;&nbsp;$299.00</b></p>
+<p><a href="https://www.arrow.com/en/products/ds20921-evk/synaptics" target="_blank">Learn more &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+		
+	</div>
+</div>
+</div>
+<div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-medium mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+			<div class="column-control_wrapper_container50-50 clearfix gutter-none">
+				<div class="column-control_wrapper_container50-50 content-section gutter-none p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-none p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-none mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+		
+		
+		
+		
+			<div class="column-control_wrapper_container16-16-16-16-16-16 clearfix gutter-small">
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text parbase aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    <div class="text-comp mt-none mb-none font-black">
+        <div class="text-comp_wrapper">
+            <div class="description">
+                <p></p><div style="text-align: center;"><a href="#top">Back to top</a></div>
+<p></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</div>
+				</div>
+			</div>
+		
+	</div>
+</div>
+</div>
+
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+		
+		
+	</div>
+</div>
+</div>
+
+    
+</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+<div class="rowComponent aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+<div class="row-container">
+	<div class="mt-none mb-none" style="background-color:#00B6FF">
+<!--The super indent field was added to the dialog after the pages were authored. Hence in order to avoid re-authoring the pages, properties.contentIndent has to be checked before being applied. If this is not done, existing row containers authored in page will not pick up the required CSS class  -->		
+		<div class="inner-wrap-indent px-3 px-md-5">
+			<div class="row-component_wrapper p-large">
+				
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-none mb-none" style="background:#00B6FF">
+	<div class="column-control_wrapper">
+		
+			<div class="column-control_wrapper_container50-50 clearfix gutter-small">
+				<div class="column-control_wrapper_container50-50 content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="title aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+<div class="title-comp mt-none mb-none font-white">
+        <div class="title-comp_wrapper">
+			
+				<a class="title-link" id="not-sure-where-to-start"></a>
+                
+					<div class="title-left text-left">
+						
+						
+							
+								<h2>Not Sure Where to Start?</h2>
+							
+							
+							
+							
+								 
+						
+				</div>
+				
+            	
+           
+     </div>
+ </div>
+</div>
+<div class="title aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+<div class="title-comp mt-none mb-none font-white">
+        <div class="title-comp_wrapper">
+			
+				<a class="title-link" id="fill-out-this-form-to-request-more-information-about-amazonqualified-development-kits"></a>
+                
+					<div class="title-left text-left">
+						
+						
+							
+							
+							
+								<h4>Fill out this form to request more information about Amazon-qualified development kits.</h4>
+							
+							
+								 
+						
+				</div>
+				
+            	
+           
+     </div>
+ </div>
+</div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="marketoform aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+  
+<div id="voice-mail-sign-up_form">
+	<div id="marketoFormEmbedCS">
+		<script src="//app-ab10.marketo.com/js/forms2/js/forms2.min.js"></script>
+		<form id="mktoForm_3370"></form>
+		<script>
+			var id = 3370;
+			MktoForms2.loadForm("//app-ab10.marketo.com", "365-EFI-026", id);
+		</script>
+	</div>
+</div></div>
+<div class="text parbase aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    <div class="text-comp mt-small mb-none font-white">
+        <div class="text-comp_wrapper">
+            <div class="description">
+                <p><sub>&nbsp; &nbsp;<a href="https://build.amazonalexadev.com/preference-center.html">Manage Email Preferences</a></sub></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+		
+		
+	</div>
+</div>
+</div>
+
+    
+</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+<div class="rowComponent aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+<div class="row-container">
+	<div class="mt-none mb-none" style="background-color:none">
+<!--The super indent field was added to the dialog after the pages were authored. Hence in order to avoid re-authoring the pages, properties.contentIndent has to be checked before being applied. If this is not done, existing row containers authored in page will not pick up the required CSS class  -->		
+		<div class="inner-wrap-indent px-3 px-md-5">
+			<div class="row-component_wrapper p-large">
+				
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="title aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+<div class="title-comp mt-none mb-none font-black">
+        <div class="title-comp_wrapper">
+			
+				<a class="title-link" id="choosing-the-right-audio-front-end"></a>
+                	
+            
+                <div class="title-center mx-auto text-center">
+                    
+						
+							
+								<h2>Choosing the Right Audio Front End</h2>
+							
+							
+							
+							
+								 
+						
+                </div>
+				
+           
+     </div>
+ </div>
+</div>
+<div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-extra-large mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+		
+			<div class="column-control_wrapper_container33-33-33 clearfix gutter-large">
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                
+	                    <a target="_self" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_number-of-mics_824x160.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_number-of-mics_824x160.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium">Number of Mics</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>How you want your users to interact with your product determines the number of microphones you select. Voice-enabled devices designed for closer, hands-free interaction can use 1 or 2-mic solutions, whereas far-field products with listening ranges from across the room can benefit from a 4 or 7-mic array. Keep in mind that additional mics may take up more physical space and add incremental costs to your product.</p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                
+	                    <a target="_self" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_arrangment-of-mics_824x160.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_arrangment-of-mics_824x160.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium">Mic Arrangement</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Your product’s form factor determines the arrangement of microphones. Square or circular arrays in a horizontal plane are better for 360-degree, omni-directional listening often utilized in tabletop products like the Amazon Echo or Echo Dot. Linear arrays are better suited for uni-directional listening or wall-mounted products such as connected light switches and thermostats with Alexa built-in like the ecobee4.</p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                
+	                    <a target="_self" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_audio-algorithms_824x160.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/dev-kits/grid3_audio-algorithms_824x160.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium">Audio Algorithms</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Voice processing algorithms enable your device to leverage the full capabilities of the mic array. Noise reduction improves speech recognition in noisy environments, beam forming helps locate the direction of speech, and acoustic echo cancellation allows the user to barge in even when your device is playing loud music. These algorithms, combined with wake word engines, allow voice-initiated interactions and send clear, processed audio to the cloud.</p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+		
+	</div>
+</div>
+</div>
+<div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-medium mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+			<div class="column-control_wrapper_container50-50 clearfix gutter-none">
+				<div class="column-control_wrapper_container50-50 content-section gutter-none p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-none p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-none mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+		
+		
+		
+		
+			<div class="column-control_wrapper_container16-16-16-16-16-16 clearfix gutter-small">
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text parbase aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    <div class="text-comp mt-none mb-none font-black">
+        <div class="text-comp_wrapper">
+            <div class="description">
+                <p></p><div style="text-align: center;"><a href="#top">Back to top</a></div>
+<p></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</div>
+				</div>
+			</div>
+		
+	</div>
+</div>
+</div>
+
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+		
+		
+	</div>
+</div>
+</div>
+
+    
+</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+<div class="rowComponent aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+<div class="row-container">
+	<div class="mt-none mb-none" style="background-color:#f6f6f6">
+<!--The super indent field was added to the dialog after the pages were authored. Hence in order to avoid re-authoring the pages, properties.contentIndent has to be checked before being applied. If this is not done, existing row containers authored in page will not pick up the required CSS class  -->		
+		<div class="inner-wrap-indent px-3 px-md-5">
+			<div class="row-component_wrapper p-large">
+				
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="title aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+<div class="title-comp mt-none mb-none font-black">
+        <div class="title-comp_wrapper">
+			
+				<a class="title-link" id="additional-solution-providers"></a>
+                	
+            
+                <div class="title-center mx-auto text-center">
+                    
+						
+							
+								<h2>Additional Solution Providers</h2>
+							
+							
+							
+							
+								 
+						
+                </div>
+				
+           
+     </div>
+ </div>
+</div>
+<div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-extra-large mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+		
+			<div class="column-control_wrapper_container33-33-33 clearfix gutter-large">
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                
+	                    <a href="/alexa/alexa-voice-service/systems-integrators" target="_self" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/avs-build/grid_si_left-align_824x200.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/avs-build/grid_si_left-align_824x200.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium">Systems Integrators</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Amazon works with select Systems Integrators (SIs) to help commercial device manufacturers bring new devices with Alexa built-in to market. The Systems Integrators provide hardware modules, software, and services that accelerate the implementation, delivery, and support of devices with Alexa built-in.&nbsp;</p>
+<p><a href="/alexa/alexa-voice-service/systems-integrators">See all Systems Integrators &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                
+	                    <a href="https://developer.amazon.com/alexa-voice-service/odm-solutions" target="_self" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/avs-build/grid_odm_left-align_824x200.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/avs-build/grid_odm_left-align_824x200.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium">Original Design Manufacturers</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Amazon works with select Original Design Manufacturers (ODMs) to provide commercial device makers with a simplified Alexa integration path. The ODMs offer turnkey solutions and streamlined processes for designing, testing, and manufacturing devices with Alexa built-in.&nbsp;</p>
+<p><a href="/alexa/alexa-voice-service/odm-solutions">See all ODMs &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-rte aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+ 
+
+
+ 
+
+
+<div class="image-rte font-black">
+    <div class="image-rte_wrapper">
+    	
+            <div class="image-pos">
+	            <div class="image-wrap d-flex align-items-center justify-content-start">
+	                
+	                
+	                    <a href="/alexa/alexa-voice-service/cps" target="_self" tabindex="0">
+						
+	                    
+	                    	
+		                        <picture>
+		                            <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/cps/grid_cps_left-align_824x200.png"></source>
+		                            
+		                            <img class="banner-image" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/alexa-voice-service/cps/grid_cps_left-align_824x200.png" />
+		                        </picture>
+	                        
+	                     
+	                    </a>
+	                
+	            </div>
+            </div>
+          
+         
+            
+                <div class="text-wrap d-flex text-left">
+                    
+                    
+                        <h5 class="title-medium">Consulting and Professional Services</h5>
+                     
+                    
+                </div>
+            
+            
+		
+		
+        	<div class="rte-text"><p>Consulting and Professional Services (CPS) firms can help companies develop and launch new Alexa-based products. They offer a full spectrum of services, including Ideation, Design, Prototyping, Market Testing, Product Launch, and Post-Launch services.</p>
+<p><a href="/alexa/alexa-voice-service/cps">See all CPS providers &raquo;</a></p>
+
+            </div>
+        
+		
+    </div>
+</div></div>
+
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+		
+	</div>
+</div>
+</div>
+<div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-medium mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+			<div class="column-control_wrapper_container50-50 clearfix gutter-none">
+				<div class="column-control_wrapper_container50-50 content-section gutter-none p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-none p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-none mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+		
+		
+		
+		
+			<div class="column-control_wrapper_container16-16-16-16-16-16 clearfix gutter-small">
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-small p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text parbase aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    <div class="text-comp mt-none mb-none font-black">
+        <div class="text-comp_wrapper">
+            <div class="description">
+                <p></p><div style="text-align: center;"><a href="#top">Back to top</a></div>
+<p></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</div>
+				</div>
+			</div>
+		
+	</div>
+</div>
+</div>
+
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+		
+		
+	</div>
+</div>
+</div>
+
+    
+</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+<div class="rowComponent aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+<div class="row-container">
+	<div class="mt-none mb-none" style="background-color:#495159">
+<!--The super indent field was added to the dialog after the pages were authored. Hence in order to avoid re-authoring the pages, properties.contentIndent has to be checked before being applied. If this is not done, existing row containers authored in page will not pick up the required CSS class  -->		
+		<div class="inner-wrap-superindent px-3 px-md-5">
+			<div class="row-component_wrapper p-large">
+				
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="title aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+<div class="title-comp mt-none mb-large font-white">
+        <div class="title-comp_wrapper">
+			
+				<a class="title-link" id="get-started-with-avs"></a>
+                	
+            
+                <div class="title-center mx-auto text-center">
+                    
+						
+							
+								<h2>Get Started with AVS</h2>
+							
+							
+							
+							
+								 
+						
+                </div>
+				
+           
+     </div>
+ </div>
+</div>
+<div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-none mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+		
+		
+			<div class="column-control_wrapper_container25-25-25-25 clearfix gutter-none">
+				<div class="content-section gutter-none p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+				<div class="content-section gutter-none p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="buttonComponent aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+<div class="btn-section" align="center" id="get-started-with-avs_button1">
+	<a href="https://developer.amazon.com/docs/alexa-voice-service/get-started-with-alexa-voice-service.html" tabindex="0" target="_self" class="cta-button d-inline-flex align-items-center justify-content-center cta-green">Quick Start Guide</a>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-none p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="buttonComponent aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+<div class="btn-section" align="center" id="get-started-with-avs_button2">
+	<a href="https://developer.amazon.com/docs/alexa-voice-service/api-overview.html" tabindex="0" target="_self" class="cta-button d-inline-flex align-items-center justify-content-center cta-blue">See Documentation</a>
+</div></div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-none p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+	</div>
+</div>
+</div>
+
+    
+</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+<div class="rowComponent aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+<div class="row-container">
+	<div class="mt-none mb-none" style="background-color:none">
+<!--The super indent field was added to the dialog after the pages were authored. Hence in order to avoid re-authoring the pages, properties.contentIndent has to be checked before being applied. If this is not done, existing row containers authored in page will not pick up the required CSS class  -->		
+		<div class="inner-wrap-indent px-3 px-md-5">
+			<div class="row-component_wrapper p-large">
+				
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-none mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+		
+		
+			<div class="column-control_wrapper_container25-25-25-25 clearfix gutter-large">
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="title aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+<div class="title-comp mt-none mb-extra-small font-black" id="l-d-b-l_title_learn">
+        <div class="title-comp_wrapper">
+			
+				<a class="title-link" id="learn"></a>
+                
+					<div class="title-left text-left">
+						
+							
+								
+								
+								
+								
+								<a class="title-link" href="/alexa/alexa-voice-service/learn" target="_self">
+									<h5>Learn</h5>
+								</a>
+								
+								
+								
+							 
+						
+						
+				</div>
+				
+            	
+           
+     </div>
+ </div>
+</div>
+<div class="text parbase aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    <div class="text-comp mt-none mb-none font-black" id="l-d-b-l_text-links_learn">
+        <div class="text-comp_wrapper">
+            <div class="description">
+                <p></p><p><a href="/alexa/alexa-voice-service/learn">Learn - Overview</a></p>
+<p><a href="https://developer.amazon.com/docs/alexa-voice-service/get-started-with-alexa-voice-service.html">Quick Start Guide</a></p>
+<p><a href="/alexa/alexa-voice-service/international">AVS International</a></p>
+<p><a href="/alexa/alexa-voice-service/learn/tutorials">Tutorials</a></p>
+<p><a href="https://developer.amazon.com/blogs/alexa/tag/Alexa+Voice+Service">AVS Blog</a></p>
+<p><a href="/alexa/alexa-voice-service/avs-new">AVS What's New</a></p>
+<p></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="title aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+<div class="title-comp mt-none mb-extra-small font-black" id="l-d-b-l_text-links_design">
+        <div class="title-comp_wrapper">
+			
+				<a class="title-link" id="design"></a>
+                
+					<div class="title-left text-left">
+						
+							
+								
+								
+								
+								
+								<a class="title-link" href="/alexa/alexa-voice-service/design" target="_self">
+									<h5>Design</h5>
+								</a>
+								
+								
+								
+							 
+						
+						
+				</div>
+				
+            	
+           
+     </div>
+ </div>
+</div>
+<div class="text parbase aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    <div class="text-comp mt-none mb-none font-black" id="l-d-b-l_text-links_design">
+        <div class="text-comp_wrapper">
+            <div class="description">
+                <p></p><p><a href="/alexa/alexa-voice-service/design">Design - Overview</a></p>
+<p><a href="https://developer.amazon.com/docs/alexa-voice-service/audio-hardware-configurations.html">Audio Hardware Configurations</a></p>
+<p><a href="https://developer.amazon.com/docs/alexa-voice-service/functional-requirements.html">Functional Design Guide</a></p>
+<p><a href="https://developer.amazon.com/docs/alexa-voice-service/ux-design-overview.html">UX Design Guidelines</a></p>
+<p></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="title aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+<div class="title-comp mt-none mb-extra-small font-black" id="l-d-b-l_text-links_build">
+        <div class="title-comp_wrapper">
+			
+				<a class="title-link" id="build"></a>
+                
+					<div class="title-left text-left">
+						
+							
+								
+								
+								
+								
+								<a class="title-link" href="/alexa/alexa-voice-service/build" target="_self">
+									<h5>Build</h5>
+								</a>
+								
+								
+								
+							 
+						
+						
+				</div>
+				
+            	
+           
+     </div>
+ </div>
+</div>
+<div class="text parbase aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    <div class="text-comp mt-none mb-none font-black" id="l-d-b-l_text-links_build">
+        <div class="text-comp_wrapper">
+            <div class="description">
+                <p></p><p><a href="/alexa/alexa-voice-service/build">Build - Overview</a></p>
+<p><a href="/alexa/alexa-voice-service/sdk">AVS Device SDK</a></p>
+<p><a href="/alexa/alexa-voice-service/dev-kits">Development Kits for AVS</a></p>
+<p><a href="/alexa/alexa-voice-service/systems-integrators">Systems Integrators</a></p>
+<p><a href="/alexa/alexa-voice-service/odm-solutions">Original Design Manufacturers</a></p>
+<p><a href="/alexa/alexa-voice-service/cps">Consulting and Professional Services</a></p>
+<p><a href="https://developer.amazon.com/docs/alexa-voice-service/api-overview.html" style="background-color: rgb(255,255,255);">API and Reference</a><br />
+</p>
+<p></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-none">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="title aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+<div class="title-comp mt-none mb-extra-small font-black" id="l-d-b-l_title_launch">
+        <div class="title-comp_wrapper">
+			
+				<a class="title-link" id="launch"></a>
+                
+					<div class="title-left text-left">
+						
+							
+								
+								
+								
+								
+								<a class="title-link" href="/alexa/alexa-voice-service/launch" target="_self">
+									<h5>Launch</h5>
+								</a>
+								
+								
+								
+							 
+						
+						
+				</div>
+				
+            	
+           
+     </div>
+ </div>
+</div>
+<div class="text parbase aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    <div class="text-comp mt-none mb-none font-black" id="l-d-b-l_text-links_launch">
+        <div class="text-comp_wrapper">
+            <div class="description">
+                <p></p><p><a href="/alexa/alexa-voice-service/launch">Launch - Overview</a></p>
+<p><a href="https://developer.amazon.com/docs/alexa-voice-service/product-testing-overview.html">Product Testing Overview</a></p>
+<p><a href="https://developer.amazon.com/docs/alexa-voice-service/marketing-and-branding-guidelines.html">Marketing &amp; Brand Guidelines</a></p>
+<p><a href="/alexa/alexa-voice-service/marketing-opportunities">Marketing Opportunities</a></p>
+<p><a href="/alexa/alexa-voice-service/case-studies">Success Stories</a></p>
+<p></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+	</div>
+</div>
+</div>
+
+    
+</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+
+    
+</div></div>
+<div class="footer iparsys parsys">
+
+
+
+    
+        
+        
+        <div class="newpar new section">
+
+</div>
+
+    
+        
+        
+        <div class="par iparys_inherited">
+
+    
+    
+    
+    
+        
+        
+        <div class="navigation-footer">
+
+    
+
+
+<footer>
+    <a class="dpfBackToTopLink" href="#">Back To Top</a>
+    <nav class="dpfNav accordion clearfix">
+        <div class="dpfWidth">
+            <div class="dpfnHideRightMargin">
+                <div>
+                    <div class="dpfnCol">
+                        <div>
+                            <div class="dpfnGroup accrItem">
+                                <div class="dpIconArrow accrHandle"></div>
+                                <h3><a>Alexa Skills Kit</a></h3>
+                                <ul>
+                                    <div>
+                                        <li><a href="https://developer.amazon.com/alexa-skills-kit">Alexa Skills Kit</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-skills-kit/learn">Learn</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-skills-kit/design">Design</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-skills-kit/build">Build</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-skills-kit/launch">Launch</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                        
+                            <div class="dpfnGroup accrItem">
+                                <div class="dpIconArrow accrHandle"></div>
+                                <h3><a>Resources</a></h3>
+                                <ul>
+                                    <div>
+                                        <li><a href="https://developer.amazon.com/alexa-skills-kit/start">Getting Started</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-skills-kit/tutorials">Tutorials</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/docs/ask-overviews/build-skills-with-the-alexa-skills-kit.html">Documentation</a></li>
+                                    
+                                        <li><a href="https://forums.developer.amazon.com/spaces/165/index.html">Developer Forum</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa/agencies-and-tools">Agencies and Tools</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="dpfnCol">
+                        <div>
+                            <div class="dpfnGroup accrItem">
+                                <div class="dpIconArrow accrHandle"></div>
+                                <h3><a>Alexa Voice Service</a></h3>
+                                <ul>
+                                    <div>
+                                        <li><a href="https://developer.amazon.com/alexa-voice-service">Alexa Voice Service</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-voice-service/learn">Learn</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-voice-service/design">Design</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-voice-service/build">Build</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-voice-service/launch">Launch</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                        
+                            <div class="dpfnGroup accrItem">
+                                <div class="dpIconArrow accrHandle"></div>
+                                <h3><a>AVS Resources</a></h3>
+                                <ul>
+                                    <div>
+                                        <li><a href="https://developer.amazon.com/docs/alexa-voice-service/get-started-with-alexa-voice-service.html">Getting Started</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-voice-service/sdk">AVS Device SDK</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/docs/alexa-voice-service/api-overview.html">AVS API</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa-voice-service/dev-kits">Dev Kits for AVS</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="dpfnCol">
+                        <div>
+                            <div class="dpfnGroup accrItem">
+                                <div class="dpIconArrow accrHandle"></div>
+                                <h3><a>Connected Devices</a></h3>
+                                <ul>
+                                    <div>
+                                        <li><a href="https://developer.amazon.com/alexa/connected-devices">Alexa Smart Home</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/alexa/alexa-gadgets">Alexa Gadgets</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                        
+                            <div class="dpfnGroup accrItem">
+                                <div class="dpIconArrow accrHandle"></div>
+                                <h3><a>Agreements</a></h3>
+                                <ul>
+                                    <div>
+                                        <li><a href="https://developer.amazon.com/appsandservices/support/legal/da">Amazon Developer Services Agreement</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/appsandservices/support/pml.html">Program Materials License Agreement</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/public/support/mobileads/publisher-agreement.html">Mobile Ad Network Publisher Agreement</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/public/support/mobileads/participation-requirements.html">Mobile Ad Network Program Participation Requirements</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/public/support/advertise-your-app-agreement">Advertise Your App with Amazon Agreement</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/public/support/legal/tuabg">Trademark Guidelines</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/public/support/legal/tou">Terms of Use</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-voice-service/support/terms-and-agreements">AVS Program Requirements</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="dpfnCol">
+                        <div>
+                            <div class="dpfnGroup accrItem">
+                                <div class="dpIconArrow accrHandle"></div>
+                                <h3><a>Blogs</a></h3>
+                                <ul>
+                                    <div>
+                                        <li><a href="https://developer.amazon.com/en-US/blogs/alexa/alexa-skills-kit">Alexa Skills Kit Blog</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/en-US/blogs/alexa/device-makers">Device Makers Blog</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/en-US/blogs/alexa/alexa-auto">Alexa Auto</a></li>
+                                    
+                                        <li><a href="https://aws.amazon.com/blogs/aws/">AWS Blog</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                        
+                            <div class="dpfnGroup accrItem">
+                                <div class="dpIconArrow accrHandle"></div>
+                                <h3><a>Support</a></h3>
+                                <ul>
+                                    <div>
+                                        <li><a href="https://developer.amazon.com/support/">Amazon Developer Support</a></li>
+                                    
+                                        <li><a href="https://developer.amazon.com/support/contact-us?subjectCategory=ALEXA">Contact Us</a></li>
+                                    
+                                        <li><a href="https://forums.developer.amazon.com/spaces/165/index.html">Forums</a></li>
+                                    
+                                        <li><a href="https://build.amazonalexadev.com/preference-center.html">Manage Email Preferences</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="dpfSocialLocal clearfix">
+        <div class="dpfWidth">
+            <div class="dpfSocial">
+                <span class="dpfSocialTitle">
+                    Follow Us:
+                </span>
+                
+                    <a href="https://www.facebook.com/AlexaDevs/">
+                        <img src="//d3ogm7ac91k97u.cloudfront.net/content/dam/shared/social/logo-facebook.png" />
+                    </a>
+                
+                    <a href="https://twitter.com/alexadevs">
+                        <img src="//d3ogm7ac91k97u.cloudfront.net/content/dam/shared/social/logo-twitter..png" />
+                    </a>
+                
+                    <a href="https://developer.amazon.com/blogs/alexa/">
+                        <img src="//d3ogm7ac91k97u.cloudfront.net/content/dam/shared/social/logo-blog.png" />
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+</footer></div>
+
+    
+        
+        
+        <div class="rowComponent">
+
+    
+
+
+
+
+
+
+<div class="row-container">
+	<div class="mt-none mb-none" style="background-color:#404951">
+<!--The super indent field was added to the dialog after the pages were authored. Hence in order to avoid re-authoring the pages, properties.contentIndent has to be checked before being applied. If this is not done, existing row containers authored in page will not pick up the required CSS class  -->		
+		<div class="inner-wrap-indent px-3 px-md-5">
+			<div class="row-component_wrapper p-large">
+				
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="column-control col-12 px-0 mt-none mb-none" style="background:none">
+	<div class="column-control_wrapper">
+		
+		
+		
+			<div class="column-control_wrapper_container25-25-25-25 clearfix gutter-large">
+				<div class="content-section gutter-large p-large">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-component aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    
+    
+    
+    
+    <div class="image-rte">
+        <div class="image-rte_wrapper">
+            
+                <div class="image-pos">
+                    <div class="image-wrap d-flex align-items-center justify-content-center">
+                        
+                        
+                            <a href="https://developer.amazon.com/alexa" target="_self" tabindex="0" class="image-width">
+                            	
+                                
+                                	
+	                                    <picture class="image-picture">
+	                                        <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/temp-working-folder/subfooter-nav/Alexalogoheaderwhite._V506548913_.png"></source>
+	                                        
+	                                        <img class="image-width" alt="Amazon Alexa" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/temp-working-folder/subfooter-nav/Alexalogoheaderwhite._V506548913_.png" />
+	                                    </picture>
+	                            	
+                                
+                            </a>
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-large">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-component aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    
+    
+    
+    
+    <div class="image-rte">
+        <div class="image-rte_wrapper">
+            
+                <div class="image-pos">
+                    <div class="image-wrap d-flex align-items-center justify-content-center">
+                        
+                        
+                            <a href="https://developer.amazon.com/apps-and-games" target="_self" tabindex="0" class="image-width">
+                            	
+                                
+                                	
+	                                    <picture class="image-picture">
+	                                        <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/temp-working-folder/subfooter-nav/Appstorelogowhite._V506548913_.png"></source>
+	                                        
+	                                        <img class="image-width" alt="Amazon Appstore" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/temp-working-folder/subfooter-nav/Appstorelogowhite._V506548913_.png" />
+	                                    </picture>
+	                            	
+                                
+                            </a>
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-large">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-component aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    
+    
+    
+    
+    <div class="image-rte">
+        <div class="image-rte_wrapper">
+            
+                <div class="image-pos">
+                    <div class="image-wrap d-flex align-items-center justify-content-center">
+                        
+                        
+                            <a href="https://aws.amazon.com/" target="_self" tabindex="0" class="image-width">
+                            	
+                                
+                                	
+	                                    <picture class="image-picture">
+	                                        <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/temp-working-folder/subfooter-nav/AWS_logo_RGB_WHT._CB1506540482_.png"></source>
+	                                        
+	                                        <img class="image-width" alt="Amazon Web Services" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/temp-working-folder/subfooter-nav/AWS_logo_RGB_WHT._CB1506540482_.png" />
+	                                    </picture>
+	                            	
+                                
+                            </a>
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+    
+</div>
+				</div>
+				<div class="content-section gutter-large p-large">
+					
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image-component aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    
+    
+    
+    
+    <div class="image-rte">
+        <div class="image-rte_wrapper">
+            
+                <div class="image-pos">
+                    <div class="image-wrap d-flex align-items-center justify-content-center">
+                        
+                        
+                            <a href="https://developer.amazon.com/dash-services" target="_self" tabindex="0" class="image-width">
+                            	
+                                
+                                	
+	                                    <picture class="image-picture">
+	                                        <source media="(min-width: 768px)" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/temp-working-folder/subfooter-nav/DashLogoWhite._V506548913_.png"></source>
+	                                        
+	                                        <img class="image-width" alt="Amazon Dash Replenishment" srcset="//d3ogm7ac91k97u.cloudfront.net/content/dam/alexa/temp-working-folder/subfooter-nav/DashLogoWhite._V506548913_.png" />
+	                                    </picture>
+	                            	
+                                
+                            </a>
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+    
+</div>
+				</div>
+			</div>
+		
+		
+		
+	</div>
+</div>
+</div>
+
+    
+</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+
+    
+
+</div>
+
+    
+
+</div>
+
+</div>
+            
+    
+    
+	
+    
+<script type="text/javascript" src="//d3ogm7ac91k97u.cloudfront.net/etc.clientlibs/developer-portal/clientlibs/dependencies.bc2e3663a17988bb5631a62d7bf1d94e.js"></script>
+
+
+
+    
+    
+<script type="text/javascript" src="//d3ogm7ac91k97u.cloudfront.net/etc.clientlibs/developer-portal/clientlibs/main.915f2e870b19b8ac03f1a60cd6331652.js"></script>
+
+
+    
+
+
+
+
+    
+
+    
+
+    
+
+            
+
+        
+    
+
+</body>
+      
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="dante-footer">
+    <div class="container-fluid p-0">
+        <div class="d-flex flex-row align-items-start dante-footer-row">
+            <div class="flex-column">
+                <div id="localizationSelector" class="dropup">
+                    <a id="localizationSelectorLink" class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="localizationIcon align-middle"></i>
+                        <span class="align-middle">
+                            English (US)
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu localizerSelectorMenu" aria-labelledby="localizationSelectorLink">
+                        
+                            <a href="#" onclick='updateLocale("en_AU")'>
+                                <li class="w-100">
+                                    <span class="ml-3">English (ANZ)</span>
+                                </li>
+                            </a>
+                        
+                            <a href="#" onclick='updateLocale("en_GB")'>
+                                <li class="w-100">
+                                    <span class="ml-3">English (UK)</span>
+                                </li>
+                            </a>
+                        
+                            <a href="#" onclick='updateLocale("en_IN")'>
+                                <li class="w-100">
+                                    <span class="ml-3">English (India)</span>
+                                </li>
+                            </a>
+                        
+                            <a href="#" onclick='updateLocale("ja_JP")'>
+                                <li class="w-100">
+                                    <span class="ml-3">Japanese (日本語)</span>
+                                </li>
+                            </a>
+                        
+                            <a href="#" onclick='updateLocale("fr_FR")'>
+                                <li class="w-100">
+                                    <span class="ml-3">French (Français)</span>
+                                </li>
+                            </a>
+                        
+                            <a href="#" onclick='updateLocale("it_IT")'>
+                                <li class="w-100">
+                                    <span class="ml-3">Italian (Italiano)</span>
+                                </li>
+                            </a>
+                        
+                            <a href="#" onclick='updateLocale("de_DE")'>
+                                <li class="w-100">
+                                    <span class="ml-3">German (Deutsch)</span>
+                                </li>
+                            </a>
+                        
+                            <a href="#" onclick='updateLocale("es_ES")'>
+                                <li class="w-100">
+                                    <span class="ml-3">Spanish (España)</span>
+                                </li>
+                            </a>
+                        
+                            <a href="#" onclick='updateLocale("es_MX")'>
+                                <li class="w-100">
+                                    <span class="ml-3">Spanish (México)</span>
+                                </li>
+                            </a>
+                        
+                            <a href="#" onclick='updateLocale("pt_BR")'>
+                                <li class="w-100">
+                                    <span class="ml-3">Portuguese (Brasil)</span>
+                                </li>
+                            </a>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="flex-column ml-auto">
+                <div class="d-flex flex-row ml-auto flex-wrap pb-1 align-middle justify-content-end">
+                    <div class="flex-column">
+                        <span class="dante-copyright-tag">© 2010 - 2019, Amazon.com, Inc. or its affiliates. All Rights Reserved.</span>
+                    </div>
+                    <div class="flex-column flex-wrap pl-3 pr-0 pb-1 d-none d-lg-inline">
+                        <div class="footer-links">
+                            
+
+
+
+
+
+
+
+
+
+
+<a href="https://developer.amazon.com/terms-and-agreements" target="_blank">
+    Terms
+</a>
+<a href="/docs/ask-overviews/build-skills-with-the-alexa-skills-kit.html" target="_blank">
+    Docs
+</a>
+<a href="https://forums.developer.amazon.com/spaces/23/index.html" target="_blank">
+    Forums
+</a>
+<a href="https://developer.amazon.com/blogs/alexa" target="_blank">
+    Blog
+</a>
+<a href="https://developer.amazon.com/alexa" target="_blank">
+    Alexa Developer Home
+</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row dante-footer-row d-inline d-lg-none pb-2">
+            <div class="footer-links d-flex justify-content-end">
+                
+
+
+
+
+
+
+
+
+
+
+<a href="https://developer.amazon.com/terms-and-agreements" target="_blank">
+    Terms
+</a>
+<a href="/docs/ask-overviews/build-skills-with-the-alexa-skills-kit.html" target="_blank">
+    Docs
+</a>
+<a href="https://forums.developer.amazon.com/spaces/23/index.html" target="_blank">
+    Forums
+</a>
+<a href="https://developer.amazon.com/blogs/alexa" target="_blank">
+    Blog
+</a>
+<a href="https://developer.amazon.com/alexa" target="_blank">
+    Alexa Developer Home
+</a>
+
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- TODO: switch to own JQuery after setup -->
+<script src="https://m.media-amazon.com/images/G/01/alexa-blueprints/jquery-3.3.1.min._CB1518646291_.js"></script>
+<script src="https://m.media-amazon.com/images/G/01/ASK/rosie-v2/js/bootstrap.bundle._CB476904092_.js"></script>
+<script src="/alexa/console/ask/dante/static/js/app.js"></script>
+
+<script type="text/javascript">_satellite.pageBottom()</script>
+</body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LVXJD4"
+              height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+</html>
+   
+
+
