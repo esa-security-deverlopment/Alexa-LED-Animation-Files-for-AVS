@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head.inc -->
+  <title>
+  /source/index.html
+  </title>
+  <meta charset="utf-8">
+  <meta name="author" content="OpenSSL Foundation, Inc.">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link href="/favicon.ico" rel="icon">
+  <link href="/inc/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+  <script src="/inc/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./inc/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/inc/octopress.js" type="text/javascript"></script>
+
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  <!--[if lt IE 9]>
+    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<!-- end -->
+
+
+<body>
+<!-- banner.inc -->
+<header role="banner">
+  <hgroup>
+    <h1>
+      <a href="/">
+        <span id="header-open-text">Open</span><span id="header-ssl-text">SSL</span>
+      </a>
+    </h1>
+    <h2>
+      Cryptography and SSL/TLS Toolkit
+    </h2>
+  </hgroup>
+</header>
+
+<nav role="navigation">
+  <form action="https://www.google.com/search" method="get">
+    <fieldset role="search">
+      <input type="hidden" name="sitesearch" value="www.openssl.org" />
+      <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+    </fieldset>
+  </form>
+
+  <ul class="main-navigation">
+    <li><a href="/" title="Home page">Home</a></li>
+    <li><a href="/blog/" title="Team blog">Blog</a></li>
+    <li><a href="/source/" title="Source code">Downloads</a></li>
+    <li><a href="/docs/" title="FAQ, FIPS, manpages, ...">Docs</a></li>
+    <li><a href="/news/" title="Latest information">News</a></li>
+    <li><a href="/policies/" title="How we operate">Policies</a></li>
+    <li><a href="/community/" title="Blog, bugs, email, ...">Community</a></li>
+    <li><a href="/support/" title="Commercial support and contracting">Support</a></li>
+  </ul>
+  </nav>
+<!-- end -->
+
+
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+	<article>
+	  <header><h2>Downloads</h2></header>
+	  <div class="entry-content">
+	    <p>The master sources are maintained in our
+	    <a href="gitrepo.html">git repository</a>, which is
+	    accessible over the network and cloned on GitHub,
+            at <a
+              href="https://github.com/openssl/openssl">https://github.com/openssl/openssl</a>.
+            Bugs and pull patches (issues and pull requests) should be
+            filed on the GitHub repo.
+	    Please familiarize yourself with the
+	    <a href="license.html">license</a>.
+	    </p>
+
+	    <p>The table below lists the latest releases for every branch.
+            (For an explanation of the numbering, see our
+            <a href="/policies/releasestrat.html">release strategy</a>.)
+	    All releases can be found at
+	    <a href="old">/source/old</a>.
+	    A list of mirror sites can be found <a href="mirror.html">here</a>.
+	    </p>
+
+	    <p><em>Note:</em> The latest stable version is the 1.1.1 series. This is
+        also our Long Term Support (LTS) version, supported until 11th September
+        2023. Our previous LTS version (1.0.2 series) will continue to be
+        supported until 31st December 2019 (security fixes only during the last
+        year of support). All users of 1.0.2 are encouraged to upgrade to 1.1.1
+        as soon as possible. Extended support for 1.0.2 to gain access to
+        security fixes beyond 31st December 2019 is
+        <a href="/support/contracts.html">available</a>.
+        The 0.9.8, 1.0.0, 1.0.1 and 1.1.0 versions are now out of support and
+        should not be used.</p>
+
+        <p>The OpenSSL FIPS Object Module 2.0 (FOM) is also available for
+        download. It is no longer receiving updates. It must be used in
+        conjunction with a FIPS capable version of OpenSSL (1.0.2 series). A
+        new FIPS module is currently in development.</p>
+
+	    <table>
+	      <tr>
+		<td>KBytes&nbsp;</td>
+		<td>Date&nbsp;&nbsp;</td>
+		<td>File&nbsp;</td>
+	      </tr>
+	      <tr>
+  <td>5229&nbsp;</td>
+  <td>2019-Dec-20&nbsp;13:25:43&nbsp;</td>
+  <td><a href="openssl-1.0.2u.tar.gz">openssl-1.0.2u.tar.gz</a> (<a href="openssl-1.0.2u.tar.gz.sha256">SHA256</a>) (<a href="openssl-1.0.2u.tar.gz.asc">PGP sign</a>) (<a href="openssl-1.0.2u.tar.gz.sha1">SHA1</a>)</td>
+</tr>
+<tr>
+  <td>8638&nbsp;</td>
+  <td>2019-Sep-10&nbsp;13:53:14&nbsp;</td>
+  <td><a href="openssl-1.1.1d.tar.gz">openssl-1.1.1d.tar.gz</a> (<a href="openssl-1.1.1d.tar.gz.sha256">SHA256</a>) (<a href="openssl-1.1.1d.tar.gz.asc">PGP sign</a>) (<a href="openssl-1.1.1d.tar.gz.sha1">SHA1</a>)</td>
+</tr>
+<tr>
+  <td>1457&nbsp;</td>
+  <td>2017-May-24&nbsp;18:01:01&nbsp;</td>
+  <td><a href="openssl-fips-2.0.16.tar.gz">openssl-fips-2.0.16.tar.gz</a> (<a href="openssl-fips-2.0.16.tar.gz.sha256">SHA256</a>) (<a href="openssl-fips-2.0.16.tar.gz.asc">PGP sign</a>) (<a href="openssl-fips-2.0.16.tar.gz.sha1">SHA1</a>)</td>
+</tr>
+<tr>
+  <td>1437&nbsp;</td>
+  <td>2017-May-24&nbsp;18:01:01&nbsp;</td>
+  <td><a href="openssl-fips-ecp-2.0.16.tar.gz">openssl-fips-ecp-2.0.16.tar.gz</a> (<a href="openssl-fips-ecp-2.0.16.tar.gz.sha256">SHA256</a>) (<a href="openssl-fips-ecp-2.0.16.tar.gz.asc">PGP sign</a>) (<a href="openssl-fips-ecp-2.0.16.tar.gz.sha1">SHA1</a>)</td>
+</tr>
+
+	    </table>
+	    <p>&nbsp;</p>
+
+	    <p>When building a release for the first time, please make sure
+	    to look at the INSTALL file in the distribution along with any NOTES
+        file applicable to your platform. If you have problems, look at the FAQ,
+        which can be found <a href="/docs/faq.html">online</a>. If you
+        still need more help, then join the
+        <a href="/community/mailinglists.html">openssl-users</a> email list and
+        post a question there.</p>
+
+	    <p>PGP keys for the signatures are available from the
+	    <a href="https://www.openssl.org/community/omc.html">OMC page</a>.
+	    Current members that sign releases include Richard Levitte and
+	    Matt Caswell.
+
+	    <p>
+	    Each day we make a snapshot of each development branch.
+	    They can be found at
+	    <a href="https://www.openssl.org/source/snapshot/">https://www.openssl.org/source/snapshot/</a>.
+            These daily snapshots of the source tree are provided for
+            convenience only and not even guaranteed to compile.  Note that
+            keeping a git local repository and updating it every 24 hours
+            is equivalent and will often be faster and more efficient.</p>
+
+	  <h3>Legalities</h3>
+<p>
+Please remember that export/import and/or use of strong
+cryptography software, providing cryptography hooks, or even just
+communicating technical details about cryptography software is
+illegal in some parts of the world. So when you import this
+package to your country, re-distribute it from there or even
+just email technical suggestions or even source patches to the
+authors or other people you are strongly advised to pay close
+attention to any laws or regulations which apply to
+you. The authors of OpenSSL are not liable for any violations
+you make here. So be careful, it is your responsibility.
+</p>
+
+	  </div>
+	  <footer>
+	    You are here: <a href="/">Home</a>
+	    : <a href=".">Downloads</a>
+	    <br/><a href="/sitemap.txt">Sitemap</a>
+	  </footer>
+
+	</article>
+      </div>
+      <!-- sidebar.inc -->
+<aside class="sidebar">
+  <section>
+    <!-- What I tell you three times is true: -->
+    <!--  THIS NEEDS FULL PATHS SINCE THE SUBDIRS INCLUDE THIS NAVBAR. -->
+    <!--   THIS NEEDS FULL PATHS SINCE THE SUBDIRS INCLUDE THIS NAVBAR. -->
+    <!--    THIS NEEDS FULL PATHS SINCE THE SUBDIRS INCLUDE THIS NAVBAR. -->
+    <h1><a href="/source">Downloads</a></h1>
+    <ul>
+      <li>
+	<a href="/source/gitrepo.html">Git Repository</a>
+      </li>
+      <li>
+	<a href="/source/license.html">License</a>
+      </li>
+      <li>
+        <a href="/source/OCB-patent-grant-OpenSSL.pdf">OCB License</a>
+      </li>
+      <li>
+        <a href="/source/old">Old Releases</a>
+      </li>
+      <li>
+	<a href="/source/mirror.html">Mirror Sites</a>
+      </li>
+    </ul>
+  </section>
+</aside>
+<!-- end -->
+
+    </div>
+  </div>
+
+<!-- footer.inc -->
+<footer role="contentinfo">
+  <p>
+    Please report problems with this website to webmaster at openssl.org.
+  </p>
+  <p>
+    Copyright &copy; 1999-2018, OpenSSL Software Foundation.
+  </p>
+</footer>
+<!-- end -->
+
+</body>
+
+</html>
