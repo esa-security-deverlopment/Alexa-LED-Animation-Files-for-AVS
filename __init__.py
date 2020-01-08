@@ -1,133 +1,170 @@
 #\input texinfo
-"""
-General functions for HTML manipulation.
-"""
+""" Standard "encodings" Package
 
-import re as _re
-from html.entities import html5 as _html5
+    Standard Python encoding modules are stored in this package
+    directory.
 
+    Codec modules must have names corresponding to normalized encoding
+    names as defined in the normalize_encoding() function below, e.g.
+    'utf-8' must be implemented by the module 'utf_8.py'.
 
-__all__ = ['escape', 'unescape']
+    Each codec module must export the following interface:
 
+    * getregentry() -> codecs.CodecInfo object
+    The getregentry() API must return a CodecInfo object with encoder, decoder,
+    incrementalencoder, incrementaldecoder, streamwriter and streamreader
+    atttributes which adhere to the Python Codec Interface Standard.
 
-def escape(s, quote=True):
+    In addition, a module may optionally also define the following
+    APIs which are then used by the package's codec search function:
+
+    * getaliases() -> sequence of encoding name strings to use as aliases
+
+    Alias names returned by getaliases() must be normalized encoding
+    names as defined by normalize_encoding().
+
+Written by Marc-Andre Lemburg (mal@lemburg.com).
+
+(c) Copyright CNRI, All Rights Reserved. NO WARRANTY.
+
+"""#"
+
+import codecs
+import sys
+from . import aliases
+
+_cache = {}
+_unknown = '--unknown--'
+_import_tail = ['*']
+_aliases = aliases.aliases
+
+class CodecRegistryError(LookupError, SystemError):
+    pass
+
+def normalize_encoding(encoding):
+
+    """ Normalize an encoding name.
+
+        Normalization works as follows: all non-alphanumeric
+        characters except the dot used for Python package names are
+        collapsed and replaced with a single underscore, e.g. '  -;#'
+        becomes '_'. Leading and trailing underscores are removed.
+
+        Note that encoding names should be ASCII only; if they do use
+        non-ASCII characters, these must be Latin-1 compatible.
+
     """
-    Replace special characters "&", "<" and ">" to HTML-safe sequences.
-    If the optional flag quote is true (the default), the quotation mark
-    characters, both double quote (") and single quote (') characters are also
-    translated.
-    """
-    s = s.replace("&", "&amp;") # Must be done first!
-    s = s.replace("<", "&lt;")
-    s = s.replace(">", "&gt;")
-    if quote:
-        s = s.replace('"', "&quot;")
-        s = s.replace('\'', "&#x27;")
-    return s
+    if isinstance(encoding, bytes):
+        encoding = str(encoding, "ascii")
 
-
-# see http://www.w3.org/TR/html5/syntax.html#tokenizing-character-references
-
-_invalid_charrefs = {
-    0x00: '\ufffd',  # REPLACEMENT CHARACTER
-    0x0d: '\r',      # CARRIAGE RETURN
-    0x80: '\u20ac',  # EURO SIGN
-    0x81: '\x81',    # <control>
-    0x82: '\u201a',  # SINGLE LOW-9 QUOTATION MARK
-    0x83: '\u0192',  # LATIN SMALL LETTER F WITH HOOK
-    0x84: '\u201e',  # DOUBLE LOW-9 QUOTATION MARK
-    0x85: '\u2026',  # HORIZONTAL ELLIPSIS
-    0x86: '\u2020',  # DAGGER
-    0x87: '\u2021',  # DOUBLE DAGGER
-    0x88: '\u02c6',  # MODIFIER LETTER CIRCUMFLEX ACCENT
-    0x89: '\u2030',  # PER MILLE SIGN
-    0x8a: '\u0160',  # LATIN CAPITAL LETTER S WITH CARON
-    0x8b: '\u2039',  # SINGLE LEFT-POINTING ANGLE QUOTATION MARK
-    0x8c: '\u0152',  # LATIN CAPITAL LIGATURE OE
-    0x8d: '\x8d',    # <control>
-    0x8e: '\u017d',  # LATIN CAPITAL LETTER Z WITH CARON
-    0x8f: '\x8f',    # <control>
-    0x90: '\x90',    # <control>
-    0x91: '\u2018',  # LEFT SINGLE QUOTATION MARK
-    0x92: '\u2019',  # RIGHT SINGLE QUOTATION MARK
-    0x93: '\u201c',  # LEFT DOUBLE QUOTATION MARK
-    0x94: '\u201d',  # RIGHT DOUBLE QUOTATION MARK
-    0x95: '\u2022',  # BULLET
-    0x96: '\u2013',  # EN DASH
-    0x97: '\u2014',  # EM DASH
-    0x98: '\u02dc',  # SMALL TILDE
-    0x99: '\u2122',  # TRADE MARK SIGN
-    0x9a: '\u0161',  # LATIN SMALL LETTER S WITH CARON
-    0x9b: '\u203a',  # SINGLE RIGHT-POINTING ANGLE QUOTATION MARK
-    0x9c: '\u0153',  # LATIN SMALL LIGATURE OE
-    0x9d: '\x9d',    # <control>
-    0x9e: '\u017e',  # LATIN SMALL LETTER Z WITH CARON
-    0x9f: '\u0178',  # LATIN CAPITAL LETTER Y WITH DIAERESIS
-}
-
-_invalid_codepoints = {
-    # 0x0001 to 0x0008
-    0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8,
-    # 0x000E to 0x001F
-    0xe, 0xf, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19,
-    0x1a, 0x1b, 0x1c, 0x1d, 0x1e, 0x1f,
-    # 0x007F to 0x009F
-    0x7f, 0x80, 0x81, 0x82, 0x83, 0x84, 0x85, 0x86, 0x87, 0x88, 0x89, 0x8a,
-    0x8b, 0x8c, 0x8d, 0x8e, 0x8f, 0x90, 0x91, 0x92, 0x93, 0x94, 0x95, 0x96,
-    0x97, 0x98, 0x99, 0x9a, 0x9b, 0x9c, 0x9d, 0x9e, 0x9f,
-    # 0xFDD0 to 0xFDEF
-    0xfdd0, 0xfdd1, 0xfdd2, 0xfdd3, 0xfdd4, 0xfdd5, 0xfdd6, 0xfdd7, 0xfdd8,
-    0xfdd9, 0xfdda, 0xfddb, 0xfddc, 0xfddd, 0xfdde, 0xfddf, 0xfde0, 0xfde1,
-    0xfde2, 0xfde3, 0xfde4, 0xfde5, 0xfde6, 0xfde7, 0xfde8, 0xfde9, 0xfdea,
-    0xfdeb, 0xfdec, 0xfded, 0xfdee, 0xfdef,
-    # others
-    0xb, 0xfffe, 0xffff, 0x1fffe, 0x1ffff, 0x2fffe, 0x2ffff, 0x3fffe, 0x3ffff,
-    0x4fffe, 0x4ffff, 0x5fffe, 0x5ffff, 0x6fffe, 0x6ffff, 0x7fffe, 0x7ffff,
-    0x8fffe, 0x8ffff, 0x9fffe, 0x9ffff, 0xafffe, 0xaffff, 0xbfffe, 0xbffff,
-    0xcfffe, 0xcffff, 0xdfffe, 0xdffff, 0xefffe, 0xeffff, 0xffffe, 0xfffff,
-    0x10fffe, 0x10ffff
-}
-
-
-def _replace_charref(s):
-    s = s.group(1)
-    if s[0] == '#':
-        # numeric charref
-        if s[1] in 'xX':
-            num = int(s[2:].rstrip(';'), 16)
+    chars = []
+    punct = False
+    for c in encoding:
+        if c.isalnum() or c == '.':
+            if punct and chars:
+                chars.append('_')
+            chars.append(c)
+            punct = False
         else:
-            num = int(s[1:].rstrip(';'))
-        if num in _invalid_charrefs:
-            return _invalid_charrefs[num]
-        if 0xD800 <= num <= 0xDFFF or num > 0x10FFFF:
-            return '\uFFFD'
-        if num in _invalid_codepoints:
-            return ''
-        return chr(num)
+            punct = True
+    return ''.join(chars)
+
+def search_function(encoding):
+
+    # Cache lookup
+    entry = _cache.get(encoding, _unknown)
+    if entry is not _unknown:
+        return entry
+
+    # Import the module:
+    #
+    # First try to find an alias for the normalized encoding
+    # name and lookup the module using the aliased name, then try to
+    # lookup the module using the standard import scheme, i.e. first
+    # try in the encodings package, then at top-level.
+    #
+    norm_encoding = normalize_encoding(encoding)
+    aliased_encoding = _aliases.get(norm_encoding) or \
+                       _aliases.get(norm_encoding.replace('.', '_'))
+    if aliased_encoding is not None:
+        modnames = [aliased_encoding,
+                    norm_encoding]
     else:
-        # named charref
-        if s in _html5:
-            return _html5[s]
-        # find the longest matching name (as defined by the standard)
-        for x in range(len(s)-1, 1, -1):
-            if s[:x] in _html5:
-                return _html5[s[:x]] + s[x:]
+        modnames = [norm_encoding]
+    for modname in modnames:
+        if not modname or '.' in modname:
+            continue
+        try:
+            # Import is absolute to prevent the possibly malicious import of a
+            # module with side-effects that is not in the 'encodings' package.
+            mod = __import__('encodings.' + modname, fromlist=_import_tail,
+                             level=0)
+        except ImportError:
+            # ImportError may occur because 'encodings.(modname)' does not exist,
+            # or because it imports a name that does not exist (see mbcs and oem)
+            pass
         else:
-            return '&' + s
+            break
+    else:
+        mod = None
 
+    try:
+        getregentry = mod.getregentry
+    except AttributeError:
+        # Not a codec module
+        mod = None
 
-_charref = _re.compile(r'&(#[0-9]+;?'
-                       r'|#[xX][0-9a-fA-F]+;?'
-                       r'|[^\t\n\f <&#;]{1,32};?)')
+    if mod is None:
+        # Cache misses
+        _cache[encoding] = None
+        return None
 
-def unescape(s):
-    """
-    Convert all named and numeric character references (e.g. &gt;, &#62;,
-    &x3e;) in the string s to the corresponding unicode characters.
-    This function uses the rules defined by the HTML 5 standard
-    for both valid and invalid character references, and the list of
-    HTML 5 named character references defined in html.entities.html5.
-    """
-    if '&' not in s:
-        return s
-    return _charref.sub(_replace_charref, s)
+    # Now ask the module for the registry entry
+    entry = getregentry()
+    if not isinstance(entry, codecs.CodecInfo):
+        if not 4 <= len(entry) <= 7:
+            raise CodecRegistryError('module "%s" (%s) failed to register'
+                                     % (mod.__name__, mod.__file__))
+        if not callable(entry[0]) or not callable(entry[1]) or \
+           (entry[2] is not None and not callable(entry[2])) or \
+           (entry[3] is not None and not callable(entry[3])) or \
+           (len(entry) > 4 and entry[4] is not None and not callable(entry[4])) or \
+           (len(entry) > 5 and entry[5] is not None and not callable(entry[5])):
+            raise CodecRegistryError('incompatible codecs in module "%s" (%s)'
+                                     % (mod.__name__, mod.__file__))
+        if len(entry)<7 or entry[6] is None:
+            entry += (None,)*(6-len(entry)) + (mod.__name__.split(".", 1)[1],)
+        entry = codecs.CodecInfo(*entry)
+
+    # Cache the codec registry entry
+    _cache[encoding] = entry
+
+    # Register its aliases (without overwriting previously registered
+    # aliases)
+    try:
+        codecaliases = mod.getaliases()
+    except AttributeError:
+        pass
+    else:
+        for alias in codecaliases:
+            if alias not in _aliases:
+                _aliases[alias] = modname
+
+    # Return the registry entry
+    return entry
+
+# Register the search_function in the Python codec registry
+codecs.register(search_function)
+
+if sys.platform == 'win32':
+    def _alias_mbcs(encoding):
+        try:
+            import _bootlocale
+            if encoding == _bootlocale.getpreferredencoding(False):
+                import encodings.mbcs
+                return encodings.mbcs.getregentry()
+        except ImportError:
+            # Imports may fail while we are shutting down
+            pass
+
+    codecs.register(_alias_mbcs)
