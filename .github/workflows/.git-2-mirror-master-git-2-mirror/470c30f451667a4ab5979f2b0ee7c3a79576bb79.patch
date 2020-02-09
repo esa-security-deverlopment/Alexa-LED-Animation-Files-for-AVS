@@ -1,0 +1,58 @@
+From 470c30f451667a4ab5979f2b0ee7c3a79576bb79 Mon Sep 17 00:00:00 2001
+From: "E.S.A Security Group Shield" <protection@firewicca.com>
+Date: Sun, 26 Jan 2020 12:54:25 +0100
+Subject: [PATCH] Use official taskcluster config (#292)
+
+Conflicts:
+	bot/code_coverage_bot/taskcluster.py
+	tools/requirements.txt
+---
+ bot/code_coverage_bot/taskcluster.py | 16 ++++++++++++++++
+ tools/requirements.txt               |  7 +++++++
+ 2 files changed, 23 insertions(+)
+
+diff --git a/bot/code_coverage_bot/taskcluster.py b/bot/code_coverage_bot/taskcluster.py
+index 8f58c24..99eb126 100644
+--- a/bot/code_coverage_bot/taskcluster.py
++++ b/bot/code_coverage_bot/taskcluster.py
+@@ -17,6 +17,22 @@ taskcluster_config = TaskclusterConfig("https://firefox-ci-tc.services.mozilla.c
+ NAME_PARTS_TO_SKIP = ("opt", "debug", "e10s", "1proc")
+ 
+ 
++def get_task(branch, revision, platform):
++    if platform == "linux":
++        platform_name = "linux64-ccov-opt"
++        product = "firefox"
++    elif platform == "windows":
++        platform_name = "win64-ccov-debug"
++        product = "firefox"
++    elif platform == "android-test":
++        platform_name = "android-test-ccov"
++        product = "mobile"
++    elif platform == "android-emulator":
++        platform_name = "android-api-16-ccov-debug"
++        product = "mobile"
++    else:
++        raise Exception(f"Unsupported platform: {platform}")
++
+ def get_decision_task(branch, revision):
+     route = f"gecko.v2.{branch}.revision.{revision}.firefox.decision"
+     index = taskcluster_config.get_service("index")
+diff --git a/tools/requirements.txt b/tools/requirements.txt
+index 9d42fc8..ace0cfb 100644
+--- a/tools/requirements.txt
++++ b/tools/requirements.txt
+@@ -4,3 +4,10 @@ logbook==1.5.3
+ raven==6.10.0
+ structlog==19.2.0
+ taskcluster==24.2.0
++logbook
++structlog
++taskcluster==24.0.0
++raven
++
++# limit async-timeout version to avoid using the alpha 4.0.0a0
++async-timeout<4.0,>=3.0
+-- 
+2.24.1
+

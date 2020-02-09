@@ -1,0 +1,70 @@
+This PR contains the following updates:
+
+| Package | Type | Update | Change |
+|---|---|---|---|
+| [go.opencensus.io](https://togithub.com/census-instrumentation/opencensus-go) | require | patch | `v0.22.0` -> `v0.22.2` |
+| [go.opencensus.io](https://togithub.com/census-instrumentation/opencensus-go) | require | minor | `v0.17.0` -> `v0.22.2` |
+
+---
+
+### Release Notes
+
+<details>
+<summary>census-instrumentation/opencensus-go</summary>
+
+### [`v0.22.2`](https://togithub.com/census-instrumentation/opencensus-go/releases/v0.22.2)
+
+[Compare Source](https://togithub.com/census-instrumentation/opencensus-go/compare/v0.22.1...v0.22.2)
+
+### Changes since v0.22.1
+
+[`aad2c52`](https://togithub.com/census-instrumentation/opencensus-go/commit/aad2c527c5defcf89b5afab7f37274304195a6b2) exclude zero bucket from aggregation_data ([#&#8203;1183](https://togithub.com/census-instrumentation/opencensus-go/issues/1183))
+[`3b5a343`](https://togithub.com/census-instrumentation/opencensus-go/commit/3b5a343282fe4b4fccdb0f24cbd1d7169d20858a) Added seconds unit ([#&#8203;1179](https://togithub.com/census-instrumentation/opencensus-go/issues/1179))
+[`fa651b0`](https://togithub.com/census-instrumentation/opencensus-go/commit/fa651b05963cfb6060755dc887e7d156ba66e792) Add runtime metrics support ([#&#8203;1156](https://togithub.com/census-instrumentation/opencensus-go/issues/1156))
+[`f58a717`](https://togithub.com/census-instrumentation/opencensus-go/commit/f58a71790be543eb35437f28370e9817b5d092bb) Allow overriding health endpoint check in handler ([#&#8203;1177](https://togithub.com/census-instrumentation/opencensus-go/issues/1177))
+[`df0549d`](https://togithub.com/census-instrumentation/opencensus-go/commit/df0549d970e2a64236cca48fa6a76f0d321c8254) add opencensus and opentracing merger note ([#&#8203;1175](https://togithub.com/census-instrumentation/opencensus-go/issues/1175))
+[`d7af601`](https://togithub.com/census-instrumentation/opencensus-go/commit/d7af601eacbd8e41ece0b1a9fbb9040c844d8fa4) Add New Relic to list of available exporters. ([#&#8203;1172](https://togithub.com/census-instrumentation/opencensus-go/issues/1172))
+[`6531013`](https://togithub.com/census-instrumentation/opencensus-go/commit/65310139a05de5c10077b75ac45eac743aa01214) Remove Gopkg.toml ([#&#8203;1170](https://togithub.com/census-instrumentation/opencensus-go/issues/1170))
+[`1b2595d`](https://togithub.com/census-instrumentation/opencensus-go/commit/1b2595daaf5b3b90f83bdba55486caa1d38c61a2) fix appveyor build. ([#&#8203;1168](https://togithub.com/census-instrumentation/opencensus-go/issues/1168))
+[`3da91ae`](https://togithub.com/census-instrumentation/opencensus-go/commit/3da91ae5e6af5a3e42dac7761866fa513a753d5e) Simplify use of time package ([#&#8203;1167](https://togithub.com/census-instrumentation/opencensus-go/issues/1167))
+[`ce85b6d`](https://togithub.com/census-instrumentation/opencensus-go/commit/ce85b6d0fba87f4b9f1bef96b9692e7ece47514b) Use stats.UnitDimensionless rather than deprecated stats.UnitNone ([#&#8203;1166](https://togithub.com/census-instrumentation/opencensus-go/issues/1166))
+
+### [`v0.22.1`](https://togithub.com/census-instrumentation/opencensus-go/releases/v0.22.1)
+
+[Compare Source](https://togithub.com/census-instrumentation/opencensus-go/compare/v0.22.0...v0.22.1)
+
+### Changes since v0.22.0
+
+[`59d1ce3`](https://togithub.com/census-instrumentation/opencensus-go/commit/59d1ce35d30f3c25ba762169da2a37eab6ffa041) Update LRU usage ([#&#8203;1164](https://togithub.com/census-instrumentation/opencensus-go/issues/1164))
+[`556cb5b`](https://togithub.com/census-instrumentation/opencensus-go/commit/556cb5bcd57b4e3e6bdb538f7ac80f161f10393c) Fix typo in view documentation and remove unnecessary type conversions ([#&#8203;1162](https://togithub.com/census-instrumentation/opencensus-go/issues/1162))
+[`c3153da`](https://togithub.com/census-instrumentation/opencensus-go/commit/c3153da60838155e855bf92946f877d763607410) Fix bug in ocgrpc client logging ([#&#8203;1161](https://togithub.com/census-instrumentation/opencensus-go/issues/1161))
+[`19caf3a`](https://togithub.com/census-instrumentation/opencensus-go/commit/19caf3aebd1153094beef53e7449948b2d403406) Use time.Since rather than time.Now().Sub ([#&#8203;1160](https://togithub.com/census-instrumentation/opencensus-go/issues/1160))
+[`29aa3ca`](https://togithub.com/census-instrumentation/opencensus-go/commit/29aa3cabbf25be9f1c3c6d78cecfbe0c3e20cf5a) change unit to dimensionless when aggregation is count. ([#&#8203;1157](https://togithub.com/census-instrumentation/opencensus-go/issues/1157))
+[`b4a1468`](https://togithub.com/census-instrumentation/opencensus-go/commit/b4a14686f0a98096416fe1b4cb848e384fb2b22b) Clean up comments in view.go ([#&#8203;1152](https://togithub.com/census-instrumentation/opencensus-go/issues/1152))
+[`19a9151`](https://togithub.com/census-instrumentation/opencensus-go/commit/19a91518e33fbd42c94402bb5758d88f3c3738eb) Map 422 Unprocessable Entity to INVALID_ARGUMENT ([#&#8203;1149](https://togithub.com/census-instrumentation/opencensus-go/issues/1149))
+[`df42942`](https://togithub.com/census-instrumentation/opencensus-go/commit/df42942ad08fc1d7526b5a0361f909c351fabfa3) Add deployment key for k8s resource. ([#&#8203;1148](https://togithub.com/census-instrumentation/opencensus-go/issues/1148))
+[`f6172e4`](https://togithub.com/census-instrumentation/opencensus-go/commit/f6172e422374225c6748bd2a9c872e88c2eb43d4) Replace tag.NewKey calls with tag.MustNewKey where appropriate ([#&#8203;1146](https://togithub.com/census-instrumentation/opencensus-go/issues/1146))
+[`a092815`](https://togithub.com/census-instrumentation/opencensus-go/commit/a092815c29e3a8fb79dfa966ad048ed20f1f8c01) Fix typo in docs An => A ([#&#8203;1145](https://togithub.com/census-instrumentation/opencensus-go/issues/1145))
+[`6325d76`](https://togithub.com/census-instrumentation/opencensus-go/commit/6325d764b2d4a66576c5623aa1e6010b4148a429) Bump up the version to v0.23.0 ([#&#8203;1144](https://togithub.com/census-instrumentation/opencensus-go/issues/1144))
+
+</details>
+
+---
+
+### Renovate configuration
+
+:date: **Schedule**: At any time (no schedule defined).
+
+:vertical_traffic_light: **Automerge**: Disabled by config. Please merge this manually once you are satisfied.
+
+:recycle: **Rebasing**: Whenever PR becomes conflicted, or if you modify the PR title to begin with "`rebase!`".
+
+:no_bell: **Ignore**: Close this PR and you won't be reminded about these updates again.
+
+---
+
+ - [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check this box
+
+---
+
+Newsflash: Renovate has joined WhiteSource, and is now free for all use. [Learn more](https://renovate.whitesourcesoftware.com/blog/renovate-is-now-part-of-whitesource/) or view updated [terms](https://renovate.whitesourcesoftware.com/terms-of-service/) and [privacy](https://renovate.whitesourcesoftware.com/privacy-policy/) policies.

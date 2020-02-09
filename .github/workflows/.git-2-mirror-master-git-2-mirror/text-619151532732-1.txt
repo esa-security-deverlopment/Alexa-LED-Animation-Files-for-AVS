@@ -1,0 +1,26 @@
+https://www.vgregion.se/
+https://www.vgregion.se/Static/gfx/ic_close_white_24px.svg
+https://www.vgregion.se/Areas/Public/Static/fonts/PTSerif-Regular.woff2
+https://www.vgregion.se/Static/gfx/dekorelement.svg
+https://www.vgregion.se/Static/gfx/vgr-logotyp-neg.svg
+https://www.vgregion.se/bundles/css/public/theme-1/non-critical.css?v=-L_agSK9bwqT76syzZ3sQGuqRM60gUi20QgkWLb9Cvs1
+https://www.vgregion.se/static/gfx/vgr-logotyp-neg.png
+https://www.vgregion.se/contentassets/2f07cc17c98f43b1b7036efb19b416a2/9f0caf3605764345b8164c5e051935cd22.jpg?w=1144
+https://www.vgregion.se/bundles/css/public/print.css?v=cW_pO_AhzCpOiUqWT9Znwe9OvD0XQPQ5hWf-FFEt9Y81
+https://www.vgregion.se/Static/gfx/ic_search_white_24px.svg
+https://www.vgregion.se/contentassets/712bd91bf637453db9cbd81d67e401f4/cropped-vgr17-kifacebook_profilbild_vgr_fokus5b25d_23542.jpg?w=1144
+https://www.vgregion.se/contentassets/5c61a8334bee42a2ac146d2ca5346af4/cropped-vgr17-ko0591_18539.jpg?w=1144
+https://www.vgregion.se/contentassets/6abaaa4e2fb04fd2b6d63aae7086b57a/71b349a30be94bf3bad8d6a435ff276c22.jpg?w=1144
+https://www.vgregion.se/contentassets/03d492b7929545e190a03566fabc1c75/cropped-vgr17-ko_i4a5617b_01021.jpg?w=1144
+https://www.vgregion.se/contentassets/3b9dade2eb7e4a829e6f8a3e1d8a3d7a/b735e6be513a42bca97434eed7c926a822.jpg?w=1144
+https://www.vgregion.se/contentassets/153e56d84e31451d90ee9e49ffc9caba/cropped-vgr16-kodsc_2325_03007.jpg?w=1144
+https://www.vgregion.se/contentassets/3b616b050c9d45f89f27a8b09c9887f7/vgr-logotyp-neg.png?w=1144
+https://www.vgregion.se/bundles/js/scriptjs?v=Q2VrxNTkjmpWe5z4GbX7SSsbrLegJpjSUzzLjTBK9po1
+https://www.vgregion.se/Static/gfx/ic_phone_white_18px.svg
+https://www.vgregion.se/Static/gfx/ic_mail_outline_white_18px.svg
+https://www.vgregion.se/bundles/js/public/common?v=3bm0ldEx_gfD2XBkldKqzl8bO76UoQEPxmcczpN86VU1
+https://piwik.vgregion.se/js/container_euGr615t.js
+https://piwik-ext.vgregion.se/piwik.js
+https://piwik-ext.vgregion.se/piwik.php?action_name=Västra Götalandsregionen - Västra Götalandsregionen&idsite=86&rec=1&r=270161&h=19&m=26&s=4&url=https://www.vgregion.se/&_id=dc12eb540fa590d0&_idts=1575573964&_idvc=1&_idn=0&_refts=0&_viewts=1575573964&send_image=1&pdf=1&qt=0&realp=0&wma=0&dir=0&fla=0&java=0&gears=0&ag=0&cookie=1&res=1600x1000&gt_ms=2131&pv_id=3rl6YB
+https://piwik-ext.vgregion.se/plugins/HeatmapSessionRecording/configs.php?idsite=86&trackerid=DPrYtu&url=https://www.vgregion.se/
+https://www.vgregion.se/Static/gfx/favicon.ico

@@ -1,0 +1,33 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{95, 105}, {51, 31}}",
+        "class" : "Switch",
+        "attributes" : {
+          "action" : "Get to doorexit",
+          "frame" : "{{95, 105}, {51, 31}}",
+          "class" : "Switch",
+          "background_color" : "RGBA(1.000000,0.571429,0.000000,1.000000)",
+          "value" : true,
+          "uuid" : "33FD0B6C-515F-4AE3-9954-346C0F6C8B50",
+          "name" : "switch1"
+        },
+        "selected" : true
+      }
+    ],
+    "frame" : "{{0, 0}, {240, 240}}",
+    "class" : "View",
+    "attributes" : {
+      "enabled" : true,
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]

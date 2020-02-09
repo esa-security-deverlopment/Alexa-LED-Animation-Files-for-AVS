@@ -1,0 +1,14 @@
+https://inetapp.de/en/ineturlschemes.html
+https://inetapp.de/en/css/bootstrap.min.css
+https://inetapp.de/en/img/bananalogo@2x.png
+https://inetapp.de/en/css/style.css
+https://inetapp.de/en/js/jquery.min.js
+https://inetapp.de/en/js/jquery-ui.min.js
+https://inetapp.de/en/js/superfish.js
+https://inetapp.de/en/js/jquery.prettyPhoto.js
+https://inetapp.de/en/js/main.js
+https://inetapp.de/en/js/jquery.hoverdir.js
+https://ssl.google-analytics.com/ga.js
+https://ssl.google-analytics.com/r/__utm.gif?utmwv=5.7.2&utms=1&utmn=1616034649&utmhn=inetapp.de&utmcs=UTF-8&utmsr=1600x1000&utmvp=1085x784&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=URL Schemes and Siri Voice Shortcuts to Command iNet via Other Apps&utmhid=343235783&utmr=-&utmp=/en/ineturlschemes.html&utmht=1575573666766&utmac=UA-6518341-3&utmcc=__utma=228625732.440681925.1575573667.1575573667.1575573667.1;+__utmz=228625732.1575573667.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none);&utmjid=1486700193&utmredir=1&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~
+https://inetapp.de/en/img/favicon32.png
+https://inetapp.de/en/img/faviconinet.ico

@@ -1,0 +1,78 @@
+azure: Using SSH key ssh-rsa 4096 05:4a:f5:34:1c:b9:4b:52:ec:2c:8b:76:4b:77:48:e9
+
+Pythonista-Issues: Using SSH key ssh-rsa 4096 05:4a:f5:34:1c:b9:4b:52:ec:2c:8b:76:4b:77:48:e9
+
+blockchain-tutorial-2: Using SSH key ssh-rsa 4096 05:4a:f5:34:1c:b9:4b:52:ec:2c:8b:76:4b:77:48:e9
+
+go-cloud: Using SSH key ssh-rsa 4096 05:4a:f5:34:1c:b9:4b:52:ec:2c:8b:76:4b:77:48:e9
+
+Swift_Playgrounds_Author_Template_for_Xcode_10: Using SSH key ssh-rsa 4096 b9:47:36:d2:9c:57:85:bb:bd:18:98:7b:eb:a6:21:22
+
+azure: Fetch received nothing.
+
+blockchain-tutorial-2: Fetch received nothing.
+
+go-cloud: Enumerating objects: 7, done.
+Counting objects:  14% (1/7)
+go-cloud: Enumerating objects: 7, done.
+
+go-cloud: Counting objects:  28% (2/7)Counting objects:  42% (3/7)Counting objects:  57% (4/7)Counting objects:  71% (5/7)Counting obj
+go-cloud: ects:  85% (6/7)Counting objects: 100% (7/7)Counting objects: 100% (7/7), done.
+Compressing objects:  50% (1/2)Compressing ob
+go-cloud: jects: 100% (2/2)Compressing objects: 100% (2/2), done.
+
+go-cloud: Counting objects:  14% (1/7)Counting objects:  28% (2/7)Counting objects:  42% (3/7)Counting objects:  57% (4/7)Counting objects:  71% (5/7)
+go-cloud: Counting objects:  85% (6/7)Counting objects: 100% (7/7)Counting objects: 100% (7/7), done.
+
+go-cloud: Compressing objects:  50% (1/2)Compressing objects: 100% (2/2)
+go-cloud: Total 7 (delta 5), reused 6 (delta 5), pack-reused 0
+
+go-cloud: Compressing objects: 100% (2/2), done.
+Total 7 (delta 5), reused 6 (delta 5), pack-reused 0
+
+ambjoerna.skoeld603826: Doing password authentication for protection1
+
+go-cloud: Fetch received 2.9 Kbytes and added 1 branch.
+
+Swift_Playgrounds_Author_Template_for_Xcode_10: Fetch received nothing.
+
+ambjoerna.skoeld603826: Fetch received nothing.
+
+libgcrypt-1.8.4 2: Fetch received nothing.
+
+starship: Using SSH key ssh-rsa 4096 b9:47:36:d2:9c:57:85:bb:bd:18:98:7b:eb:a6:21:22
+
+starship: Using SSH key ssh-rsa 4096 b9:47:36:d2:9c:57:85:bb:bd:18:98:7b:eb:a6:21:22 (2)
+
+starship: Using SSH key ssh-rsa 4096 b9:47:36:d2:9c:57:85:bb:bd:18:98:7b:eb:a6:21:22 (3)
+
+starship: Using SSH key ssh-rsa 4096 b9:47:36:d2:9c:57:85:bb:bd:18:98:7b:eb:a6:21:22 (4)
+
+starship: No more authentication methods.
+
+The operation couldn’t be completed. (Git error -7.)
+Interpreting last error as: SSH connection rejected. Make sure SSH key is valid on github.com.
+-2: Using SSH key ssh-rsa 4096 05:4a:f5:34:1c:b9:4b:52:ec:2c:8b:76:4b:77:48:e9
+
+atom: Using SSH key ssh-rsa 4096 05:4a:f5:34:1c:b9:4b:52:ec:2c:8b:76:4b:77:48:e9
+
+linuxTweaks-2: Fetch received nothing.
+
+-2: Fetch received nothing.
+
+linuxTweaks: Fetch received nothing.
+
+typedoc: Fetch received nothing.
+
+Pythonista-Issues: Using SSH key ssh-rsa 4096 05:4a:f5:34:1c:b9:4b:52:ec:2c:8b:76:4b:77:48:e9
+
+wiki: Fetch received nothing.
+
+wiki-2: Fetch received nothing.
+
+Pythonista-Issues: Fetch received nothing.
+
+atom: Fetch received nothing.
+
+azure-pipelines-tasks: Fetch received nothing.
+
