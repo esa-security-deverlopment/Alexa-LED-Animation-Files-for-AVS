@@ -1,0 +1,163 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wi-Fi Transfer QR login</title>
+    <meta name="description" content="Transfer music, videos, photos or documents from your iPhone or iPad to a Mac or PC and vice versa with our super fast Wi-Fi Transfer technology. Just fire up a camera and your files are one tap away.">
+
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-itunes-app" content="app-id=364901807"/>
+
+    <link rel="icon" type="image/png" href="/img/favicon/wifi-transfer-icon-20.png?201803261241" sizes="20x20" />
+    <link rel="icon" type="image/png" href="/img/favicon/wifi-transfer-icon-40.png?201803261241" sizes="40x40" />
+    <link rel="icon" type="image/png" href="/img/favicon/wifi-transfer-icon-60.png?201803261241" sizes="60x60" />
+
+    
+<!-- Google Analytics -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-116567-22', 'auto');
+    
+    ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+    <link rel="stylesheet" href="/css/style-beaut.css?1558530053" type="text/css" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <script type="text/javascript" src="/js/jquery-1.11.2.min.js?1558530053"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js?1558530053"></script>
+    <script type="text/javascript" src="/js/functions.js?1558530053"></script>
+
+    <script type="text/javascript" src="/js/script-beaut.js?1565607031"></script>
+
+</head>
+<body class="sv pdfwifi" ontouchstart="">
+
+
+<div id="fade" class="trans-overlay">
+    <div id="dark" class="black-overlay"></div>
+    <div id="connection" class="white-content">
+        <p class="title">Establishing <strong>local connection</strong>...</p>
+        <div class="wifi_connect">
+            <img class="wifi_connect_img" src="/img/disconnect-grey.svg" alt="" />
+            <iframe class="wifi_connect_frame" name="wifiConnect" src="/img/animations/connect.html" frameborder="0" scrolling="no" style="opacity: 0"></iframe>
+        </div>
+
+        <a class="close" href="#"></a>
+    </div>
+
+    <div id="connection_error" class="white-content text-left tall">
+        <p class="title">Something went wrong</p>
+        <p class="text-1">Make sure your computer is connected to <span class="wifi-network">wifi_network_name</span>.</p>
+        <p class="text-2">You can also connect your device without Wi-Fi:</p>
+
+        <div class="point point-1">
+            <p class="point-text"><strong>1 - Activate USB Transfer</strong></p>
+            <p class="point-text">To share documents without Wi-Fi, connect iPhone via USB cable</p>
+        </div>
+
+        <div class="point point-2">
+            <p class="point-text"><strong>2 - Establish Connection</strong></p>
+            <p class="point-text">Follow the link: <a href="http://bonjour-adress.local:8080" class="bonjur-name" target="_blank">http://bonjour-adress.local:8080</a></p>
+        </div>
+
+        <a class="close" href="#"></a>
+    </div>
+
+    <div id="connection_edge" class="white-content text-left">
+        <p class="title">QR-login is not supported by your browser</p>
+        <p class="text">To use Wi-Fi Transfer with this browser make sure you are connected to <span class="wifi-network">wifi_network_name</span> and click the link: <a href="http://bonjour-adress.local:8080" class="bonjur-name" target="_blank">http://bonjour-adress.local:8080</a></p>
+        <p class="subtitle">Wi-Fi Transfer is compatible with the following browsers:</p>
+
+        <div class="text-center">
+            <a class="browser chrome text-center" href="https://www.google.com/chrome/" target="_blank">
+                <img class="icon" src="/img/chrome.png" alt="" />
+                <p class="name">Google Chrome</p>
+            </a><!--
+
+            --><a class="browser firefox text-center" href="https://www.mozilla.org/firefox/" target="_blank">
+                <img class="icon" src="/img/firefox.png" alt="" />
+                <p class="name">Mozilla Firefox</p>
+            </a><!--
+
+            --><a class="browser opera text-center" href="https://www.opera.com/" target="_blank">
+                <img class="icon" src="/img/opera.png" alt="" />
+                <p class="name">Opera</p>
+            </a>
+        </div>
+
+        <a class="close" href="#"></a>
+    </div>
+</div>
+
+<div class="main">
+
+    <div class="verification-content">
+        <img class="logo" src="/img/pdfexpert-appicon@2x.png" alt="" />
+        <h1 class="title">Connect to PDF Expert</h1>
+        <h2 class="subtitle">Enter your Verification Code</h2>
+
+        <div class="pin-form">
+            <input class="pin-number" type="text" value="" data-pos="1" pattern="[0-9]*" />
+            <input class="pin-number" type="text" value="" data-pos="2" pattern="[0-9]*" />
+            <input class="pin-number" type="text" value="" data-pos="3" pattern="[0-9]*" />
+            <input class="pin-number" type="text" value="" data-pos="4" pattern="[0-9]*" />
+        </div>
+
+        <a class="qr-code-link" href="#"><i class="fas fa-qrcode"></i>Show QR-code to Scan</a>
+
+        <div class="qr-code hidden">
+            <img id="qr_code" class="qr-code-image" src="/qrcode?token=79cdb571-75f5-48f2-b205-edd55a834c28&size=180" data-token="79cdb571-75f5-48f2-b205-edd55a834c28" alt="" />
+
+            <p class="tip iphone-tip text-center">Scan with iPhone Camera app</p>
+            <p class="tip ipad-tip text-center hidden">Scan with iPad Camera app</p>
+        </div>
+    </div>
+
+    <div class="get-started">
+        <a class="get-started-link" href="#"><i class="fas fa-question-circle"></i>Need help to get started?</a>
+    </div>
+
+    <div class="get-started-tip hidden">
+        <h3 class="title-switch">Connect to:</h3>
+        <div class="switch text-center active" data-switch="iphone-description" data-tip="iphone-tip">
+            <span class="iphone">iPhone</span>
+        </div><!--
+            --><div class="switch text-center" data-switch="ipad-description" data-tip="ipad-tip">
+            <span class="ipad">iPad</span>
+        </div>
+
+        <div class="qr-description iphone-description">
+            <p class="text">1. Open PDF Expert on your device</p>
+            <p class="text">2. Tap <img class="cloud-svg" src="/img/network.svg" /> Services and select <strong>Wi-Fi Transfer</strong></p>
+            <p class="text">3. Enter the number you see on your device</p>
+        </div>
+
+        <div class="qr-description ipad-description hidden">
+            <p class="text">1. Open PDF Expert on your device</p>
+            <p class="text">2. Tap <img class="fab-svg" src="/img/add.svg" /> Services and select <strong>Wi-Fi Transfer</strong></p>
+            <p class="text">3. Enter the number you see on your device</p>
+        </div>
+
+        <p class="help">Still have questions? <a href="https://pdfexpert.com/ios/how-to-transfer-pdf" target="_blank">Check our guide</a></p>
+    </div>
+
+</div>
+
+<div class="hidden img-check"></div>
+
+
+
+</body>
+</html>
+
+<!-- g:0.0025150775909424 v:0.0034468173980713 -->
