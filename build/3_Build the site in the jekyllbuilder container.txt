@@ -1,0 +1,90 @@
+2021-04-24T02:43:06.4316212Z ##[group]Run docker run \
+2021-04-24T02:43:06.4316718Z [36;1mdocker run \[0m
+2021-04-24T02:43:06.4318409Z [36;1m-v /home/runner/work/Alexa-LED-Animation-Files-for-AVS/Alexa-LED-Animation-Files-for-AVS:/srv/jekyll -v /home/runner/work/Alexa-LED-Animation-Files-for-AVS/Alexa-LED-Animation-Files-for-AVS/_site:/srv/jekyll/_site \[0m
+2021-04-24T02:43:06.4320259Z [36;1mjekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"[0m
+2021-04-24T02:43:06.4362002Z shell: /usr/bin/bash -e {0}
+2021-04-24T02:43:06.4362405Z ##[endgroup]
+2021-04-24T02:43:06.7224389Z Unable to find image 'jekyll/builder:latest' locally
+2021-04-24T02:43:06.9957818Z latest: Pulling from jekyll/builder
+2021-04-24T02:43:06.9980900Z cbdbe7a5bc2a: Pulling fs layer
+2021-04-24T02:43:06.9981675Z aa8ae8202b42: Pulling fs layer
+2021-04-24T02:43:06.9982256Z b21786fe7c0d: Pulling fs layer
+2021-04-24T02:43:06.9982912Z 68296e6645b2: Pulling fs layer
+2021-04-24T02:43:06.9983493Z 6b1c37303e2d: Pulling fs layer
+2021-04-24T02:43:06.9984305Z 787be8e21c02: Pulling fs layer
+2021-04-24T02:43:06.9984772Z 68296e6645b2: Waiting
+2021-04-24T02:43:06.9985225Z 6b1c37303e2d: Waiting
+2021-04-24T02:43:06.9985693Z 787be8e21c02: Waiting
+2021-04-24T02:43:07.0095886Z aa8ae8202b42: Download complete
+2021-04-24T02:43:07.0205340Z b21786fe7c0d: Verifying Checksum
+2021-04-24T02:43:07.0207248Z b21786fe7c0d: Download complete
+2021-04-24T02:43:07.0984872Z 6b1c37303e2d: Verifying Checksum
+2021-04-24T02:43:07.0987049Z 6b1c37303e2d: Download complete
+2021-04-24T02:43:07.1186778Z cbdbe7a5bc2a: Verifying Checksum
+2021-04-24T02:43:07.1187382Z cbdbe7a5bc2a: Download complete
+2021-04-24T02:43:07.3560184Z cbdbe7a5bc2a: Pull complete
+2021-04-24T02:43:07.4620411Z 68296e6645b2: Verifying Checksum
+2021-04-24T02:43:07.4620934Z 68296e6645b2: Download complete
+2021-04-24T02:43:09.9139934Z 787be8e21c02: Verifying Checksum
+2021-04-24T02:43:09.9140556Z 787be8e21c02: Download complete
+2021-04-24T02:43:11.0634520Z aa8ae8202b42: Pull complete
+2021-04-24T02:43:11.1231743Z b21786fe7c0d: Pull complete
+2021-04-24T02:43:12.0064325Z 68296e6645b2: Pull complete
+2021-04-24T02:43:12.0653116Z 6b1c37303e2d: Pull complete
+2021-04-24T02:43:21.5022795Z 787be8e21c02: Pull complete
+2021-04-24T02:43:21.5056498Z Digest: sha256:b918b81939a1076dce89d142c0764c2c3cb93858f56ecf4f04ad0387338e77aa
+2021-04-24T02:43:21.5076188Z Status: Downloaded newer image for jekyll/builder:latest
+2021-04-24T02:43:21.8839628Z ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c) [x86_64-linux-musl]
+2021-04-24T02:43:22.3007749Z Configuration file: /srv/jekyll/_config.yml
+2021-04-24T02:43:22.3052763Z [31m                    ------------------------------------------------[0m
+2021-04-24T02:43:22.3053700Z [31m      Jekyll 4.2.0   Please append `--trace` to the `build` command [0m
+2021-04-24T02:43:22.3054611Z [31m                     for any additional information or backtrace. [0m
+2021-04-24T02:43:22.3061657Z [31m                    ------------------------------------------------[0m
+2021-04-24T02:43:22.3063994Z /usr/gem/gems/jekyll-4.2.0/lib/jekyll/theme.rb:82:in `rescue in gemspec': The jekyll-theme-time-machine theme could not be found. (Jekyll::Errors::MissingDependencyException)
+2021-04-24T02:43:22.3065622Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/theme.rb:79:in `gemspec'
+2021-04-24T02:43:22.3066574Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/theme.rb:19:in `root'
+2021-04-24T02:43:22.3067516Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/theme.rb:13:in `initialize'
+2021-04-24T02:43:22.3068462Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/site.rb:510:in `new'
+2021-04-24T02:43:22.3069429Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/site.rb:510:in `configure_theme'
+2021-04-24T02:43:22.3070386Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/site.rb:60:in `config='
+2021-04-24T02:43:22.3071340Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/site.rb:23:in `initialize'
+2021-04-24T02:43:22.3072306Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/commands/build.rb:30:in `new'
+2021-04-24T02:43:22.3073324Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/commands/build.rb:30:in `process'
+2021-04-24T02:43:22.3074731Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/command.rb:91:in `block in process_with_graceful_fail'
+2021-04-24T02:43:22.3075791Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/command.rb:91:in `each'
+2021-04-24T02:43:22.3076843Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/command.rb:91:in `process_with_graceful_fail'
+2021-04-24T02:43:22.3079337Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/commands/build.rb:18:in `block (2 levels) in init_with_program'
+2021-04-24T02:43:22.3080641Z 	from /usr/gem/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `block in execute'
+2021-04-24T02:43:22.3081745Z 	from /usr/gem/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `each'
+2021-04-24T02:43:22.3082832Z 	from /usr/gem/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `execute'
+2021-04-24T02:43:22.3083892Z 	from /usr/gem/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in `go'
+2021-04-24T02:43:22.3085012Z 	from /usr/gem/gems/mercenary-0.4.0/lib/mercenary.rb:21:in `program'
+2021-04-24T02:43:22.3086052Z 	from /usr/gem/gems/jekyll-4.2.0/exe/jekyll:15:in `<top (required)>'
+2021-04-24T02:43:22.3086722Z 	from /usr/gem/bin/jekyll:23:in `load'
+2021-04-24T02:43:22.3087304Z 	from /usr/gem/bin/jekyll:23:in `<main>'
+2021-04-24T02:43:22.3088883Z /usr/local/lib/ruby/site_ruby/2.7.0/rubygems/dependency.rb:307:in `to_specs': Could not find 'jekyll-theme-time-machine' (>= 0) among 126 total gem(s) (Gem::MissingSpecError)
+2021-04-24T02:43:22.3090373Z Checked in 'GEM_PATH=/home/jekyll/.local/share/gem/ruby/2.7.0:/usr/local/lib/ruby/gems/2.7.0:/usr/gem' , execute `gem env` for more information
+2021-04-24T02:43:22.3091424Z 	from /usr/local/lib/ruby/site_ruby/2.7.0/rubygems/dependency.rb:319:in `to_spec'
+2021-04-24T02:43:22.3092349Z 	from /usr/local/lib/ruby/site_ruby/2.7.0/rubygems/specification.rb:974:in `find_by_name'
+2021-04-24T02:43:22.3093253Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/theme.rb:80:in `gemspec'
+2021-04-24T02:43:22.3094064Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/theme.rb:19:in `root'
+2021-04-24T02:43:22.3094905Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/theme.rb:13:in `initialize'
+2021-04-24T02:43:22.3095709Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/site.rb:510:in `new'
+2021-04-24T02:43:22.3096541Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/site.rb:510:in `configure_theme'
+2021-04-24T02:43:22.3097380Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/site.rb:60:in `config='
+2021-04-24T02:43:22.3098197Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/site.rb:23:in `initialize'
+2021-04-24T02:43:22.3099046Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/commands/build.rb:30:in `new'
+2021-04-24T02:43:22.3099912Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/commands/build.rb:30:in `process'
+2021-04-24T02:43:22.3100892Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/command.rb:91:in `block in process_with_graceful_fail'
+2021-04-24T02:43:22.3101793Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/command.rb:91:in `each'
+2021-04-24T02:43:22.3102851Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/command.rb:91:in `process_with_graceful_fail'
+2021-04-24T02:43:22.3103911Z 	from /usr/gem/gems/jekyll-4.2.0/lib/jekyll/commands/build.rb:18:in `block (2 levels) in init_with_program'
+2021-04-24T02:43:22.3104921Z 	from /usr/gem/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `block in execute'
+2021-04-24T02:43:22.3105878Z 	from /usr/gem/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `each'
+2021-04-24T02:43:22.3106808Z 	from /usr/gem/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `execute'
+2021-04-24T02:43:22.3107735Z 	from /usr/gem/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in `go'
+2021-04-24T02:43:22.3108614Z 	from /usr/gem/gems/mercenary-0.4.0/lib/mercenary.rb:21:in `program'
+2021-04-24T02:43:22.3109468Z 	from /usr/gem/gems/jekyll-4.2.0/exe/jekyll:15:in `<top (required)>'
+2021-04-24T02:43:22.3110145Z 	from /usr/gem/bin/jekyll:23:in `load'
+2021-04-24T02:43:22.3110703Z 	from /usr/gem/bin/jekyll:23:in `<main>'
+2021-04-24T02:43:22.4499759Z ##[error]Process completed with exit code 1.

@@ -1,0 +1,286 @@
+2021-04-24T02:42:54.5660197Z ##[group]Run actions/checkout@v1
+2021-04-24T02:42:54.5660885Z with:
+2021-04-24T02:42:54.5661300Z   clean: true
+2021-04-24T02:42:54.5661736Z ##[endgroup]
+2021-04-24T02:42:55.4551551Z Syncing repository: ESA-linux/Alexa-LED-Animation-Files-for-AVS
+2021-04-24T02:42:55.4562461Z ##[command]git version
+2021-04-24T02:42:55.4563374Z git version 2.31.1
+2021-04-24T02:42:55.4564148Z ##[command]git lfs version
+2021-04-24T02:42:55.4565191Z git-lfs/2.13.3 (GitHub; linux amd64; go 1.16.2)
+2021-04-24T02:42:55.4566774Z ##[command]git init "/home/runner/work/Alexa-LED-Animation-Files-for-AVS/Alexa-LED-Animation-Files-for-AVS"
+2021-04-24T02:42:55.4568337Z hint: Using 'master' as the name for the initial branch. This default branch name
+2021-04-24T02:42:55.4569259Z hint: is subject to change. To configure the initial branch name to use in all
+2021-04-24T02:42:55.4570181Z hint: of your new repositories, which will suppress this warning, call:
+2021-04-24T02:42:55.4570873Z hint: 
+2021-04-24T02:42:55.4571705Z hint: 	git config --global init.defaultBranch <name>
+2021-04-24T02:42:55.4572418Z hint: 
+2021-04-24T02:42:55.4573270Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2021-04-24T02:42:55.4574363Z hint: 'development'. The just-created branch can be renamed via this command:
+2021-04-24T02:42:55.4575110Z hint: 
+2021-04-24T02:42:55.4575783Z hint: 	git branch -m <name>
+2021-04-24T02:42:55.4577281Z Initialized empty Git repository in /home/runner/work/Alexa-LED-Animation-Files-for-AVS/Alexa-LED-Animation-Files-for-AVS/.git/
+2021-04-24T02:42:55.4579568Z ##[command]git remote add origin https://github.com/ESA-linux/Alexa-LED-Animation-Files-for-AVS
+2021-04-24T02:42:55.4580655Z ##[command]git config gc.auto 0
+2021-04-24T02:42:55.4608376Z ##[command]git config --get-all http.https://github.com/ESA-linux/Alexa-LED-Animation-Files-for-AVS.extraheader
+2021-04-24T02:42:55.4612968Z ##[command]git -c http.extraheader="AUTHORIZATION: basic ***" fetch --tags --prune --progress --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/*
+2021-04-24T02:42:55.9349994Z remote: Enumerating objects: 15042, done.        
+2021-04-24T02:42:55.9354532Z remote: Counting objects:  33% (1/3)        
+2021-04-24T02:42:55.9357307Z remote: Counting objects:  66% (2/3)        
+2021-04-24T02:42:55.9359476Z remote: Counting objects: 100% (3/3)        
+2021-04-24T02:42:55.9361557Z remote: Counting objects: 100% (3/3), done.        
+2021-04-24T02:42:55.9364046Z remote: Compressing objects:  33% (1/3)        
+2021-04-24T02:42:55.9366596Z remote: Compressing objects:  66% (2/3)        
+2021-04-24T02:42:55.9368591Z remote: Compressing objects: 100% (3/3)        
+2021-04-24T02:42:55.9371207Z remote: Compressing objects: 100% (3/3), done.        
+2021-04-24T02:42:56.1971420Z Receiving objects:   0% (1/15042)
+2021-04-24T02:42:56.9652287Z Receiving objects:   1% (151/15042)
+2021-04-24T02:42:57.9659953Z Receiving objects:   1% (255/15042), 12.14 MiB | 11.83 MiB/s
+2021-04-24T02:42:57.9661535Z Receiving objects:   2% (301/15042), 12.14 MiB | 11.83 MiB/s
+2021-04-24T02:42:57.9672383Z Receiving objects:   3% (452/15042), 12.14 MiB | 11.83 MiB/s
+2021-04-24T02:42:58.0185275Z Receiving objects:   4% (602/15042), 26.65 MiB | 17.16 MiB/s
+2021-04-24T02:42:58.1076569Z Receiving objects:   4% (650/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.1114834Z Receiving objects:   5% (753/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.1149077Z Receiving objects:   6% (903/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.1174534Z Receiving objects:   7% (1053/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.1198139Z Receiving objects:   8% (1204/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.1214020Z Receiving objects:   9% (1354/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.1282122Z Receiving objects:  10% (1505/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.1284379Z Receiving objects:  11% (1655/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.1285352Z Receiving objects:  12% (1806/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.1340496Z Receiving objects:  13% (1956/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.1341964Z Receiving objects:  14% (2106/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.1343444Z Receiving objects:  15% (2257/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.1344678Z Receiving objects:  16% (2407/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.1464464Z Receiving objects:  17% (2558/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.1465375Z Receiving objects:  18% (2708/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.1466524Z Receiving objects:  19% (2858/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.1467171Z Receiving objects:  20% (3009/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.1467770Z Receiving objects:  21% (3159/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9374178Z Receiving objects:  22% (3310/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9375133Z Receiving objects:  23% (3460/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9375770Z Receiving objects:  24% (3611/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9376550Z Receiving objects:  25% (3761/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9377180Z Receiving objects:  26% (3911/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9377788Z Receiving objects:  27% (4062/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9378553Z Receiving objects:  28% (4212/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9379275Z Receiving objects:  29% (4363/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9379858Z Receiving objects:  30% (4513/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9380427Z Receiving objects:  31% (4664/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9381032Z Receiving objects:  32% (4814/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9381599Z Receiving objects:  33% (4964/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9382182Z Receiving objects:  34% (5115/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9382942Z Receiving objects:  35% (5265/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9383633Z Receiving objects:  36% (5416/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9384710Z Receiving objects:  37% (5566/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9385351Z Receiving objects:  38% (5716/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9385926Z Receiving objects:  39% (5867/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9386504Z Receiving objects:  40% (6017/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9387437Z Receiving objects:  41% (6168/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9388024Z Receiving objects:  42% (6318/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9388603Z Receiving objects:  43% (6469/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9389173Z Receiving objects:  44% (6619/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9389755Z Receiving objects:  45% (6769/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9390334Z Receiving objects:  46% (6920/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:58.9390921Z Receiving objects:  47% (7070/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:59.0520338Z Receiving objects:  48% (7221/15042), 41.62 MiB | 20.02 MiB/s
+2021-04-24T02:42:59.1617819Z Receiving objects:  48% (7272/15042), 71.32 MiB | 22.92 MiB/s
+2021-04-24T02:42:59.3212860Z Receiving objects:  49% (7371/15042), 71.32 MiB | 22.92 MiB/s
+2021-04-24T02:42:59.7891882Z Receiving objects:  50% (7521/15042), 71.32 MiB | 22.92 MiB/s
+2021-04-24T02:42:59.8088326Z Receiving objects:  51% (7672/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:42:59.8608389Z Receiving objects:  52% (7822/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:42:59.8682536Z Receiving objects:  53% (7973/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:42:59.8850220Z Receiving objects:  54% (8123/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:42:59.8931224Z Receiving objects:  55% (8274/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:42:59.9223508Z Receiving objects:  56% (8424/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:42:59.9236796Z Receiving objects:  57% (8574/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:42:59.9273299Z Receiving objects:  58% (8725/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:42:59.9326120Z Receiving objects:  59% (8875/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:42:59.9399789Z Receiving objects:  60% (9026/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:42:59.9436908Z Receiving objects:  60% (9144/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:42:59.9569661Z Receiving objects:  61% (9176/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:42:59.9652094Z Receiving objects:  62% (9327/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:42:59.9723995Z Receiving objects:  63% (9477/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:42:59.9778923Z Receiving objects:  64% (9627/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:42:59.9834206Z Receiving objects:  65% (9778/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:42:59.9877135Z Receiving objects:  66% (9928/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:42:59.9943632Z Receiving objects:  67% (10079/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:43:00.0032668Z Receiving objects:  68% (10229/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:43:00.0097538Z Receiving objects:  69% (10379/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:43:00.0098423Z Receiving objects:  70% (10530/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:43:00.0139355Z Receiving objects:  71% (10680/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:43:00.0178217Z Receiving objects:  72% (10831/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:43:00.0254394Z Receiving objects:  73% (10981/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:43:00.0297966Z Receiving objects:  74% (11132/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:43:00.0355024Z Receiving objects:  75% (11282/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:43:00.0493868Z Receiving objects:  76% (11432/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:43:00.0780363Z Receiving objects:  77% (11583/15042), 85.61 MiB | 23.70 MiB/s
+2021-04-24T02:43:00.0913714Z Receiving objects:  78% (11733/15042), 98.39 MiB | 23.92 MiB/s
+2021-04-24T02:43:00.1186109Z Receiving objects:  79% (11884/15042), 98.39 MiB | 23.92 MiB/s
+2021-04-24T02:43:00.1491658Z Receiving objects:  80% (12034/15042), 98.39 MiB | 23.92 MiB/s
+2021-04-24T02:43:00.2038841Z Receiving objects:  81% (12185/15042), 98.39 MiB | 23.92 MiB/s
+2021-04-24T02:43:00.2363635Z Receiving objects:  82% (12335/15042), 98.39 MiB | 23.92 MiB/s
+2021-04-24T02:43:00.2937747Z Receiving objects:  83% (12485/15042), 98.39 MiB | 23.92 MiB/s
+2021-04-24T02:43:00.7194445Z Receiving objects:  84% (12636/15042), 98.39 MiB | 23.92 MiB/s
+2021-04-24T02:43:00.9735981Z Receiving objects:  85% (12786/15042), 113.61 MiB | 24.63 MiB/s
+2021-04-24T02:43:01.2736771Z Receiving objects:  85% (12799/15042), 113.61 MiB | 24.63 MiB/s
+2021-04-24T02:43:01.2999229Z Receiving objects:  86% (12937/15042), 128.31 MiB | 27.68 MiB/s
+2021-04-24T02:43:01.3202019Z Receiving objects:  87% (13087/15042), 128.31 MiB | 27.68 MiB/s
+2021-04-24T02:43:01.3531814Z Receiving objects:  88% (13237/15042), 128.31 MiB | 27.68 MiB/s
+2021-04-24T02:43:01.3847145Z Receiving objects:  89% (13388/15042), 128.31 MiB | 27.68 MiB/s
+2021-04-24T02:43:01.4236391Z Receiving objects:  90% (13538/15042), 128.31 MiB | 27.68 MiB/s
+2021-04-24T02:43:01.4569021Z Receiving objects:  91% (13689/15042), 128.31 MiB | 27.68 MiB/s
+2021-04-24T02:43:01.4762594Z Receiving objects:  92% (13839/15042), 128.31 MiB | 27.68 MiB/s
+2021-04-24T02:43:01.4807311Z Receiving objects:  93% (13990/15042), 128.31 MiB | 27.68 MiB/s
+2021-04-24T02:43:01.5134248Z Receiving objects:  94% (14140/15042), 128.31 MiB | 27.68 MiB/s
+2021-04-24T02:43:01.6445876Z Receiving objects:  95% (14290/15042), 128.31 MiB | 27.68 MiB/s
+2021-04-24T02:43:02.5527638Z Receiving objects:  96% (14441/15042), 143.60 MiB | 28.67 MiB/s
+2021-04-24T02:43:02.8376298Z Receiving objects:  96% (14507/15042), 159.23 MiB | 29.08 MiB/s
+2021-04-24T02:43:02.9913545Z Receiving objects:  97% (14591/15042), 175.00 MiB | 29.33 MiB/s
+2021-04-24T02:43:03.0244078Z Receiving objects:  97% (14627/15042), 175.00 MiB | 29.33 MiB/s
+2021-04-24T02:43:03.0600844Z Receiving objects:  98% (14742/15042), 175.00 MiB | 29.33 MiB/s
+2021-04-24T02:43:03.0602164Z remote: Total 15042 (delta 0), reused 0 (delta 0), pack-reused 15039        
+2021-04-24T02:43:03.0615883Z Receiving objects:  99% (14892/15042), 175.00 MiB | 29.33 MiB/s
+2021-04-24T02:43:03.0616608Z Receiving objects: 100% (15042/15042), 175.00 MiB | 29.33 MiB/s
+2021-04-24T02:43:03.0617380Z Receiving objects: 100% (15042/15042), 190.86 MiB | 26.79 MiB/s, done.
+2021-04-24T02:43:03.0631263Z Resolving deltas:   0% (0/3290)
+2021-04-24T02:43:03.0660706Z Resolving deltas:   1% (33/3290)
+2021-04-24T02:43:03.0673632Z Resolving deltas:   2% (66/3290)
+2021-04-24T02:43:03.0676921Z Resolving deltas:   3% (99/3290)
+2021-04-24T02:43:03.0678814Z Resolving deltas:   4% (132/3290)
+2021-04-24T02:43:03.0680442Z Resolving deltas:   5% (165/3290)
+2021-04-24T02:43:03.0682260Z Resolving deltas:   6% (198/3290)
+2021-04-24T02:43:03.0684094Z Resolving deltas:   7% (231/3290)
+2021-04-24T02:43:03.0686208Z Resolving deltas:   8% (264/3290)
+2021-04-24T02:43:03.0698901Z Resolving deltas:   9% (297/3290)
+2021-04-24T02:43:03.0699623Z Resolving deltas:  10% (329/3290)
+2021-04-24T02:43:03.0719786Z Resolving deltas:  11% (362/3290)
+2021-04-24T02:43:03.0721647Z Resolving deltas:  12% (395/3290)
+2021-04-24T02:43:03.0723225Z Resolving deltas:  13% (428/3290)
+2021-04-24T02:43:03.0724765Z Resolving deltas:  14% (461/3290)
+2021-04-24T02:43:03.0726202Z Resolving deltas:  15% (494/3290)
+2021-04-24T02:43:03.0742960Z Resolving deltas:  16% (527/3290)
+2021-04-24T02:43:03.0744681Z Resolving deltas:  17% (560/3290)
+2021-04-24T02:43:03.0783324Z Resolving deltas:  18% (593/3290)
+2021-04-24T02:43:03.0785003Z Resolving deltas:  19% (626/3290)
+2021-04-24T02:43:03.0786520Z Resolving deltas:  20% (658/3290)
+2021-04-24T02:43:03.0793631Z Resolving deltas:  21% (691/3290)
+2021-04-24T02:43:03.0830775Z Resolving deltas:  22% (724/3290)
+2021-04-24T02:43:03.0842660Z Resolving deltas:  23% (757/3290)
+2021-04-24T02:43:03.0847061Z Resolving deltas:  24% (790/3290)
+2021-04-24T02:43:03.0849938Z Resolving deltas:  25% (823/3290)
+2021-04-24T02:43:03.0867064Z Resolving deltas:  26% (856/3290)
+2021-04-24T02:43:03.0881274Z Resolving deltas:  27% (889/3290)
+2021-04-24T02:43:03.0885324Z Resolving deltas:  28% (922/3290)
+2021-04-24T02:43:03.0891104Z Resolving deltas:  29% (955/3290)
+2021-04-24T02:43:03.0896627Z Resolving deltas:  30% (987/3290)
+2021-04-24T02:43:03.0900305Z Resolving deltas:  31% (1020/3290)
+2021-04-24T02:43:03.0918107Z Resolving deltas:  32% (1053/3290)
+2021-04-24T02:43:03.0932437Z Resolving deltas:  33% (1086/3290)
+2021-04-24T02:43:03.0957510Z Resolving deltas:  34% (1119/3290)
+2021-04-24T02:43:03.0969535Z Resolving deltas:  35% (1152/3290)
+2021-04-24T02:43:03.0975053Z Resolving deltas:  36% (1185/3290)
+2021-04-24T02:43:03.0992830Z Resolving deltas:  37% (1218/3290)
+2021-04-24T02:43:03.1011057Z Resolving deltas:  38% (1251/3290)
+2021-04-24T02:43:03.1041957Z Resolving deltas:  39% (1284/3290)
+2021-04-24T02:43:03.1053199Z Resolving deltas:  40% (1316/3290)
+2021-04-24T02:43:03.1057897Z Resolving deltas:  41% (1349/3290)
+2021-04-24T02:43:03.1062134Z Resolving deltas:  42% (1382/3290)
+2021-04-24T02:43:03.1065985Z Resolving deltas:  43% (1415/3290)
+2021-04-24T02:43:03.1069118Z Resolving deltas:  44% (1448/3290)
+2021-04-24T02:43:03.1073657Z Resolving deltas:  45% (1481/3290)
+2021-04-24T02:43:03.1084730Z Resolving deltas:  46% (1514/3290)
+2021-04-24T02:43:03.1098817Z Resolving deltas:  47% (1547/3290)
+2021-04-24T02:43:03.1166340Z Resolving deltas:  48% (1580/3290)
+2021-04-24T02:43:03.1170740Z Resolving deltas:  49% (1613/3290)
+2021-04-24T02:43:03.1176258Z Resolving deltas:  50% (1645/3290)
+2021-04-24T02:43:03.1181141Z Resolving deltas:  51% (1678/3290)
+2021-04-24T02:43:03.1187482Z Resolving deltas:  52% (1711/3290)
+2021-04-24T02:43:03.1196354Z Resolving deltas:  53% (1744/3290)
+2021-04-24T02:43:03.1214754Z Resolving deltas:  54% (1777/3290)
+2021-04-24T02:43:03.1235724Z Resolving deltas:  55% (1810/3290)
+2021-04-24T02:43:03.1251147Z Resolving deltas:  56% (1843/3290)
+2021-04-24T02:43:03.1265280Z Resolving deltas:  57% (1876/3290)
+2021-04-24T02:43:03.1282541Z Resolving deltas:  58% (1909/3290)
+2021-04-24T02:43:03.1312081Z Resolving deltas:  59% (1942/3290)
+2021-04-24T02:43:03.1329699Z Resolving deltas:  60% (1974/3290)
+2021-04-24T02:43:03.1353510Z Resolving deltas:  61% (2007/3290)
+2021-04-24T02:43:03.1375330Z Resolving deltas:  62% (2040/3290)
+2021-04-24T02:43:03.1400793Z Resolving deltas:  63% (2073/3290)
+2021-04-24T02:43:03.1456493Z Resolving deltas:  64% (2106/3290)
+2021-04-24T02:43:03.1495199Z Resolving deltas:  65% (2139/3290)
+2021-04-24T02:43:03.1623911Z Resolving deltas:  66% (2172/3290)
+2021-04-24T02:43:03.1644060Z Resolving deltas:  67% (2205/3290)
+2021-04-24T02:43:03.1666894Z Resolving deltas:  68% (2238/3290)
+2021-04-24T02:43:03.1696305Z Resolving deltas:  69% (2271/3290)
+2021-04-24T02:43:03.1726052Z Resolving deltas:  70% (2303/3290)
+2021-04-24T02:43:03.1760528Z Resolving deltas:  71% (2336/3290)
+2021-04-24T02:43:03.1794296Z Resolving deltas:  72% (2369/3290)
+2021-04-24T02:43:03.1838731Z Resolving deltas:  73% (2402/3290)
+2021-04-24T02:43:03.1881615Z Resolving deltas:  74% (2435/3290)
+2021-04-24T02:43:03.1919866Z Resolving deltas:  75% (2468/3290)
+2021-04-24T02:43:03.1943065Z Resolving deltas:  76% (2501/3290)
+2021-04-24T02:43:03.1992190Z Resolving deltas:  77% (2534/3290)
+2021-04-24T02:43:03.2009243Z Resolving deltas:  78% (2567/3290)
+2021-04-24T02:43:03.2026580Z Resolving deltas:  79% (2600/3290)
+2021-04-24T02:43:03.2085844Z Resolving deltas:  80% (2632/3290)
+2021-04-24T02:43:03.2137143Z Resolving deltas:  81% (2665/3290)
+2021-04-24T02:43:03.2158551Z Resolving deltas:  82% (2698/3290)
+2021-04-24T02:43:03.2174746Z Resolving deltas:  83% (2731/3290)
+2021-04-24T02:43:03.2189076Z Resolving deltas:  84% (2764/3290)
+2021-04-24T02:43:03.2219641Z Resolving deltas:  85% (2797/3290)
+2021-04-24T02:43:03.2230051Z Resolving deltas:  86% (2831/3290)
+2021-04-24T02:43:03.2937035Z Resolving deltas:  87% (2863/3290)
+2021-04-24T02:43:03.3941341Z Resolving deltas:  88% (2896/3290)
+2021-04-24T02:43:03.3981658Z Resolving deltas:  89% (2929/3290)
+2021-04-24T02:43:03.4019432Z Resolving deltas:  90% (2961/3290)
+2021-04-24T02:43:03.4026965Z Resolving deltas:  91% (2994/3290)
+2021-04-24T02:43:03.4034367Z Resolving deltas:  92% (3027/3290)
+2021-04-24T02:43:03.4040894Z Resolving deltas:  93% (3061/3290)
+2021-04-24T02:43:03.4047298Z Resolving deltas:  94% (3093/3290)
+2021-04-24T02:43:03.4052570Z Resolving deltas:  95% (3126/3290)
+2021-04-24T02:43:03.4103747Z Resolving deltas:  96% (3159/3290)
+2021-04-24T02:43:03.4106035Z Resolving deltas:  97% (3192/3290)
+2021-04-24T02:43:03.4107140Z Resolving deltas:  98% (3225/3290)
+2021-04-24T02:43:03.4108172Z Resolving deltas:  99% (3258/3290)
+2021-04-24T02:43:03.4109199Z Resolving deltas: 100% (3290/3290)
+2021-04-24T02:43:03.4110262Z Resolving deltas: 100% (3290/3290), done.
+2021-04-24T02:43:04.3720670Z From https://github.com/ESA-linux/Alexa-LED-Animation-Files-for-AVS
+2021-04-24T02:43:04.3721931Z  * [new branch]      master     -> origin/master
+2021-04-24T02:43:04.3764885Z ##[command]git checkout --progress --force 3394027ef03ca3ac09072da5d997d03abb6bd987
+2021-04-24T02:43:05.5804265Z Updating files:  83% (11437/13692)
+2021-04-24T02:43:05.7808654Z Updating files:  84% (11502/13692)
+2021-04-24T02:43:05.9272799Z Updating files:  85% (11639/13692)
+2021-04-24T02:43:05.9415571Z Updating files:  86% (11776/13692)
+2021-04-24T02:43:05.9573818Z Updating files:  87% (11913/13692)
+2021-04-24T02:43:05.9765981Z Updating files:  88% (12049/13692)
+2021-04-24T02:43:05.9913565Z Updating files:  89% (12186/13692)
+2021-04-24T02:43:06.0060772Z Updating files:  90% (12323/13692)
+2021-04-24T02:43:06.0267175Z Updating files:  91% (12460/13692)
+2021-04-24T02:43:06.0440705Z Updating files:  92% (12597/13692)
+2021-04-24T02:43:06.0518354Z Updating files:  93% (12734/13692)
+2021-04-24T02:43:06.0588673Z Updating files:  94% (12871/13692)
+2021-04-24T02:43:06.0796068Z Updating files:  95% (13008/13692)
+2021-04-24T02:43:06.0948095Z Updating files:  96% (13145/13692)
+2021-04-24T02:43:06.1472728Z Updating files:  97% (13282/13692)
+2021-04-24T02:43:06.2776672Z Updating files:  98% (13419/13692)
+2021-04-24T02:43:06.3809861Z Updating files:  99% (13556/13692)
+2021-04-24T02:43:06.3811572Z Updating files: 100% (13692/13692)
+2021-04-24T02:43:06.3812200Z Updating files: 100% (13692/13692), done.
+2021-04-24T02:43:06.4030131Z Note: switching to '3394027ef03ca3ac09072da5d997d03abb6bd987'.
+2021-04-24T02:43:06.4031033Z 
+2021-04-24T02:43:06.4031973Z You are in 'detached HEAD' state. You can look around, make experimental
+2021-04-24T02:43:06.4032931Z changes and commit them, and you can discard any commits you make in this
+2021-04-24T02:43:06.4033811Z state without impacting any branches by switching back to a branch.
+2021-04-24T02:43:06.4042067Z 
+2021-04-24T02:43:06.4042996Z If you want to create a new branch to retain commits you create, you may
+2021-04-24T02:43:06.4044242Z do so (now or later) by using -c with the switch command. Example:
+2021-04-24T02:43:06.4044953Z 
+2021-04-24T02:43:06.4045742Z   git switch -c <new-branch-name>
+2021-04-24T02:43:06.4046239Z 
+2021-04-24T02:43:06.4046781Z Or undo this operation with:
+2021-04-24T02:43:06.4047226Z 
+2021-04-24T02:43:06.4047832Z   git switch -
+2021-04-24T02:43:06.4048211Z 
+2021-04-24T02:43:06.4048989Z Turn off this advice by setting config variable advice.detachedHead to false
+2021-04-24T02:43:06.4049669Z 
+2021-04-24T02:43:06.4050226Z HEAD is now at 3394027 Update SECURITY.md

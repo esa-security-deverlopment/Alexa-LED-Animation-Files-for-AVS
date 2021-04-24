@@ -1,0 +1,29 @@
+2021-04-24T02:42:51.7840594Z Current runner version: '2.278.0'
+2021-04-24T02:42:51.7869051Z ##[group]Operating System
+2021-04-24T02:42:51.7870088Z Ubuntu
+2021-04-24T02:42:51.7870497Z 20.04.2
+2021-04-24T02:42:51.7870937Z LTS
+2021-04-24T02:42:51.7871382Z ##[endgroup]
+2021-04-24T02:42:51.7871939Z ##[group]Virtual Environment
+2021-04-24T02:42:51.7872538Z Environment: ubuntu-20.04
+2021-04-24T02:42:51.7873092Z Version: 20210419.1
+2021-04-24T02:42:51.7874026Z Included Software: https://github.com/actions/virtual-environments/blob/ubuntu20/20210419.1/images/linux/Ubuntu2004-README.md
+2021-04-24T02:42:51.7875370Z Image Release: https://github.com/actions/virtual-environments/releases/tag/ubuntu20%2F20210419.1
+2021-04-24T02:42:51.7876246Z ##[endgroup]
+2021-04-24T02:42:51.7878024Z ##[group]GITHUB_TOKEN Permissions
+2021-04-24T02:42:51.7879147Z Actions: write
+2021-04-24T02:42:51.7879690Z Checks: write
+2021-04-24T02:42:51.7880215Z Contents: write
+2021-04-24T02:42:51.7880768Z Deployments: write
+2021-04-24T02:42:51.7881252Z Issues: write
+2021-04-24T02:42:51.7881922Z Metadata: read
+2021-04-24T02:42:51.7882411Z Packages: write
+2021-04-24T02:42:51.7882973Z PullRequests: write
+2021-04-24T02:42:51.7883554Z RepositoryProjects: write
+2021-04-24T02:42:51.7884192Z SecurityEvents: write
+2021-04-24T02:42:51.7884701Z Statuses: write
+2021-04-24T02:42:51.7885317Z ##[endgroup]
+2021-04-24T02:42:51.7888086Z Prepare workflow directory
+2021-04-24T02:42:51.8468132Z Prepare all required actions
+2021-04-24T02:42:51.8478380Z Getting action download info
+2021-04-24T02:42:52.2384226Z Download action repository 'actions/checkout@v1'
