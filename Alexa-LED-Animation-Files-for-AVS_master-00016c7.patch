@@ -1,0 +1,53 @@
+From 00016c7dba6285152cc45ee74de6ed9756ef9683 Mon Sep 17 00:00:00 2001
+From: DPO - Higher Commander: Ambjoern Shield <ESA-Security-Group@users.noreply.github.com>
+Date: Sat, 24 Apr 2021 04:58:44 +0200
+Subject: [PATCH] Alexa-LED-Animation-Files-for-AVS master
+
+All access and permission for all commands and use is now changed to
+"private" for all of Ambjörn Sköld's created work
+---
+ Alexa-LED-Animation-Files-for-AVS | 1 +
+ clipboard-5.txt                   | 1 +
+ clipboard-6.txt                   | 1 +
+ master                            | 1 +
+ 4 files changed, 4 insertions(+)
+ create mode 100644 Alexa-LED-Animation-Files-for-AVS
+ create mode 100644 clipboard-5.txt
+ create mode 100644 clipboard-6.txt
+ create mode 100644 master
+
+diff --git a/Alexa-LED-Animation-Files-for-AVS b/Alexa-LED-Animation-Files-for-AVS
+new file mode 100644
+index 0000000..1c807f3
+--- /dev/null
++++ b/Alexa-LED-Animation-Files-for-AVS
+@@ -0,0 +1 @@
++ESA-linux/Alexa-LED-Animation-Files-for-AVS
+\ No newline at end of file
+diff --git a/clipboard-5.txt b/clipboard-5.txt
+new file mode 100644
+index 0000000..1c807f3
+--- /dev/null
++++ b/clipboard-5.txt
+@@ -0,0 +1 @@
++ESA-linux/Alexa-LED-Animation-Files-for-AVS
+\ No newline at end of file
+diff --git a/clipboard-6.txt b/clipboard-6.txt
+new file mode 100644
+index 0000000..e2d65a3
+--- /dev/null
++++ b/clipboard-6.txt
+@@ -0,0 +1 @@
++https://github.com/dejavu-fonts/dejavu-fonts/blob/9b5d1b2ffeec20c7b46aa89c0223d783c02762cf/Makefile
+\ No newline at end of file
+diff --git a/master b/master
+new file mode 100644
+index 0000000..11d18eb
+--- /dev/null
++++ b/master
+@@ -0,0 +1 @@
++File Finder
+\ No newline at end of file
+--
+libgit2 1.0.1
+
